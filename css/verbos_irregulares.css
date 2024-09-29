@@ -1,0 +1,33 @@
+img{
+    width: 50px;
+    height: 50px;
+}
+
+header{
+    background-color: #00b1ff;
+}
+
+main{
+    background-color: #00da5d ;
+}
+
+section{
+    height: auto;
+    background-color: #00daf5;
+}
+
+aside{
+    background-color: #ffe06c;
+}
+
+footer{
+    background-color: #00b1ff;
+    text-align: center;
+}
+
+
+.color1 {color: #00b1ff;}
+.color2 {color: #00daf5;}
+.color3 {color: #79f05d;}
+.color4 {color: #ffe06c;}
+.color5 {color: #ffc9ff;}
