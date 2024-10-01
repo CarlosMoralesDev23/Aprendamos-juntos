@@ -1,9 +1,9 @@
-img{
+img {
     width: 50px;
     height: 50px;
 }
 
-header{
+header {
     background-color: #00b1ff;
     display: flex;
     flex-direction: row;
@@ -11,37 +11,68 @@ header{
     justify-content: space-around;
 }
 
-main{
-    background-color: #00da5d ;
+main {
+    background-color: #00da5d;
+    padding: 20px;
 }
 
-section{
+section {
     height: auto;
     background-color: #00daf5;
 }
 
-aside{
+aside {
     background-color: #ffe06c;
+    padding: 20px;
 }
 
-footer{
+footer {
     background-color: #00b1ff;
     text-align: center;
 }
 
-
-.color1 {color: #00b1ff;}
-.color2 {color: #00daf5;}
-.color3 {color: #79f05d;}
-.color4 {color: #ffe06c;}
-.color5 {color: #ffc9ff;}
-.color1 {color: #ffd44f;}
-.color2 {color: #e3e673;}
-.color3 {color: #0043bb;}
-.color4 {color: #0084ea;}
-.color5 {color: #00ceff;}
-.color1 {color: #20dad6;}
-.color2 {color: #8de9b4;}
-.color3 {color: #121814;}
-.color4 {color: #7a7a76;}
-.color5 {color: #f3eae8;}
+.color1 {
+    color: #00b1ff;
+}
+.color2 {
+    color: #00daf5;
+}
+.color3 {
+    color: #79f05d;
+}
+.color4 {
+    color: #ffe06c;
+}
+.color5 {
+    color: #ffc9ff;
+}
+.color1 {
+    color: #ffd44f;
+}
+.color2 {
+    color: #e3e673;
+}
+.color3 {
+    color: #0043bb;
+}
+.color4 {
+    color: #0084ea;
+}
+.color5 {
+    color: #00ceff;
+}
+.color1 {
+    color: #20dad6;
+}
+.color2 {
+    color: #8de9b4;
+}
+.color3 {
+    color: #121814;
+}
+.color4 {
+    color: #7a7a76;
+}
+.color5 {
+    color: #f3eae8;
+}
