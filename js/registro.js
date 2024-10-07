@@ -27,8 +27,11 @@
 // TODO 18. Si no selecciono un tema "Seleccionar al menos una opción"
 // TODO 19. Validar que solo solo pueda elegir hasta 2 checkbox, o uno solo que seria general. 
 // TODO 20. Si no selecciono un rango de EDAD "Seleccionar un rango de EDAD"
+// TODO 21. Genero niño debe coincidir con edad 4-11
+// TODO 22. Adolescente debe coincidir con edad 12-17
+// TODO 23. Hombre ó Mujer debe coincidir con las otras edades. 
 
-// TODO 21 . Si dejo el input vacio Ó incompleto "completar" Ó ANIMACIÓN
-// TODO 22. Si completo con el minimo requerido "Valído" o icono de check en verde.
-// TODO 23. Si todos los inputs estan completados con el minimo requerido se puede enviar el formulario. 
+// TODO 24 . Si dejo el input vacio Ó incompleto "completar" Ó ANIMACIÓN
+// TODO 25. Si completo con el minimo requerido "Valído" o icono de check en verde.
+// TODO 26. Si todos los inputs estan completados con el minimo requerido se puede enviar el formulario. 
 

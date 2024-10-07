@@ -38,8 +38,8 @@
         <main>
             <h2>Registrarse</h2>
 
-            <form action="">
-                <div id="divFormNombreYApellido">
+            <form action="" id="formRegistro">
+                <div id="formRegistroDivNombreYApellido">
                     <!-- NOMBRE -->
                     <input
                         type="text"
@@ -63,7 +63,7 @@
 
                 <br />
 
-                <div id="divFormEmail">
+                <div id="formRegistroDivEmail">
                     <!-- EMAIL -->
                     <input
                         type="email"
@@ -86,16 +86,18 @@
 
                 <br />
 
-                <div id="divFormPassword">
+                <div id="formRegistroDivPassword">
                     <!-- PASSWORD -->
                     <input
                         type="password"
+                        id="password"
                         minlength="8"
                         maxlength="12"
                         placeholder="Ingresa tu contraseña..."
                     />
                     <input
                         type="password"
+                        id="password"
                         minlength="8"
                         maxlength="12"
                         placeholder="Confirma tu contraseña..."
@@ -103,7 +105,7 @@
                 </div>
                 <br />
 
-                <div id="divFormTemaPreferidoParaPrcticar">
+                <div id="formRegistroDivTemaPreferidoParaPrcticar">
                     <!-- ELEGIR TEMA -->
                     <h4>Areas en las que quieres enfocarte</h4>
                     <p>(Podes elegir 2, o general)</p>
@@ -146,32 +148,33 @@
                 </div>
                 <br />
 
-                <div id="divFormGenero">
+                <div id="formRegistroDivGenero">
                     <!-- GENERO -->
                     <label for="genero">Genero</label>
 
                     <select name="" id="genero">
-                        <option value="Rojo">Niño</option>
-                        <option value="Verde">Mujer</option>
-                        <option value="Amarillo">Hombre</option>
+                        <option value="niño"       >Niñ@</option>
+                        <option value="adolescente">Adolescente</option>
+                        <option value="mujer"      >Mujer</option>
+                        <option value="hombre"     >Hombre</option>
                     </select>
                 </div>
                 <br />
 
-                <div id="divFormRangoDeEdad">
+                <div id="formRegistroDivRangoDeEdad">
                     <!-- RANGO DE EDAD -->
                     <h4>Elige el rango de tu edad</h4>
 
-                    <input type="radio" name="edad" class="rangoDeEdad" />4-10
-                    <input type="radio" name="edad" class="rangoDeEdad" />11-17
-                    <input type="radio" name="edad" class="rangoDeEdad" />18-30
-                    <input type="radio" name="edad" class="rangoDeEdad" />30-45
-                    <input type="radio" name="edad" class="rangoDeEdad" />45-60
-                    <input type="radio" name="edad" class="rangoDeEdad" />60-120
+                    <input type="radio" name="edad" id="de4A11"    class="rangoDeEdad" />4-11
+                    <input type="radio" name="edad" id="de12A17"   class="rangoDeEdad" />12-17
+                    <input type="radio" name="edad" id="de18A30"   class="rangoDeEdad" />18-30
+                    <input type="radio" name="edad" id="de30A45"   class="rangoDeEdad" />30-45
+                    <input type="radio" name="edad" id="de30A60"   class="rangoDeEdad" />45-60
+                    <input type="radio" name="edad" id="de60A120"  class="rangoDeEdad" />60-120
                 </div>
                 <br />
-                
-                <div id="divFormBotonesEnviarYBorrar">
+
+                <div id="formRegistroDivBotonesEnviarYBorrar">
                     <input type="submit" />
                     <input type="reset" value="Borrar todo" />
                 </div>
