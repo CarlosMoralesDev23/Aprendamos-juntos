@@ -39,110 +39,142 @@
             <h2>Registrarse</h2>
 
             <form action="">
-                <!-- NOMBRE -->
-                <input
-                    type="text"
-                    id="name"
-                    name="name"
-                    minlength="2"
-                    maxlength="25"
-                    placeholder="Ingresa tu nombre..."
-                />
+                <div id="divFormNombreYApellido">
+                    <!-- NOMBRE -->
+                    <input
+                        type="text"
+                        id="name"
+                        name="name"
+                        minlength="2"
+                        maxlength="25"
+                        placeholder="Ingresa tu nombre..."
+                    />
 
-                <!-- APELLIDO -->
-                <input
-                    type="text"
-                    id="last_name"
-                    name="last_name"
-                    minlength="2"
-                    maxlength="25"
-                    placeholder="Ingresa tu apellido..."
-                />
+                    <!-- APELLIDO -->
+                    <input
+                        type="text"
+                        id="last_name"
+                        name="last_name"
+                        minlength="2"
+                        maxlength="25"
+                        placeholder="Ingresa tu apellido..."
+                    />
+                </div>
+
                 <br />
+
+                <div id="divFormEmail">
+                    <!-- EMAIL -->
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        minlength="6"
+                        maxlength="60"
+                        placeholder="Ingresa tu correo..."
+                    />
+
+                    <input
+                        type="email"
+                        id="email"
+                        name="email"
+                        minlength="6"
+                        maxlength="60"
+                        placeholder="Confirma tu correo..."
+                    />
+                </div>
+
                 <br />
 
-                <!-- EMAIL -->
-                <input
-                    type="email"
-                    id="email"
-                    name="email"
-                    minlength="6"
-                    maxlength="60"
-                    placeholder="Ingresa tu correo..."
-                />
+                <div id="divFormPassword">
+                    <!-- PASSWORD -->
+                    <input
+                        type="password"
+                        minlength="8"
+                        maxlength="12"
+                        placeholder="Ingresa tu contraseña..."
+                    />
+                    <input
+                        type="password"
+                        minlength="8"
+                        maxlength="12"
+                        placeholder="Confirma tu contraseña..."
+                    />
+                </div>
+                <br />
 
-                <br /><br />
+                <div id="divFormTemaPreferidoParaPrcticar">
+                    <!-- ELEGIR TEMA -->
+                    <h4>Areas en las que quieres enfocarte</h4>
+                    <p>(Podes elegir 2, o general)</p>
 
-                <input
-                    type="password"
-                    minlength="8"
-                    maxlength="12"
-                    placeholder="Re-ingresa tu contraseña..."
-                />
-                <input
-                    type="password"
-                    minlength="8"
-                    maxlength="12"
-                    placeholder="Ingresa tu contraseña..."
-                />
-                <br /><br />
+                    <input
+                        type="checkbox"
+                        name="temasParaPracticar"
+                        id="opcionTemaTecnologia"
+                        class="temaPreferidoParaPrcticar"
+                    />
+                    Tecnologia
+                    <input
+                        type="checkbox"
+                        name="temasParaPracticar"
+                        id="opcionTemaGastronomia"
+                        class="temaPreferidoParaPrcticar"
+                    />
+                    Gastronomia
+                    <input
+                        type="checkbox"
+                        name="temasParaPracticar"
+                        id="opcionTemaViaje"
+                        class="temaPreferidoParaPrcticar"
+                    />
+                    Viaje
+                    <input
+                        type="checkbox"
+                        name="temasParaPracticar"
+                        id="opcionTemaDeportes"
+                        class="temaPreferidoParaPrcticar"
+                    />
+                    Deportes
+                    <input
+                        type="checkbox"
+                        name="temasParaPracticar"
+                        id="opcionTemaGeneral"
+                        class="temaPreferidoParaPrcticar"
+                    />
+                    General
+                </div>
+                <br />
 
-                <select name="" id="">
-                    <option value="Rojo">Niño</option>
-                    <option value="Verde">Mujer</option>
-                    <option value="Amarillo">Hombre</option>
-                </select>
+                <div id="divFormGenero">
+                    <!-- GENERO -->
+                    <label for="genero">Genero</label>
 
-                <h2>Areas en las que quieres enfocartes</h2>
-                <p>(Podes elegir 2, o general)</p>
+                    <select name="" id="genero">
+                        <option value="Rojo">Niño</option>
+                        <option value="Verde">Mujer</option>
+                        <option value="Amarillo">Hombre</option>
+                    </select>
+                </div>
+                <br />
 
-                <input
-                    type="checkbox"
-                    name="comidas"
-                    id=""
-                    class="temaPreferidoParaPrcticar"
-                />
-                Tecnologia
-                <input
-                    type="checkbox"
-                    name="comidas"
-                    id=""
-                    class="temaPreferidoParaPrcticar"
-                />
-                Gastronomia
-                <input
-                    type="checkbox"
-                    name="comidas"
-                    id=""
-                    class="temaPreferidoParaPrcticar"
-                />
-                Viaje
-                <input
-                    type="checkbox"
-                    name="comidas"
-                    id=""
-                    class="temaPreferidoParaPrcticar"
-                />
-                Deportes
-                <input
-                    type="checkbox"
-                    name="comidas"
-                    id=""
-                    class="temaPreferidoParaPrcticar"
-                />
-                General
+                <div id="divFormRangoDeEdad">
+                    <!-- RANGO DE EDAD -->
+                    <h4>Elige el rango de tu edad</h4>
 
-                <h2>Cual es tu edad</h2>
-
-                <input type="radio" name="edad" class="rangoDeEdad" />4-10
-                <input type="radio" name="edad" class="rangoDeEdad" />11-17
-                <input type="radio" name="edad" class="rangoDeEdad" />18-30
-                <input type="radio" name="edad" class="rangoDeEdad" />30-45
-                <input type="radio" name="edad" class="rangoDeEdad" />45-120
-
-                <br /><br />
-                <input type="submit" />
-                <input type="reset" value="Borrar" />
+                    <input type="radio" name="edad" class="rangoDeEdad" />4-10
+                    <input type="radio" name="edad" class="rangoDeEdad" />11-17
+                    <input type="radio" name="edad" class="rangoDeEdad" />18-30
+                    <input type="radio" name="edad" class="rangoDeEdad" />30-45
+                    <input type="radio" name="edad" class="rangoDeEdad" />45-60
+                    <input type="radio" name="edad" class="rangoDeEdad" />60-120
+                </div>
+                <br />
+                
+                <div id="divFormBotonesEnviarYBorrar">
+                    <input type="submit" />
+                    <input type="reset" value="Borrar todo" />
+                </div>
             </form>
         </main>
 
@@ -207,5 +239,3 @@
         </footer>
     </body>
 </html>
-
-
