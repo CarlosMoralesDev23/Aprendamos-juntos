@@ -36,55 +36,116 @@
         </header>
 
         <main>
-            
-                <h2>Registrarse...</h2>
+            <h2>Registrarse</h2>
 
-                <form action="">
-                    <label for="name">Nombre</label>
-                    <input type="text" id="name"       name="name"       minlength="2"  maxlength="25"  placeholder="Ingresa tu nombre...">
-                    <input type="text" id="last_name"  name="last_name"  minlength="2"  maxlength="25"  placeholder="Ingresa tu apellido...">
-                    <br> <br>
+            <form action="">
+                <!-- NOMBRE -->
+                <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    minlength="2"
+                    maxlength="25"
+                    placeholder="Ingresa tu nombre..."
+                />
 
-                    <input type="email"  id="email"  name="email"  minlength="6"  maxlength="60"  placeholder="Ingresa tu correo...">
-                    <input type="number" id="edad"   name="edad"   min="4"        max="120"       placeholder="Ingresa tu edad...">
-                    <input type="date">
-                    <br><br>
+                <!-- APELLIDO -->
+                <input
+                    type="text"
+                    id="last_name"
+                    name="last_name"
+                    minlength="2"
+                    maxlength="25"
+                    placeholder="Ingresa tu apellido..."
+                />
+                <br />
+                <br />
 
-                    <input type="password"     minlength="8"   maxlength="12"  placeholder="Re-ingresa tu contraseña...">
-                    <input type="password"     minlength="8"   maxlength="12"  placeholder="Ingresa tu contraseña...">
-                    <br><br>
+                <!-- EMAIL -->
+                <input
+                    type="email"
+                    id="email"
+                    name="email"
+                    minlength="6"
+                    maxlength="60"
+                    placeholder="Ingresa tu correo..."
+                />
 
-                    <input type="submit">
-                    <input type="reset" value="Borrar">
+                <br /><br />
 
-                    <select name="" id="">
-                        <option value="Rojo">Rojo</option>
-                        <option value="Verde">Verde</option>
-                        <option value="Amarillo">Amarillo</option>
-                        <option value="Azul">Azul</option>
-                    </select>
+                <input
+                    type="password"
+                    minlength="8"
+                    maxlength="12"
+                    placeholder="Re-ingresa tu contraseña..."
+                />
+                <input
+                    type="password"
+                    minlength="8"
+                    maxlength="12"
+                    placeholder="Ingresa tu contraseña..."
+                />
+                <br /><br />
 
-                    <h2>Comidas</h2>
+                <select name="" id="">
+                    <option value="Rojo">Niño</option>
+                    <option value="Verde">Mujer</option>
+                    <option value="Amarillo">Hombre</option>
+                </select>
 
-                    <input type="checkbox" name="comidas" id=""> Pizza
-                    <input type="checkbox" name="comidas" id=""> Asado
-                    <input type="checkbox" name="comidas" id=""> Empanadas
-                    <input type="checkbox" name="comidas" id=""> Milanesas
-                    <input type="checkbox" name="comidas" id=""> Asado
+                <h2>Areas en las que quieres enfocartes</h2>
+                <p>(Podes elegir 2, o general)</p>
 
-                    
-                    <h2>Postres</h2>
+                <input
+                    type="checkbox"
+                    name="comidas"
+                    id=""
+                    class="temaPreferidoParaPrcticar"
+                />
+                Tecnologia
+                <input
+                    type="checkbox"
+                    name="comidas"
+                    id=""
+                    class="temaPreferidoParaPrcticar"
+                />
+                Gastronomia
+                <input
+                    type="checkbox"
+                    name="comidas"
+                    id=""
+                    class="temaPreferidoParaPrcticar"
+                />
+                Viaje
+                <input
+                    type="checkbox"
+                    name="comidas"
+                    id=""
+                    class="temaPreferidoParaPrcticar"
+                />
+                Deportes
+                <input
+                    type="checkbox"
+                    name="comidas"
+                    id=""
+                    class="temaPreferidoParaPrcticar"
+                />
+                General
 
-                    <input type="radio" name="postres" id="">Helado
-                    <input type="radio" name="postres" id="">Torta
-                    <input type="radio" name="postres" id="">Flan
-                    <input type="radio" name="postres">Buedin de Pan
-                    <input type="radio" name="postres">Ensalada de fruta
+                <h2>Cual es tu edad</h2>
 
-                </form>
+                <input type="radio" name="edad" class="rangoDeEdad" />4-10
+                <input type="radio" name="edad" class="rangoDeEdad" />11-17
+                <input type="radio" name="edad" class="rangoDeEdad" />18-30
+                <input type="radio" name="edad" class="rangoDeEdad" />30-45
+                <input type="radio" name="edad" class="rangoDeEdad" />45-120
 
+                <br /><br />
+                <input type="submit" />
+                <input type="reset" value="Borrar" />
+            </form>
         </main>
-        
+
         <aside>
             <div>
                 <h3>Recomendaciones</h3>
@@ -100,15 +161,25 @@
                         >
                     </p>
 
-                    <iframe width="140" height="80" src="https://www.youtube.com/embed/Cq_9hh42PgE?si=jhkEIVrDGIGTl6jc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe
+                        width="140"
+                        height="80"
+                        src="https://www.youtube.com/embed/Cq_9hh42PgE?si=jhkEIVrDGIGTl6jc"
+                        title="YouTube video player"
+                        frameborder="0"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        referrerpolicy="strict-origin-when-cross-origin"
+                        allowfullscreen
+                    ></iframe>
 
                     <p>
-                        Contenido gramatical - Pagina web - 
+                        Contenido gramatical - Pagina web -
                         <a
                             href="https://www.pacho8a.com/#gsc.tab=0"
                             target="_blank"
-                            >Academia Ingles Facil <img src="/img/pacho8a_comic.png" alt=""></a
-                        >
+                            >Academia Ingles Facil
+                            <img src="/img/pacho8a_comic.png" alt=""
+                        /></a>
                     </p>
                 </div>
             </div>
@@ -121,53 +192,34 @@
             />
             <h4>Designed and created by Carlos Morales</h4>
             <p>
-                
                 <a href="mailto:carlosmoralesdev23@gmail.com"
-                    ><img src="/icons/gmail.png" alt="">carlosmoralesdev23@gmail.com</a
+                    ><img
+                        src="/icons/gmail.png"
+                        alt=""
+                    />carlosmoralesdev23@gmail.com</a
                 >
             </p>
             <p>
                 <a href="https://wa.me/5491122519382" target="_blank"
-                    ><img src="/icons/whatsapp.png" alt=""> 11-2251-9382</a
+                    ><img src="/icons/whatsapp.png" alt="" /> 11-2251-9382</a
                 >
             </p>
         </footer>
     </body>
 </html>
 
-
-
-
-validaciones
-
-
-CSS
-Eliminar los br
-
-
-HTML
-Definir si va con label o con placeholder
-Definir si algun input ira solo con placeholder
-Cuando los largos y minimos esten definidos en JS se elminan en el HTML
-
-Javascript
-cantidad de caracteres en nombres sin espacio
-cantidad de caracteres en apellido sin espacio
-validar edad entre 4 y 120
-validar todos los inputs y colocar mensajes segun el estado.
+validaciones CSS Eliminar los br HTML Definir si va con label o con placeholder
+Definir si algun input ira solo con placeholder Cuando los largos y minimos
+esten definidos en JS se elminan en el HTML Javascript cantidad de caracteres en
+nombres sin espacio cantidad de caracteres en apellido sin espacio validar edad
+entre 4 y 120 validar todos los inputs y colocar mensajes segun el estado.
 cuando comience a escribir pero lo deje sin completar ... incompleto en amarillo
 cuando lo abandone y este completo colocar mensaje tipo ... valido en verde
-cuando no sea valido,  dar el mensaje por el cual no es valido... edad invalidad, nombre invalido.
-cuando el mail este incompleto
-cuando este sin @
-cuando le falte el punto. 
-cuando le falte el com, net, u otro... 
-aceptar cualquier email.
-pasar todo los text a minuscula para manejo de la base de datos
-Configurar la constraseña,  min 8,  1 mayuscula,  1 minuscula, 1 numero, 1 caracter, 
-Validar que ambos campos del input sean iguales
-Fecha de nacimiento que valide contra el input edad
-Es necesario que los radio tengan el mismo name para que solo pueda escogerse una opcion, se agrupan por el name. 
-
-
-
+cuando no sea valido, dar el mensaje por el cual no es valido... edad invalidad,
+nombre invalido. cuando el mail este incompleto cuando este sin @ cuando le
+falte el punto. cuando le falte el com, net, u otro... aceptar cualquier email.
+pasar todo los text a minuscula para manejo de la base de datos Configurar la
+constraseña, min 8, 1 mayuscula, 1 minuscula, 1 numero, 1 caracter, Validar que
+ambos campos del input sean iguales Fecha de nacimiento que valide contra el
+input edad Es necesario que los radio tengan el mismo name para que solo pueda
+escogerse una opcion, se agrupan por el name.
