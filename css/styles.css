@@ -1,54 +1,13 @@
-header {
-    background-color: #0084ea;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: space-around;
+@import 'general/header/header.css';
+@import 'general/main/main.css';
+@import 'general/aside/aside.css';
+@import 'general/footer/footer.css';
 
-    img {
-        width: 50px;
-        height: 50px;
-    }
 
-    nav {
-        ul {
-            display: flex;
-            gap: 8px;
-            li {
-                list-style: none;
-                a {
-                    text-decoration: none;
-                    color: white;
-                }
-            }
-        }
-    }
-}
 
-main {
-    background-color: #00daf5;
-    padding: 20px;
-}
+/* Modulos */
+@import 'modulos/registro.css';
 
-aside {
-    background-color: #ffe06c;
-    padding: 20px;
-
-    img {
-        width: 100px;
-        height: 100px;
-    }
-}
-
-footer {
-    background-color: #0084ea;
-    text-align: center;
-
-    img {
-        width: 50px;
-        height: 50px;
-    }
-}
 
 
 
@@ -96,4 +55,12 @@ footer {
 }
 .color5 {
     color: #f3eae8;
+}
+
+.color6{
+    color: #090A31;
+}
+
+.color6{
+    color: #06E224;
 }
