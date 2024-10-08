@@ -1,1 +1,19 @@
-/** validaciones CSS Eliminar los br */
+#formRegistro{
+    width: 600px;
+    background-color: #090A31;
+    padding: 30px;
+    margin: auto;
+    margin-top: 60px;
+    border-radius: 8px;
+    font-family: sans-serif;
+    color: white;
+
+    h2{
+        font-size: 22px;
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+
+
+}

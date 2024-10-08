@@ -36,14 +36,16 @@
         </header>
 
         <main>
-            <h2>Registrarse</h2>
-
+            
             <form action="" id="formRegistro">
+                <h2>Formulario de Registrarse</h2>
+
                 <div id="formRegistroDivNombreYApellido">
                     <!-- NOMBRE -->
                     <input
                         type="text"
                         id="name"
+                        class="controls"
                         name="name"
                         minlength="2"
                         maxlength="25"
@@ -54,6 +56,7 @@
                     <input
                         type="text"
                         id="last_name"
+                        class="controls"
                         name="last_name"
                         minlength="2"
                         maxlength="25"
@@ -68,6 +71,7 @@
                     <input
                         type="email"
                         id="email"
+                        class="controls"
                         name="email"
                         minlength="6"
                         maxlength="60"
@@ -76,7 +80,8 @@
 
                     <input
                         type="email"
-                        id="email"
+                        id="confirmEmail"
+                        class="controls"
                         name="email"
                         minlength="6"
                         maxlength="60"
@@ -91,13 +96,15 @@
                     <input
                         type="password"
                         id="password"
+                        class="controls"
                         minlength="8"
                         maxlength="12"
                         placeholder="Ingresa tu contraseña..."
                     />
                     <input
                         type="password"
-                        id="password"
+                        id="confirmPassword"
+                        class="controls"
                         minlength="8"
                         maxlength="12"
                         placeholder="Confirma tu contraseña..."
@@ -175,8 +182,8 @@
                 <br />
 
                 <div id="formRegistroDivBotonesEnviarYBorrar">
-                    <input type="submit" />
-                    <input type="reset" value="Borrar todo" />
+                    <input type="submit" class="buttons"/>
+                    <input type="reset" value="Borrar todo" class="buttons"/>
                 </div>
             </form>
         </main>
