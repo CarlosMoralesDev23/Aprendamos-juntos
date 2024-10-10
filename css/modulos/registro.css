@@ -1,19 +1,49 @@
-#formRegistro{
+#formRegistro {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
     width: 600px;
-    background-color: #090A31;
+    background-color: #090a31;
     padding: 30px;
     margin: auto;
-    margin-top: 60px;
+    margin-top: 40px;
     border-radius: 8px;
     font-family: sans-serif;
     color: white;
 
-    h2{
+    h2 {
         font-size: 22px;
         margin-bottom: 20px;
         text-align: center;
     }
 
+    div {
+        & .controls {
+            width: 45%;
+            padding: 7px;
+            margin: 5px 7px 8px 15px ;
+            border: 2.3px solid #06E224;
+            border-radius: 8px;
+        }
+    }
+}
 
+#formRegistro {
+    & #formRegistroDivTemaPreferidoParaPrcticar {
+        h4 {
+            margin-bottom: 2px;
+        }
 
+        p {
+            margin-bottom: 10px;
+        }
+
+        input {
+            margin-right: 13px;
+            margin-left: 1px;
+            /* TODO Centrar-alinear con la palabra */
+        }
+    }
 }

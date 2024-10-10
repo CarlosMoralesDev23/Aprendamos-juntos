@@ -1,9 +1,16 @@
 footer {
-    background-color: #0084ea;
+    background-color: #090A31;
+    color: white;
     text-align: center;
 
     img {
         width: 50px;
         height: 50px;
+    }
+
+    p{
+        a{
+            color: white;
+        }
     }
 }
