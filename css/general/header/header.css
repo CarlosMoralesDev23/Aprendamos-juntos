@@ -1,13 +1,15 @@
 header {
-    background-color: #0084ea;
-    background-color: #090A31;
+    background-color: #010d23;
+    border-bottom: 2px solid #fccb6f;
+    border-radius: 0px 0px 10px 10px;
+    height: 135px;
+    
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: space-around;
-    padding: 25px;
+    color: #f8f8ec;
 
-    
     
     img{
         width: 50px;
@@ -15,24 +17,39 @@ header {
     }
 
     h1{
-        color: white;
         font-size: 36px;
+        letter-spacing: 1.7px;
+        text-decoration: underline 3px solid  #fccb6f;
+        text-underline-offset: 10px;
     }
 
     nav {
+        width: 600px;
         ul {
             display: flex;
-            gap: 8px;
+            justify-content: space-between;
             li {
                 list-style: none;
                 a {
                     font-weight: bold;
                     text-decoration: none;
-                    color: white;
+                    color: #f8f8ec;
+                    letter-spacing: 1px;
+                    cursor: pointer;
+
+                    &:hover{
+                        color: #fccb6f;
+                        font-size: 16.5px;
+                        border: 1px solid #fccb6f;
+                        border-radius: 13px;
+                        padding: 13px;
+
+                    }
                 }
             }
         }
     }
 }
 
+/* TODO quitar el efecto de que cuando crezca una palabra las demas se alteren.  */
 /*TODO ARREGLAR EL NESTIN DE HEADER A IMG por id */

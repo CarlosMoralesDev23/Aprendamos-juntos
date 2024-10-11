@@ -1,4 +1,6 @@
+@import './componentes_main/mainDePracticas.css';
+
 main {
-    background-color: #00daf5;
-    padding: 20px;
+    background-color: #038bbb;
+    padding: 25px;
 }
