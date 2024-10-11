@@ -1,23 +1,44 @@
+.mainDePracticarVerbosEnPasado {
+    #niveles {
+        display: flex;
+        justify-content: space-between;
+        flex-wrap: wrap;
 
+        height: 500px;
+        padding: 10px;
 
+        border-bottom: 3px solid #fccb6f;
 
+        .cajaNiveles {
+            background-color: #03223f;
+            border: 4px solid #fccb6f;
+            height: 80px;
+            width: 80px;
+            margin: 50px;
+            padding: 50px;
+            font-size: 16px;
+            text-align: center;
+            border-radius: 13px;
 
+            display: flex;
+            justify-content: center;
+            align-items: center;
 
-#niveles{
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
+            a {
+                color: white;
+                text-decoration: none;
+            }
+        }
+    }
 
-    height: 500px;
-    padding: 10px;
-
-    .cajaNiveles{
+    #modalPracticaVerbo {
         background-color: #03223f;
         border: 4px solid #fccb6f;
         color: white;
-        height: 80px;
-        width:  80px;
-        margin: 50px;
+
+        width: 60%;
+        margin: auto;
+        margin-top: 20px;
         padding: 50px;
         font-size: 16px;
         text-align: center;
@@ -25,8 +46,60 @@
         border-radius: 13px;
 
         display: flex;
+        flex-direction: column;
         justify-content: center;
         align-items: center;
+        gap: 30px;
 
+        #verboPregunta {
+            h3 {
+                font-size: 26px;
+                margin-bottom: 10px;
+            }
+
+            img {
+                width: 80px;
+                border-radius: 10px;
+            }
+        }
+
+        #opcionesDeVerboPregunta {
+            width: 80%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            button {
+                font-size: 15px;
+                padding: 12px;
+                color: #f8f8ec;
+                border: 2px solid #fccb6f;
+                border-radius: 10px;
+
+                background-color: #038bbb;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
+
+        #verificarYAvanzar {
+            button {
+                font-size: 15px;
+                font-weight: bold;
+                padding: 12px;
+                color: #f8f8ec;
+                border: 2px solid #038bbb;
+                border-radius: 10px;
+
+                background-color: #fad928;
+                color: #03223f;
+
+                &:hover {
+                    cursor: pointer;
+                }
+            }
+        }
     }
 }
