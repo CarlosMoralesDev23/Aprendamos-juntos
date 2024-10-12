@@ -1,37 +1,77 @@
 aside {
-    background-color: #3a8ba9;
+    background-color: var(--color-fondoAside);
     width: 20%;
-    padding: 15px;
-    /* del main que lo contiene */
+    height: fit-content;
+
     margin-left: 50px;
+    padding: 10px;
+
     border-radius: 15px;
     text-align: center;
 
     display: flex;
     flex-direction: column;
-    gap: 30px;
+    gap: 45px;
 
-    h3 {
+    #tituloAside {
         color: var(--color-texto-blanco);
-        text-align: center;
-        font-weight: bold;
-        font-size: 24px;
-        background-color: var(--color-aside);
-        padding: 5px;
-        border-radius: 10px;
-        color: var(--color-header-footer-textoOscuro);
+        background-color: var(--color-fondoOscuro);
+        font-size: 18px;
+        width: 100%;
+        margin-top: 15px;
+        padding: 4px;
+        border-radius: 8px;
     }
 
-    .pacho8a {
+    #sectionPacho8aYoutube {
         display: flex;
         flex-direction: column;
-        gap: 25px;
+        gap: 10px;
 
-        iframe{
+        h4 {
+            color: var(--color-textoOscuro);
+            background-color: var(--color-fondoBlanco);
+            font-size: 16px;
+            width: fit-content;
             margin: auto;
+            padding: 5px;
+            border-radius: 8px;
         }
+
+        a {
+            color: var(--color-textoOscuro);
+            text-decoration: none;
+        }
+
+        iframe {
+            margin: auto;
+            width: 200px;
+            height: 150px;
+        }
+    }
+
+    #sectionPacho8aSitioWeb {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+            color: var(--color-textoOscuro);
+            background-color: var(--color-fondoBlanco);
+            font-size: 16px;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
         img {
-            width: 150px;
+            width: 125px;
+        }
+
+        a {
+            color: var(--color-textoOscuro);
+            text-decoration: none;
         }
     }
 }
