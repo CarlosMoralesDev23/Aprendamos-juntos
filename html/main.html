@@ -40,9 +40,24 @@
         </header>
 
         <main class="mainDePracticarVerbosEnPasado">
-            <div class="cajaDeTitulosEnMainDePracticarVerbosEnPasado">
+            <div id="cajaDeTitulosEnMainDePracticarVerbosEnPasado">
                 <h2>Practiquemos</h2>
                 <h3>Avancemos por frecuencia de su uso en la vida cotidiana</h3>
+
+                <div id="cajaInstrucciones">
+                    <h4>Instrucciones</h4>
+                    <ol>
+                        <li>
+                            Pactica los verbos en ingles en simple past, en orden de frecuencia de uso.
+                        </li>
+                        <li>En cada nivel sumaremos 10 verbos, a los acumulados anteriormente.</li>
+                        <li>Los verbos y opciones, apareceran de forma aleatoria</li>
+                        <li>Deberas seleccionar el verbo correcto y automaticamente avanza al siguiente verbo</li>
+                        <li>Solo apruebas cada nivel con el 95%</li>
+                        <li>Si te queivocas en algunos verbos, los mismo se repetiran al final tantas veces como te equivoques </li>
+                        <li>Los niveles siguientes solo se debloquean cuando apruebas el 100% del anterior</li>
+                    </ol>
+                </div>
             </div>
 
             <div id="niveles">
@@ -85,11 +100,11 @@
                 </div>
 
                 <div id="opcionesDeVerboPregunta">
-                    <button value="Walkedd">Walkedd</button>
+                    <button value="Walkedd" class="incorrecta">Walkedd</button>
 
-                    <button value="Walked">Walked</button>
+                    <button value="Walked" class="correcta">Walked</button>
 
-                    <button value="Walkood">Walkood</button>
+                    <button value="Walkood" class="incorrecta">Walkood</button>
                 </div>
 
                 <!-- <div id="verificarYAvanzar">
