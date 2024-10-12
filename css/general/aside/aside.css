@@ -1,9 +1,33 @@
 aside {
-    background-color: #ffe06c;
-    padding: 20px;
+    background-color: #3a8ba9;
+    width: 20%;
+    padding: 15px;
+    /* del main que lo contiene */
+    margin-left: 50px;
+    border-radius: 15px;
+    text-align: center;
 
-    img {
-        width: 100px;
-        height: 100px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+
+    h3 {
+        color: var(--color-texto-blanco);
+        text-align: center;
+        font-weight: bold;
+        font-size: 24px;
+    }
+
+    .pacho8a {
+        display: flex;
+        flex-direction: column;
+        gap: 25px;
+
+        iframe{
+            margin: auto;
+        }
+        img {
+            width: 150px;
+        }
     }
 }
