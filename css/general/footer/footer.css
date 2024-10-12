@@ -1,16 +1,37 @@
 footer {
+    padding: 30px;
     background-color: #010d23;
     color: white;
     text-align: center;
 
-    img {
-        width: 50px;
-        height: 50px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+
+    #footerSecciones {
+
+        margin: auto;
+        width: 80%;
+
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 40px;
+        flex-wrap: wrap;
+
+        section {
+            margin: auto;
+            width: 20%;
+
+            img {
+                width: 40px;
+                height: 40px;
+            }
+        }
     }
 
-    p{
-        a{
-            color: white;
-        }
+    a {
+        color: white;
     }
 }
