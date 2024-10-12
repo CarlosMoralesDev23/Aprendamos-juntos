@@ -16,6 +16,10 @@ aside {
         text-align: center;
         font-weight: bold;
         font-size: 24px;
+        background-color: var(--color-aside);
+        padding: 5px;
+        border-radius: 10px;
+        color: var(--color-header-footer-textoOscuro);
     }
 
     .pacho8a {
