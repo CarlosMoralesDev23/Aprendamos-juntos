@@ -1,0 +1,32 @@
+:root {
+    --color-header-footer: #010d23;
+    --color-main: #038bbb;
+    --color-niveles: #03223f;
+    --color-bordes: #fccb6f;
+    --color-texto-blanco: #f8f8ec;
+    --color-aside: #e19f41;
+}
+
+.colorHeaderYFooter {
+    color: var(--color-header-footer);
+}
+
+.colorMain {
+    color: var(--color-main);
+}
+
+.colorNiveles {
+    color: var(--color-niveles);
+}
+
+.colorBordes {
+    color: var(--color-bordes);
+}
+
+.colorTextoBlanco {
+    color: var(--color-texto-blanco);
+}
+
+.colorAside {
+    color: var(--color-aside);
+}

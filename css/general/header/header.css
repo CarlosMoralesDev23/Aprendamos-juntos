@@ -1,5 +1,5 @@
 header {
-    background-color: #010d23;
+    background-color: var(--color-header-footer);    
     border-bottom: 2px solid #fccb6f;
     border-radius: 0px 0px 10px 10px;
     height: 135px;

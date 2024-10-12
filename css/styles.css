@@ -1,41 +1,18 @@
-@import 'general/body/body.css';
-@import 'general/header/header.css';
-@import 'general/main/main.css';
-@import 'general/aside/aside.css';
-@import 'general/footer/footer.css';
+
+/** Estilos de los colores */
+@import './colores.css';
+
+/** Estilos Generales para todas las paginas del sitio web */
+@import './general/main_y_body/main_y_body.css';
+@import './general/header/header.css';
+@import './general/aside/aside.css';
+@import './general/footer/footer.css';
 
 
-
-/* Modulos */
-@import 'modulos/registro.css';
-
-
-
-
-.colorHeaderYFooter{
-    color: #010d23;
-}
-
-.colorMain{
-    color :#038bbb ;
-}
-
-.colorNiveles{
-    color : #03223f ;
-}
-
-.colorBordes{
-    color :#fccb6f ;
-}
-.colorTextoBlanco{
-    color : #f8f8ec ;
-}
-
-.colorAside{
-    color: #e19f41
-}
-
-
-body{
-    background-color: #038bbb;
-}
+/** Estilos para cada pagina del sitio web */
+@import './paginas/inicio/inicio.css';
+@import './paginas/quien_soy/quien_soy.css';
+@import './paginas/verbos/verbos.css';
+@import './paginas/vocabulario/vocabulario.css';
+@import './paginas/inicio/inicio.css';
+@import './paginas/registro/registro.css';
