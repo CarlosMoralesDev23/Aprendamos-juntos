@@ -1,17 +1,19 @@
 :root {
-    --color-textoOscuro  : #010d23;
-    --color-texto-blanco:  #f8f8ec;
-    
-    
     --color-body:          #038bbb;
     --color-header-footer: #010d23;
     --color-main:          #038bbb;
-    --color-fondoAside:    #3A8BA9;
-    
-    --color-bordes-paraFondoOscuro: #fccb6f;
+    --color-aside:         #3A8BA9;
 
+
+    --color-texto-oscuro:  #010d23;
+    --color-texto-blanco:  #f8f8ec;
+    --color-texto-dorado:  #fccb6f;
     
-    --color-fondoOscuro: #010d23;
-    --color-fondoBlanco:  #f8f8ec;
-    --color-fondoCajaNiveles:       #03223f;
+    --color-borde-dorado:  #fccb6f;
+
+
+    --color-fondo-oscuro:    #010d23;
+    --color-fondo-blanco:    #f8f8ec;
+
+    --color-subrayado-dorado:#fccb6f; 
 }

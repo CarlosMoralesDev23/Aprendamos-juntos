@@ -8,12 +8,28 @@
     width: 95%;
     margin: auto;
 
+    #menuDeContenidosTeoricos {
+        background-color: var(--color-fondoAside);
+        width: 10%;
+        height: fit-content;
 
+        margin-left: 50px;
+        padding: 10px;
+
+        border-radius: 15px;
+        text-align: center;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+    }
 
     .practica {
         width: 80%;
         #cajaDeTitulosEnMainDePracticarVerbosEnPasado {
-            width: 90%;
+            width: 70%;
             display: flex;
             flex-direction: column;
             gap: 5px;
