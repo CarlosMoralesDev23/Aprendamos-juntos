@@ -1,0 +1,28 @@
+    #menuDeContenidosTeoricos {
+        width: 15%;
+        height: auto;
+        text-align: center;
+        
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        
+        
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+            
+            li {
+                list-style: none;
+                a {
+                    color: var(--color-texto-blanco);
+                    background-color: var(--color-fondo-oscuro);
+                    text-decoration: none;
+                    padding: 0.625rem;
+                    border-radius: 5px;
+                    display: block;
+                }
+            }
+        }
+    }

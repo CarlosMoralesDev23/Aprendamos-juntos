@@ -3,7 +3,7 @@ header {
     color: var(--color-texto-blanco);
     width: 100%;
     height: auto;
-    margin-bottom: 1.25rem;
+    margin-bottom: 1.5rem;
     padding: 1.6875rem 1.5625rem 1.6875rem 1.5625rem;
     border-bottom: 0.1875rem solid var(--color-borde-dorado);
     border-radius: 0rem 0rem 0.4375rem 0.4375rem;
@@ -30,7 +30,7 @@ header {
     }
 
     nav {
-        width: 21.875rem;
+        width: 21rem;
         ul {
             display: flex;
             justify-content: space-between;

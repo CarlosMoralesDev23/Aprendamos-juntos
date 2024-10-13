@@ -1,12 +1,12 @@
 aside {
+    border: 1px solid white;
+
     background-color: var(--color-fondoAside);
-    width: 20%;
+    width: 15%;
     height: fit-content;
-
-    margin-left: 50px;
     padding: 10px;
+    padding-top: 0px;
 
-    border-radius: 15px;
     text-align: center;
 
     display: flex;
@@ -18,7 +18,7 @@ aside {
         background-color: var(--color-fondoOscuro);
         font-size: 18px;
         width: 100%;
-        margin-top: 15px;
+        /* margin-top: 15px; */
         padding: 4px;
         border-radius: 8px;
     }
