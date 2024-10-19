@@ -4,7 +4,7 @@ header {
     width: 100%;
     height: auto;
     margin-bottom: 1.5rem;
-    padding: 22px 20px;
+    padding: 21px 20px;
     border-bottom: 0.1875rem solid var(--color-borde-dorado);
     border-radius: 0rem 0rem 0.4375rem 0.4375rem;
 
@@ -13,7 +13,6 @@ header {
     justify-content: space-between;
 
     #logos {
-        border: 1px solid white;
         width: 20%;
         img {
             width: 4.6875rem;
@@ -22,7 +21,6 @@ header {
     }
     
     h1 {
-        border: 1px solid white;
         a {
             color: var(--color-texto-blanco);
             font-size: 2.5rem;
@@ -33,7 +31,6 @@ header {
     }
     
     nav {
-        border: 1px solid white;
         width: 20%;
         ul {
             display: flex;
