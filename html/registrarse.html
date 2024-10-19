@@ -46,8 +46,8 @@
             <form action="" id="formRegistro">
                 <h2>Formulario de Registrarse</h2>
 
-                <div id="formRegistroDivNombreYApellido">
-                    <!-- NOMBRE -->
+                <div id="contenedorInputWrite">
+
                     <input
                         type="text"
                         id="name"
@@ -58,7 +58,6 @@
                         placeholder="Ingresa tu nombre..."
                     />
 
-                    <!-- APELLIDO -->
                     <input
                         type="text"
                         id="last_name"
@@ -68,12 +67,7 @@
                         maxlength="25"
                         placeholder="Ingresa tu apellido..."
                     />
-                </div>
 
-                <br />
-
-                <div id="formRegistroDivEmail">
-                    <!-- EMAIL -->
                     <input
                         type="email"
                         id="email"
@@ -84,6 +78,7 @@
                         placeholder="Ingresa tu correo..."
                     />
 
+
                     <input
                         type="email"
                         id="confirmEmail"
@@ -93,12 +88,8 @@
                         maxlength="60"
                         placeholder="Confirma tu correo..."
                     />
-                </div>
 
-                <br />
 
-                <div id="formRegistroDivPassword">
-                    <!-- PASSWORD -->
                     <input
                         type="password"
                         id="password"
@@ -107,6 +98,7 @@
                         maxlength="12"
                         placeholder="Ingresa tu contraseña..."
                     />
+
                     <input
                         type="password"
                         id="confirmPassword"
@@ -116,84 +108,96 @@
                         placeholder="Confirma tu contraseña..."
                     />
                 </div>
-                <br />
 
-                <div id="formRegistroDivTemaPreferidoParaPrcticar">
+                <div id="contenedorFormSeleccionTemas">
                     <!-- ELEGIR TEMA -->
                     <h4>Areas en las que quieres enfocarte</h4>
                     <p>(Podes elegir 2, o general)</p>
 
-                    
-                    <label for="opcionTemaTecnologia">Tecnologia</label>
-                    <input
-                        type="checkbox"
-                        name="temasParaPracticar"
-                        id="opcionTemaTecnologia"
-                        class="temaPreferidoParaPrcticar"
-                    />
-                    
-                    <label for="opcionTemaGastronomia">Gastronomia</label>
-                    <input
-                        type="checkbox"
-                        name="temasParaPracticar"
-                        id="opcionTemaGastronomia"
-                        class="temaPreferidoParaPrcticar"
-                    />
-                    
-                    <label for="opcionTemaViaje">Viaje</label>
-                    <input
-                        type="checkbox"
-                        name="temasParaPracticar"
-                        id="opcionTemaViaje"
-                        class="temaPreferidoParaPrcticar"
-                    />
-                    
-                    <label for="opcionTemaDeportes">Deportes</label>
-                    <input
-                        type="checkbox"
-                        name="temasParaPracticar"
-                        id="opcionTemaDeportes"
-                        class="temaPreferidoParaPrcticar"
-                    />
-                    
-                    <label for="opcionTemaGeneral">General</label>
-                    <input
-                        type="checkbox"
-                        name="temasParaPracticar"
-                        id="opcionTemaGeneral"
-                        class="temaPreferidoParaPrcticar"
-                    />
-                    
+                    <div id="contenedorOpcionesTematicas">
+                        <div>
+                            <label for="opcionTemaTecnologia">Tecnologia</label>
+                            <input
+                                type="checkbox"
+                                name="temasParaPracticar"
+                                id="opcionTemaTecnologia"
+                                class="temaPreferidoParaPrcticar"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="opcionTemaGastronomia">Gastronomia</label>
+                            <input
+                                type="checkbox"
+                                name="temasParaPracticar"
+                                id="opcionTemaGastronomia"
+                                class="temaPreferidoParaPrcticar"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="opcionTemaViaje">Viaje</label>
+                            <input
+                                type="checkbox"
+                                name="temasParaPracticar"
+                                id="opcionTemaViaje"
+                                class="temaPreferidoParaPrcticar"
+                            />
+                        </div>
+
+
+                        <div>
+                            <label for="opcionTemaDeportes">Deportes</label>
+                            <input
+                                type="checkbox"
+                                name="temasParaPracticar"
+                                id="opcionTemaDeportes"
+                                class="temaPreferidoParaPrcticar"
+                            />
+                        </div>
+
+                        <div>
+                            <label for="opcionTemaGeneral">General</label>
+                            <input
+                                type="checkbox"
+                                name="temasParaPracticar"
+                                id="opcionTemaGeneral"
+                                class="temaPreferidoParaPrcticar"
+                            />
+                        </div>
+                    </div>
                 </div>
-                <br />
 
-                <div id="formRegistroDivGenero">
-                    <!-- GENERO -->
-                    <label for="genero">Genero</label>
-
-                    <select name="" id="genero">
-                        <option value="niño"       >Niñ@</option>
-                        <option value="adolescente">Adolescente</option>
-                        <option value="mujer"      >Mujer</option>
-                        <option value="hombre"     >Hombre</option>
-                    </select>
-                </div>
-                <br />
-
-                <div id="formRegistroDivRangoDeEdad">
+                <div id="contenedorFormRangoDeEdad">
                     <!-- RANGO DE EDAD -->
                     <h4>Elige el rango de tu edad</h4>
 
-                    <input type="radio" name="edad" id="de4A11"    class="rangoDeEdad" />4-11
-                    <input type="radio" name="edad" id="de12A17"   class="rangoDeEdad" />12-17
-                    <input type="radio" name="edad" id="de18A30"   class="rangoDeEdad" />18-30
-                    <input type="radio" name="edad" id="de30A45"   class="rangoDeEdad" />30-45
-                    <input type="radio" name="edad" id="de30A60"   class="rangoDeEdad" />45-60
-                    <input type="radio" name="edad" id="de60A120"  class="rangoDeEdad" />60-120
+                    <div id="OpcionesDeEdad">
+                        
+                        <div>
+                            <label for="de4A11">4-11</label>
+                            <input type="radio" name="edad" id="de4A11"    class="rangoDeEdad" />
+                        </div>
+                        <div>
+                            <label for="de12A17">12-17</label>
+                            <input type="radio" name="edad" id="de12A17"   class="rangoDeEdad" />
+                        </div>
+                        <div>
+                            <label for="de18A30">18-30</label>
+                            <input type="radio" name="edad" id="de18A30"   class="rangoDeEdad" />
+                        </div>
+                        <div>
+                            <label for="de30A45">30-45</label>
+                            <input type="radio" name="edad" id="de30A45"   class="rangoDeEdad" />
+                        </div>
+                        <div>
+                            <label for="de45A100">45-99</label>
+                            <input type="radio" name="edad" id="de30A60"   class="rangoDeEdad" />
+                        </div>
+                    </div>
                 </div>
-                <br />
 
-                <div id="formRegistroDivBotonesEnviarYBorrar">
+                <div id="contenedorFormBotonesEnviarYBorrar">
                     <input type="submit" class="buttons"/>
                     <input type="reset" value="Borrar todo" class="buttons"/>
                 </div>
