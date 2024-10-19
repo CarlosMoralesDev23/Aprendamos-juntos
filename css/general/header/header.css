@@ -45,7 +45,7 @@ header {
 
                     &:hover {
                         color: var(--color-texto-dorado);
-                        font-size: 1.02rem;
+                        font-size: 1.01rem;
                         text-decoration: underline 0.075rem
                             var(--color-subrayado-dorado);
                         text-underline-offset: 0.375rem;
