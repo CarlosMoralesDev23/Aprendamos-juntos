@@ -2,7 +2,7 @@
     width: 50%;
     margin: 50px auto;
 
-    padding: 20px;
+    padding: 25px;
     background-color: #090a31;
     border: 5px solid var(--color-borde-dorado);
     border-radius: 14px;
@@ -89,6 +89,12 @@
         text-align: center;
         gap: 10px;
 
+        h4 {
+            font-size: 20px;
+            margin-bottom: 4px;
+            text-align: center;
+        }
+
         #OpcionesDeEdad {
             display: flex;
             gap: 18px;
@@ -124,6 +130,11 @@
             &[type="reset"] {
                 background-color: red;
                 color: white;
+            }
+
+            &:hover {
+                scale: 1.15;
+                cursor: pointer;
             }
         }
     }
