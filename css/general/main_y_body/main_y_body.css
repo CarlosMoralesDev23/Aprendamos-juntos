@@ -14,3 +14,8 @@ main {
     padding: 0px 15px;
 }
 
+#main-login {
+    height: 60vh;
+}
+
+/* TODO Sacar este codigo del main-login cuando se pase el login al main */

@@ -15,5 +15,5 @@
 @import './paginas/quien_soy/quien_soy.css';
 @import './paginas/verbos/verbos.css';
 @import './paginas/vocabulario/vocabulario.css';
-@import './paginas/inicio/inicio.css';
 @import './paginas/registro/registro.css';
+@import './paginas/login/login.css'
