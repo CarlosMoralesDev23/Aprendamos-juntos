@@ -1,21 +1,18 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-body{
+body {
     background-color: #038bbb;
-    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+        "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
 }
 
 main {
     width: 100%;
     padding: 0px 15px;
+    position: relative;
+    /* TODO El position relative del login quizas se saca cuando lo trabaje en css */
 }
-
-#main-login {
-    height: 60vh;
-}
-
-/* TODO Sacar este codigo del main-login cuando se pase el login al main */
