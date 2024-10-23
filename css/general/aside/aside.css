@@ -1,6 +1,4 @@
 aside {
-
-    background-color: var(--color-fondoAside);
     width: 15%;
     height: fit-content;
     padding: 10px;
@@ -13,11 +11,8 @@ aside {
     gap: 45px;
 
     #tituloAside {
-        color: var(--color-texto-blanco);
-        background-color: var(--color-fondoOscuro);
         font-size: 18px;
         width: 100%;
-        /* margin-top: 15px; */
         padding: 4px;
         border-radius: 8px;
     }
@@ -28,8 +23,6 @@ aside {
         gap: 10px;
 
         h4 {
-            color: var(--color-textoOscuro);
-            background-color: var(--color-fondoBlanco);
             font-size: 16px;
             width: fit-content;
             margin: auto;
@@ -38,7 +31,7 @@ aside {
         }
 
         a {
-            color: var(--color-textoOscuro);
+            color: var(--color-texto-blanco);
             text-decoration: none;
         }
 
@@ -55,8 +48,6 @@ aside {
         gap: 10px;
 
         h4 {
-            color: var(--color-textoOscuro);
-            background-color: var(--color-fondoBlanco);
             font-size: 16px;
             width: fit-content;
             margin: auto;
@@ -69,7 +60,7 @@ aside {
         }
 
         a {
-            color: var(--color-textoOscuro);
+            color: var(--color-texto-blanco);
             text-decoration: none;
         }
     }

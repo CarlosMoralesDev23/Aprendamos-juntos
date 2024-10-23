@@ -6,8 +6,8 @@
 
 body {
     background-color: #010d23;
+    color: var(--color-texto-blanco);
     font-family: "Poppins", sans-serif;
-    font-weight: 100;
     font-style: normal;
 }
 
