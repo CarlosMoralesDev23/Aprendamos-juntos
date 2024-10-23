@@ -19,3 +19,11 @@
 
     --color-subrayado-dorado:#fccb6f; 
 }
+
+.sonCincoColores{
+    color: #038bbb;
+    color: #010d23;
+    color: #3A8BA9;
+    color: #f8f8ec;
+    color: #fccb6f;
+}
