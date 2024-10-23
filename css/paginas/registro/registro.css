@@ -7,7 +7,7 @@
     border: 0.1875rem solid var(--color-borde-dorado);
     border-radius: 0.875rem;
     font-family: sans-serif;
-    color: var(--color-texto-blanco);
+    color: var(--color-texto-principal);
 
     display: flex;
     flex-direction: column;
@@ -71,7 +71,7 @@
                 display: flex;
                 gap: 0.3125rem;
 
-                &:nth-child(3){
+                &:nth-child(3) {
                     margin-left: 0.75rem;
                 }
 

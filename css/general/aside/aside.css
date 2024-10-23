@@ -31,7 +31,7 @@ aside {
         }
 
         a {
-            color: var(--color-texto-blanco);
+            color: var(--color-texto-principal);
             text-decoration: none;
         }
 
@@ -60,7 +60,7 @@ aside {
         }
 
         a {
-            color: var(--color-texto-blanco);
+            color: var(--color-texto-principal);
             text-decoration: none;
         }
     }

@@ -6,9 +6,7 @@ footer {
     flex-direction: column;
     gap: 20px;
 
-
     #footerSecciones {
-
         margin: auto;
         width: 80%;
 
@@ -30,6 +28,6 @@ footer {
     }
 
     a {
-        color: var(--color-texto-blanco)
+        color: var(--color-texto-principal);
     }
 }

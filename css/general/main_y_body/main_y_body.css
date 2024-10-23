@@ -6,7 +6,7 @@
 
 body {
     background-color: #010d23;
-    color: var(--color-texto-blanco);
+    color: var(--color-texto-principal);
     font-family: "Poppins", sans-serif;
     font-style: normal;
 }

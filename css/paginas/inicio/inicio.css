@@ -81,7 +81,7 @@
                 align-items: center;
 
                 a {
-                    color: var(--color-texto-blanco);
+                    color: var(--color-texto-principal);
                     text-decoration: none;
                 }
             }
@@ -89,9 +89,9 @@
             .cajaNivelPlus {
                 background-color: var(--color-fondo-oscuro);
                 border: 3px solid var(--color-borde-dorado);
-                
+
                 a {
-                    color: var(--color-texto-blanco);
+                    color: var(--color-texto-principal);
                     text-decoration: none;
                     font-weight: bold;
                 }
@@ -164,7 +164,7 @@
                     font-size: 0.9375rem;
                     font-weight: bold;
                     padding: 0.75rem;
-                    color: var(--color-texto-blanco);
+                    color: var(--color-texto-principal);
 
                     border: 0.125rem solid var(--color-borde-dorado);
                     border-radius: 10px;
