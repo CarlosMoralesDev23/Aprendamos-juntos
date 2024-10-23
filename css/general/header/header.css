@@ -46,7 +46,7 @@ header {
                     cursor: pointer;
 
                     &:hover {
-                        color: var(--color-texto-dorado);
+                        color: var(--color-texto-terciario);
                         font-size: 1.01rem;
                         text-decoration: underline 0.075rem
                             var(--color-subrayado-dorado);
