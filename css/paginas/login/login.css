@@ -3,11 +3,9 @@
     margin: auto;
 
     padding: 10px;
-    background-color: #090a31;
+    background-color: var(--color-fondo-oscuro);
     border: 0.1875rem solid var(--color-borde-dorado);
     border-radius: 0.875rem;
-    font-family: sans-serif;
-    color: var(--color-texto-blanco);
 
     display: flex;
     flex-direction: column;
@@ -18,7 +16,7 @@
     top: 0px; /* Ajustar según tus necesidades */
     right: 250px; /* Ajustar para moverlo a la esquina superior derecha */
 
-    opacity: 0.02;
+    opacity: 0.001;
 
     /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
 
@@ -66,12 +64,12 @@
 
             &[type="submit"] {
                 background-color: green;
-                color: white;
+                color: var(--color--texto-blanco);
             }
-
+            
             &[type="reset"] {
                 background-color: red;
-                color: white;
+                color: var(--color--texto-blanco);
             }
 
             &:hover {

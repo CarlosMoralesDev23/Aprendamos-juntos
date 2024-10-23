@@ -3,7 +3,7 @@
     margin: 2.5rem auto;
 
     padding: 0.9375rem 0rem;
-    background-color: #090a31;
+    background-color: var(--color-fondo-oscuro);
     border: 0.1875rem solid var(--color-borde-dorado);
     border-radius: 0.875rem;
     font-family: sans-serif;
