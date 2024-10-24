@@ -3,8 +3,8 @@
     margin: 2.5rem auto;
 
     padding: 0.9375rem 0rem;
-    background-color: var(--color-fondo-oscuro);
-    border: 0.1875rem solid var(--color-borde-dorado);
+    background-color: var(--color-fondo-principal);
+    border: 0.1875rem solid var(--color-borde-principal);
     border-radius: 0.875rem;
     font-family: sans-serif;
     color: var(--color-texto-principal);
@@ -35,7 +35,7 @@
         input {
             width: 45%;
             padding: 0.4375rem;
-            border: 0.1875rem solid var(--color-borde-dorado);
+            border: 0.1875rem solid var(--color-borde-principal);
             border-radius: 0.5rem;
         }
     }
@@ -123,7 +123,7 @@
             border-radius: 0.5rem;
             font-size: 1rem;
             font-weight: bold;
-            border: 0.1563rem solid var(--color-borde-dorado);
+            border: 0.1563rem solid var(--color-borde-principal);
 
             &[type="submit"] {
                 background-color: green;

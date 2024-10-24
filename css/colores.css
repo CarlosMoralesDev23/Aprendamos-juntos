@@ -1,27 +1,27 @@
 :root {
     --color-body: #010d23;
 
-    --color-texto-principal: #f8f8ec;
+    --color-texto-principal: #7fdbf4;
     --color-texto-secundario: #010d23;
     --color-texto-terciario: #ffd48b;
 
-    --color-borde-dorado: #ffd48b;
-    --color-borde-oscuro: #010d23;
-    --color-borde-blanco: #f8f8ec;
+    --color-borde-principal: #ffd48b;
+    --color-borde-secundario: #010d23;
+    --color-borde-terciario: #7fdbf4;
 
-    --color-fondo-oscuro: #010d23;
-    --color-fondo-blanco: #f8f8ec;
-    --color-fondo-dorado: #ffd48b;
+    --color-fondo-principal: #010d23;
+    --color-fondo-secundario: #7fdbf4;
+    ---color-fondo-terciario: #ffd48b;
 
-    --color-subrayado-dorado: #ffd48b;
+    --color-subrayado-principal: #ffd48b;
 }
 
 .sonCincoColores {
     color: #010d23;
     color: #ffd48b;
-    color: #f8f8ec;
-
-    color: #08afe9;
     color: #7fdbf4;
+    
+    color: #f8f8ec;
+    color: #08afe9;
     color: #f65e55;
 }

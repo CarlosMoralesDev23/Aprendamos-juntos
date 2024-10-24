@@ -3,8 +3,8 @@
     margin: auto;
 
     padding: 10px;
-    background-color: var(--color-fondo-oscuro);
-    border: 0.1875rem solid var(--color-borde-dorado);
+    background-color: var(--color-fondo-principal);
+    border: 0.1875rem solid var(--color-borde-principal);
     border-radius: 0.875rem;
 
     display: flex;
@@ -16,7 +16,7 @@
     top: 0px; /* Ajustar según tus necesidades */
     right: 250px; /* Ajustar para moverlo a la esquina superior derecha */
 
-    opacity: 0.001;
+    /* opacity: 0.001; */
 
     /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
 
@@ -45,7 +45,7 @@
         input {
             width: 100%;
             padding: 7px;
-            border: 0.1875rem solid var(--color-borde-dorado);
+            border: 0.1875rem solid var(--color-borde-principal);
             border-radius: 0.5rem;
         }
     }
@@ -60,13 +60,13 @@
             border-radius: 0.5rem;
             font-size: 1rem;
             font-weight: bold;
-            border: 0.1563rem solid var(--color-borde-dorado);
+            border: 0.1563rem solid var(--color-borde-principal);
 
             &[type="submit"] {
                 background-color: green;
                 color: var(--color--texto-blanco);
             }
-            
+
             &[type="reset"] {
                 background-color: red;
                 color: var(--color--texto-blanco);
