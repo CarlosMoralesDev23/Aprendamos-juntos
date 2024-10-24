@@ -17,10 +17,15 @@
 }
 
 .sonCincoColores {
+    /* Estos son los que se estan usando */
     color: #010d23;
     color: #ffd48b;
     color: #7fdbf4;
     
+    
+    
+    
+    /* Estos no s eestan usando pero estan standby porque son parte de la paleta de colores, quizas sean necesarios */
     color: #f8f8ec;
     color: #08afe9;
     color: #f65e55;
