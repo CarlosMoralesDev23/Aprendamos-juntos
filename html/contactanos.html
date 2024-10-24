@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="../css/styles.css" />
+        <title>Verbos Irregulares</title>
+    </head>
+    <body>
+        <header id="header">
+
+            <div id="logos">
+                <!-- colocar mi logo -->
+                <img
+                    id="headerLogoPersonal"
+                    src="/img/mi_logo_personal.png"
+                    alt="Logo personal de Carlos Morales"
+                />
+
+                <!-- colocar imagen de ingles -->
+                <img
+                    id="headerLogoLibroEnglish"
+                    src="/img/libro_de_ingles.png"
+                    alt="imagen de un libro en ingles"
+                />
+            </div>
+
+
+            
+            <h1><a href="../public/index.html">Past Verb Pro</a></h1>
+
+
+            <nav>
+                <ul>
+                    <li><a href="../public/index.html">Home</a></li>
+                    <li><a href="./soy.html">About me</a></li>
+                    <li><a href="#formLogin">Login</a></li>
+                    <li><a href="./registrarse.html">Sign up</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main>
+
+            <form action="" id="formLogin">
+                <h2>Login</h2>
+
+                <div id="contenedorInputWrite">
+
+                    
+                    <input
+                        type="email"
+                        id="email"
+                        class="controls"
+                        name="email"
+                        minlength="6"
+                        maxlength="60"
+                        placeholder="Ingresa tu correo..."
+                    />
+
+                    <input
+                        type="password"
+                        id="password"
+                        class="controls"
+                        minlength="8"
+                        maxlength="12"
+                        placeholder="Ingresa tu contraseña..."
+                    />
+                </div>
+
+                <div id="contenedorFormBotonesEnviarYBorrar">
+                    <input type="submit" class="buttons"/>
+                    <input type="reset" value="Borrar todo" class="buttons"/>
+                </div>
+            </form>
+            
+            <form action="" id="formContactanos">
+                <h2>Registro</h2>
+
+                <div id="contenedorInputWrite">
+
+                    <input
+                        type="text"
+                        id="name"
+                        class="controls"
+                        name="name"
+                        minlength="2"
+                        maxlength="25"
+                        placeholder="Ingresa tu nombre..."
+                    />
+
+                    <input
+                        type="text"
+                        id="last_name"
+                        class="controls"
+                        name="last_name"
+                        minlength="2"
+                        maxlength="25"
+                        placeholder="Ingresa tu apellido..."
+                    />
+
+                    <input
+                        type="email"
+                        id="email"
+                        class="controls"
+                        name="email"
+                        minlength="6"
+                        maxlength="60"
+                        placeholder="Ingresa tu correo..."
+                    />
+                </div>
+
+                <div id="comentarioForm">
+                    <label for="comentarios">Deja tu comentario:</label>
+                    <textarea id="comentarios" rows="5" maxlength="500" placeholder="Máximo 500 caracteres..."></textarea>
+                    <p id="contador">Caracteres restantes: 500</p>
+                </div>
+
+
+                <div id="contenedorFormBotonesEnviarYBorrar">
+                    <input type="submit" class="buttons"/>
+                    <input type="reset" value="Borrar todo" class="buttons"/>
+                </div>
+            </form>
+        </main>
+
+        <footer>
+            <h4>Designed and created by Carlos Morales; &copy; 2024</h4>
+
+            <section id="footerSecciones">
+                <section id="footerSectionGmail">
+                    <a href="mailto:carlosmoralesdev23@gmail.com"
+                        ><img
+                            src="/icons/correo.gif"
+                            alt=""
+                        /></a
+                    >
+                    <h5>Contactanos</h4>
+                </section>
+
+                <section id="footerSectionWhatsaap">
+                    <a href="https://wa.me/5491122519382" target="_blank"
+                        ><img src="/icons/whatsapp.png" alt="" />
+                        </a
+                    >
+                    <h5>whatsapp</h4>
+                </section>
+
+                <section id="footerSectionMaps">
+                    <img
+                        src="/icons/map.gif"
+                        alt=""
+                    />
+                    <h5>Castro Barros 45456</h4>
+                </section>
+
+                <section id="footerLegales">
+                    <img
+                        src="/icons/legales.gif"
+                        alt=""
+                    />
+                    <h5>Legales</h4>
+                </section>
+            </section>
+        </footer>
+    </body>
+</html>
+

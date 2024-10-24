@@ -13,7 +13,7 @@
 /** Estilos para cada pagina del sitio web */
 @import './paginas/inicio/inicio.css';
 @import './paginas/quien_soy/quien_soy.css';
-@import './paginas/verbos/verbos.css';
+@import './paginas/contactanos/contactanos.css';
 @import './paginas/vocabulario/vocabulario.css';
 @import './paginas/registro/registro.css';
 @import './paginas/login/login.css';
