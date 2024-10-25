@@ -4,7 +4,6 @@
 
 /** Estilos Generales para todas las paginas del sitio web */
 @import './general/main_y_body/main_y_body.css';
-@import './general/header/header.css';
 @import './general/aside/aside.css';
 @import './general/menu_contenidos/menu_contenidos.css';
 @import './general/footer/footer.css';
@@ -17,3 +16,69 @@
 @import './paginas/vocabulario/vocabulario.css';
 @import './paginas/registro/registro.css';
 @import './paginas/login/login.css';
+
+
+
+
+/** ----- IGUAL PARA TODAS LAS PAGINAS-----*/
+
+/** HEADER */
+header {
+    background-color: var(--color-header-footer);
+    color: var(--color-texto-principal);
+    width: 100%;
+    height: auto;
+    margin-bottom: 1.5rem;
+    padding: 18px 20px;
+    border-bottom: 0.1px solid var(--color-borde-principal);
+    border-radius: 0rem 0rem 0.4375rem 0.4375rem;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    #logos {
+        width: 20%;
+        img {
+            width: 4.6875rem;
+            height: 4.6875rem;
+        }
+    }
+
+    h1 {
+        a {
+            color: var(--color-texto-principal);
+            font-size: 2.5rem;
+            letter-spacing: 0.0313rem;
+            text-decoration: underline 0.125rem var(--color-subrayado-principal);
+            text-underline-offset: 0.375rem;
+        }
+    }
+
+    nav {
+        width: 20%;
+        ul {
+            display: flex;
+            justify-content: space-between;
+            gap: 15px;
+            li {
+                list-style: none;
+                a {
+                    font-weight: bold;
+                    text-decoration: none;
+                    color: var(--color-texto-principal);
+                    letter-spacing: 0.025rem;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: var(--color-texto-terciario);
+                        font-size: 1.01rem;
+                        text-decoration: underline 0.075rem
+                            var(--color-subrayado-principal);
+                        text-underline-offset: 0.375rem;
+                    }
+                }
+            }
+        }
+    }
+}
