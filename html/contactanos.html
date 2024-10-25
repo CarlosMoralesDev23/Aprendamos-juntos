@@ -75,7 +75,7 @@
             </form>
             
             <form action="" id="formContactanos">
-                <h2>Registro</h2>
+                <h2>Contactanos</h2>
 
                 <div id="contenedorInputWrite">
 
@@ -108,14 +108,30 @@
                         maxlength="60"
                         placeholder="Ingresa tu correo..."
                     />
+
+                    <select
+                        type="motivo"
+                        id="motivo"
+                        class="controls"
+                        name="motivo">
+                        <option value="" disabled selected>Selecciona tu motivo</option>
+                        <option value="Contrataciones">Contrataciones</option>
+                        <option value="Agradecimiento">Agradecimiento</option>
+                        <option value="Recomendación">Recomendación</option>
+                        <option value="Error">Error</option>
+                        <option value="Queja">Queja</option>
+                        <option value="Otro">Otro</option>
+                    </select>
                 </div>
 
                 <div id="comentarioForm">
+
                     <label for="comentarios">Deja tu comentario:</label>
+
                     <textarea id="comentarios" rows="5" maxlength="500" placeholder="Máximo 500 caracteres..."></textarea>
+
                     <p id="contador">Caracteres restantes: 500</p>
                 </div>
-
 
                 <div id="contenedorFormBotonesEnviarYBorrar">
                     <input type="submit" class="buttons"/>

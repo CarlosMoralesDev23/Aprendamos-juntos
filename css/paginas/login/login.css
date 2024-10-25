@@ -16,7 +16,7 @@
     top: 0px; /* Ajustar según tus necesidades */
     right: 250px; /* Ajustar para moverlo a la esquina superior derecha */
 
-    /* opacity: 0.001; */
+    opacity: 0.001;
 
     /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
 

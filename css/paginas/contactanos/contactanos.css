@@ -1,0 +1,101 @@
+#formContactanos {
+    width: 60%;
+    margin: 2.5rem auto;
+
+    padding: 0.9375rem 0rem;
+    border: 1px solid var(--color-borde-principal);
+    border-radius: 0.875rem;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h2 {
+        font-size: 1.875rem;
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+
+    div {
+        width: 95%;
+        margin: auto;
+        border: 1px solid;
+    }
+
+    #contenedorInputWrite {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 16px 1.5625rem;
+        margin-bottom: 1.875rem;
+
+        input {
+            width: 30%;
+            padding: 0.4375rem;
+            border: 0.1875rem solid var(--color-borde-principal);
+            border-radius: 0.5rem;
+        }
+    }
+
+    #comentarioForm {
+        
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        margin-bottom: 1.875rem;
+        gap: 3px;
+
+
+        p{
+            text-align: end;
+        }
+
+        textarea{
+            width: 95%;
+            height: 150px;
+            margin: auto;
+
+        }
+
+
+
+
+        input {
+            padding: 0.4375rem;
+            border: 0.1875rem solid var(--color-borde-principal);
+            border-radius: 0.5rem;
+        }
+    }
+
+    #contenedorFormBotonesEnviarYBorrar {
+        display: flex;
+        justify-content: center;
+        gap: 1.875rem;
+
+        input {
+            padding: 0.625rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 0.1563rem solid var(--color-borde-principal);
+
+            &[type="submit"] {
+                background-color: green;
+                color: white;
+            }
+
+            &[type="reset"] {
+                background-color: red;
+                color: white;
+            }
+
+            &:hover {
+                scale: 1.15;
+                cursor: pointer;
+            }
+        }
+    }
+}
