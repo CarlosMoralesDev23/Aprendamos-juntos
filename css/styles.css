@@ -3,7 +3,6 @@
 @import './colores.css';
 
 /** Estilos Generales para todas las paginas del sitio web */
-@import './general/main_y_body/main_y_body.css';
 @import './general/aside/aside.css';
 @import './general/menu_contenidos/menu_contenidos.css';
 
@@ -19,12 +18,31 @@
 
 
 
+
+
+
 /** ----- IGUAL PARA TODAS LAS PAGINAS-----*/
+
+
+/** UNIVERSAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/** BODY */
+body {
+    background-color: var(--color-fondo-principal);
+    color: var(--color-texto-principal);
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
 
 /** HEADER */
 header {
-    background-color: var(--color-header-footer);
-    color: var(--color-texto-principal);
     width: 100%;
     height: auto;
     margin-bottom: 1.5rem;
@@ -83,6 +101,13 @@ header {
 }
 
 
+/** MAIN GENERAL */
+main {
+    width: 100%;
+    padding: 0px 15px;
+    position: relative;
+    /* TODO El position relative del login quizas se saca cuando lo trabaje en css */
+}
 
 
 /** FOOTER */
