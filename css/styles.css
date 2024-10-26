@@ -3,7 +3,6 @@
 @import './colores.css';
 
 /** Estilos Generales para todas las paginas del sitio web */
-@import './general/aside/aside.css';
 @import './general/menu_contenidos/menu_contenidos.css';
 
 
@@ -107,6 +106,76 @@ main {
     padding: 0px 15px;
     position: relative;
     /* TODO El position relative del login quizas se saca cuando lo trabaje en css */
+}
+
+
+/** ASIDE */
+aside {
+    width: 15%;
+    height: fit-content;
+    padding: 10px;
+    padding-top: 0px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    #tituloAside {
+        font-size: 18px;
+        width: 100%;
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    #sectionPacho8aYoutube {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+            font-size: 16px;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        a {
+            color: var(--color-texto-principal);
+            text-decoration: none;
+        }
+
+        iframe {
+            margin: auto;
+            width: 200px;
+            height: 150px;
+        }
+    }
+
+    #sectionPacho8aSitioWeb {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+            font-size: 16px;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 125px;
+        }
+
+        a {
+            color: var(--color-texto-principal);
+            text-decoration: none;
+        }
+    }
 }
 
 
