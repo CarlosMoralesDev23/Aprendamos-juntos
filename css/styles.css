@@ -1,14 +1,34 @@
 
-/** Estilos de los colores */
-@import './colores.css';
+/** -------------- COLORES --------------*/
+:root {
+    --color-body: #010d23;
 
-/** Estilos para cada pagina del sitio web */
-@import './paginas/inicio/inicio.css';
-@import './paginas/quien_soy/quien_soy.css';
-@import './paginas/contactame/contactame.css';
-@import './paginas/vocabulario/vocabulario.css';
-@import './paginas/registro/registro.css';
-@import './paginas/login/login.css';
+    --color-texto-principal: #7fdbf4;
+    --color-texto-secundario: #010d23;
+    --color-texto-terciario: #ffd48b;
+
+    --color-borde-principal: #ffd48b;
+    --color-borde-secundario: #010d23;
+    --color-borde-terciario: #7fdbf4;
+
+    --color-fondo-principal: #010d23;
+    --color-fondo-secundario: #7fdbf4;
+    ---color-fondo-terciario: #ffd48b;
+
+    --color-subrayado-principal: #ffd48b;
+}
+
+.sonTresColores {
+    /* Estos son los que se estan usando */
+    color: #010d23;
+    color: #ffd48b;
+    color: #7fdbf4;
+    
+    /* Estos no s eestan usando pero estan standby porque son parte de la paleta de colores, quizas sean necesarios */
+    color: #f8f8ec;
+    color: #08afe9;
+    color: #f65e55;
+}
 
 
 /** -------------- IGUAL PARA TODAS LAS PAGINAS --------------*/
