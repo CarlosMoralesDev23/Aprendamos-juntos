@@ -2,10 +2,6 @@
 /** Estilos de los colores */
 @import './colores.css';
 
-/** Estilos Generales para todas las paginas del sitio web */
-@import './general/menu_contenidos/menu_contenidos.css';
-
-
 /** Estilos para cada pagina del sitio web */
 @import './paginas/inicio/inicio.css';
 @import './paginas/quien_soy/quien_soy.css';
@@ -15,12 +11,7 @@
 @import './paginas/login/login.css';
 
 
-
-
-
-
-
-/** -------- IGUAL PARA TODAS LAS PAGINAS --------*/
+/** -------------- IGUAL PARA TODAS LAS PAGINAS --------------*/
 
 
 /** UNIVERSAL */
@@ -213,5 +204,38 @@ footer {
 
     a {
         color: var(--color-texto-principal);
+    }
+}
+
+
+
+/** -------------- ONLY HOME --------------*/
+
+/** MENU CONTENIDO PRACTICO */
+#menuDeContenidosTeoricos {
+    width: 15%;
+    height: auto;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid var(--color-borde-principal);
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        li {
+            list-style: none;
+            a {
+                color: var(--color-texto-principal);
+                text-decoration: none;
+                padding: 0.625rem;
+                border-radius: 0.3125rem;
+                display: block;
+            }
+        }
     }
 }
