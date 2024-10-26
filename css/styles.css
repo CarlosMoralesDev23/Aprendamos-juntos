@@ -13,7 +13,6 @@
 
 /** -------------- IGUAL PARA TODAS LAS PAGINAS --------------*/
 
-
 /** UNIVERSAL */
 * {
     margin: 0;
@@ -85,6 +84,89 @@ header {
                         text-underline-offset: 0.375rem;
                     }
                 }
+            }
+        }
+    }
+}
+
+/** lOGIN */
+#formLogin {
+    width: 275px;
+    margin: auto;
+
+    padding: 10px;
+    background-color: var(--color-fondo-principal);
+    border: 0.1875rem solid var(--color-borde-principal);
+    border-radius: 0.875rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute; /* Cambiar a posición absoluta */
+    top: 0px; /* Ajustar según tus necesidades */
+    right: 250px; /* Ajustar para moverlo a la esquina superior derecha */
+
+    opacity: 0.001;
+
+    /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
+
+    &:hover {
+        opacity: 1;
+    }
+
+    h2 {
+        font-size: 24px;
+        margin-bottom: 10px;
+    }
+
+    div {
+        margin: auto;
+        width: 90%;
+    }
+
+    #contenedorInputWrite {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 22px 25px;
+        margin-bottom: 1.7rem;
+
+        input {
+            width: 100%;
+            padding: 7px;
+            border: 0.1875rem solid var(--color-borde-principal);
+            border-radius: 0.5rem;
+        }
+    }
+
+    #contenedorFormBotonesEnviarYBorrar {
+        width: 90%;
+        display: flex;
+        justify-content: space-between;
+
+        input {
+            padding: 7px 10px;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 0.1563rem solid var(--color-borde-principal);
+
+            &[type="submit"] {
+                background-color: green;
+                color: var(--color--texto-blanco);
+            }
+
+            &[type="reset"] {
+                background-color: red;
+                color: var(--color--texto-blanco);
+            }
+
+            &:hover {
+                scale: 1.05;
+                cursor: pointer;
             }
         }
     }
@@ -239,3 +321,157 @@ footer {
         }
     }
 }
+
+
+
+
+/** -------------- ONLY REGISTRO --------------*/
+
+#formRegistro {
+    width: 37.5%;
+    margin: 2.5rem auto;
+
+    padding: 0.9375rem 0rem;
+    background-color: var(--color-fondo-principal);
+    border: 0.1875rem solid var(--color-borde-principal);
+    border-radius: 0.875rem;
+    font-family: sans-serif;
+    color: var(--color-texto-principal);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h2 {
+        font-size: 1.875rem;
+        text-align: center;
+        margin-bottom: 1.25rem;
+    }
+
+    div {
+        width: 95%;
+        margin: auto;
+    }
+
+    #contenedorInputWrite {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 2rem 1.5625rem;
+        margin-bottom: 1.875rem;
+
+        input {
+            width: 45%;
+            padding: 0.4375rem;
+            border: 0.1875rem solid var(--color-borde-principal);
+            border-radius: 0.5rem;
+        }
+    }
+
+    #contenedorFormSeleccionTemas {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-bottom: 2rem;
+
+        h4 {
+            font-size: 1.375rem;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+        p {
+            text-align: center;
+            margin-bottom: 0.25rem;
+        }
+
+        #contenedorOpcionesTematicas {
+            width: 95%;
+            margin: auto;
+
+            display: flex;
+            justify-content: end;
+            gap: 0.9375rem;
+
+            div {
+                margin: auto;
+                display: flex;
+                gap: 0.3125rem;
+
+                &:nth-child(3) {
+                    margin-left: 0.75rem;
+                }
+
+                input {
+                    &:hover {
+                        scale: 1.35;
+                    }
+                }
+            }
+        }
+    }
+
+    #contenedorFormRangoDeEdad {
+        margin: auto;
+        margin-bottom: 1.25rem;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        gap: 0.3125rem;
+
+        h4 {
+            font-size: 1.25rem;
+            text-align: center;
+            margin-bottom: 3px;
+        }
+
+        #OpcionesDeEdad {
+            display: flex;
+            gap: 1.125rem;
+            margin: auto;
+
+            div {
+                input {
+                    &:hover {
+                        scale: 1.35;
+                    }
+                }
+            }
+        }
+    }
+
+    #contenedorFormBotonesEnviarYBorrar {
+        display: flex;
+        justify-content: center;
+        gap: 1.875rem;
+
+        input {
+            padding: 0.625rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+            font-weight: bold;
+            border: 0.1563rem solid var(--color-borde-principal);
+
+            &[type="submit"] {
+                background-color: green;
+                color: white;
+            }
+
+            &[type="reset"] {
+                background-color: red;
+                color: white;
+            }
+
+            &:hover {
+                scale: 1.15;
+                cursor: pointer;
+            }
+        }
+    }
+}
+/* TODO Los estilos bordes del input se pierden cuando se quiere escribir en ellos */
+
+
+
