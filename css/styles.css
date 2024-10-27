@@ -202,76 +202,7 @@ main {
 }
 
 
-/** ASIDE */
-aside {
-    width: 20%;
-    height: fit-content;
-    padding: 10px;
-    padding-top: 0px;
 
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    gap: 45px;
-
-    border-left: 1px solid var(--color-borde-principal) ;
-
-    #tituloAside {
-        font-size: 18px;
-        width: 100%;
-        padding: 4px;
-        border-radius: 8px;
-    }
-
-    #sectionPacho8aYoutube {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        h4 {
-            font-size: 16px;
-            width: fit-content;
-            margin: auto;
-            padding: 5px;
-            border-radius: 8px;
-        }
-
-        a {
-            color: var(--color-texto-principal);
-            text-decoration: none;
-        }
-
-        iframe {
-            margin: auto;
-            width: 200px;
-            height: 150px;
-        }
-    }
-
-    #sectionPacho8aSitioWeb {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-
-        h4 {
-            font-size: 16px;
-            width: fit-content;
-            margin: auto;
-            padding: 5px;
-            border-radius: 8px;
-        }
-
-        img {
-            width: 125px;
-        }
-
-        a {
-            color: var(--color-texto-principal);
-            text-decoration: none;
-        }
-    }
-}
 
 
 /** FOOTER */
@@ -315,39 +246,16 @@ footer {
 
 /** -------------- ONLY HOME --------------*/
 
-/** MENU CONTENIDO PRACTICO */
-#menuDeContenidosInteractivo {
-    width: 20%;
-    height: auto;
-    text-align: center;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-right: 1px solid var(--color-borde-principal);
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-
-        li {
-            list-style: none;
-            a {
-                color: var(--color-texto-principal);
-                text-decoration: none;
-                padding: 0.625rem;
-                border-radius: 0.3125rem;
-                display: block;
-            }
-        }
-    }
-}
 
 
+/** GENERAL */
 #mainDeHome {
-    display: flex;
     position: relative;
+    
+    display: flex;
+    justify-content: space-between;
+
+
 
     #practica {
         width: 70%;
@@ -523,6 +431,112 @@ footer {
                     }
                 }
             }
+        }
+    }
+}
+
+
+#menuDeContenidosInteractivo {
+    
+    width: 20%;
+    height: auto-fit;
+    text-align: center;
+    border: 5px solid white;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    border-right: 1px solid var(--color-borde-principal);
+
+    ul {
+        display: flex;
+        flex-direction: column;
+        gap: 1.25rem;
+
+        li {
+            list-style: none;
+            a {
+                color: var(--color-texto-principal);
+                text-decoration: none;
+                padding: 0.625rem;
+                border-radius: 0.3125rem;
+                display: block;
+            }
+        }
+    }
+
+        
+}
+
+
+
+/** ASIDE */
+aside {
+    width: 20%;
+    height: fit-content;
+    padding: 10px;
+    padding-top: 0px;
+
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    gap: 45px;
+
+    border-left: 1px solid var(--color-borde-principal) ;
+
+    #tituloAside {
+        font-size: 18px;
+        width: 100%;
+        padding: 4px;
+        border-radius: 8px;
+    }
+
+    #sectionPacho8aYoutube {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+            font-size: 16px;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        a {
+            color: var(--color-texto-principal);
+            text-decoration: none;
+        }
+
+        iframe {
+            margin: auto;
+            width: 200px;
+            height: 150px;
+        }
+    }
+
+    #sectionPacho8aSitioWeb {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        h4 {
+            font-size: 16px;
+            width: fit-content;
+            margin: auto;
+            padding: 5px;
+            border-radius: 8px;
+        }
+
+        img {
+            width: 125px;
+        }
+
+        a {
+            color: var(--color-texto-principal);
+            text-decoration: none;
         }
     }
 }
