@@ -67,7 +67,6 @@ header {
     }
 
     h1 {
-
         font-size: 2.625rem;
         letter-spacing: 0.0413rem;
         a {
@@ -95,8 +94,9 @@ header {
 
                     &:hover {
                         color: var(--color-texto-terciario);
-                        text-decoration: underline 0.150rem var(--color-subrayado-principal);
-                        text-underline-offset: 0.400rem;
+                        text-decoration: underline 0.15rem
+                            var(--color-subrayado-principal);
+                        text-underline-offset: 0.4rem;
                     }
                 }
             }
@@ -123,6 +123,7 @@ header {
     top: 0px; /* Ajustar según tus necesidades */
     right: 250px; /* Ajustar para moverlo a la esquina superior derecha */
 
+    opacity: 1;
     opacity: 0.001;
 
     /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
@@ -189,8 +190,7 @@ header {
 
 /** MAIN GENERAL */
 main {
-    width: 95%;
-    margin: 0px auto;
+    width: 100%;
     position: relative;
     /* TODO El position relative del login quizas se saca cuando lo trabaje en css */
 }
@@ -237,11 +237,15 @@ footer {
 /** GENERAL */
 #mainDeHome {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
 
     #menuDeContenidosInteractivo {
+        border: 1px solid var(--color-borde-principal);
+
         width: 20%;
-        height: auto-fit;
+        height: fit-content;
+        padding: 20px 5px;
+
         text-align: center;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
@@ -353,7 +357,7 @@ footer {
 #contenedorDeContenidoInteractivo {
     border: 1px solid white;
     color: var(--color--texto-principal);
-    width: 55%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     gap: 40px 0px;
@@ -385,6 +389,7 @@ footer {
     }
 
     #cajaDeInstrucciones {
+        display: none;
         border: 1px solid white;
         width: 95%;
         margin: auto;
@@ -463,10 +468,9 @@ footer {
 /** ASIDE */
 aside {
     border: 1px solid white;
-    width: 22.5%;
+    width: 20%;
     height: fit-content;
-    padding: 10px;
-    padding-top: 0px;
+    padding: 0px 5px;
 
     text-align: center;
 
