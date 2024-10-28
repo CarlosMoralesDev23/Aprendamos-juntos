@@ -37,7 +37,7 @@
 body {
     border: 0.0625rem solid white;
 
-    width: 100vw;
+    width: 100%;
     background-color: var(--color-fondo-principal);
     color: var(--color-texto-principal);
     font-family: "Poppins", sans-serif;
@@ -240,7 +240,7 @@ footer {
     justify-content: space-around;
 
     #menuDeContenidosInteractivo {
-        border: 1px solid var(--color-borde-principal);
+        border: 3px solid var(--color-borde-principal);
 
         width: 20%;
         height: fit-content;
@@ -249,6 +249,8 @@ footer {
         text-align: center;
         border-top-left-radius: 0px;
         border-top-right-radius: 0px;
+
+        box-shadow: 3.8px 4px 3.5px 2px var(--color-borde-principal);
 
         display: flex;
         flex-direction: column;
@@ -355,7 +357,6 @@ footer {
 
 /** CONTENEDOR INTERACTIVO */
 #contenedorDeContenidoInteractivo {
-    border: 1px solid white;
     color: var(--color--texto-principal);
     width: 50%;
     display: flex;
@@ -390,7 +391,6 @@ footer {
 
     #cajaDeInstrucciones {
         display: none;
-        border: 1px solid white;
         width: 95%;
         margin: auto;
         display: flex;
@@ -467,7 +467,6 @@ footer {
 
 /** ASIDE */
 aside {
-    border: 1px solid white;
     width: 20%;
     height: fit-content;
     padding: 0px 5px;
@@ -478,7 +477,8 @@ aside {
     flex-direction: column;
     gap: 45px;
 
-    border-left: 1px solid var(--color-borde-principal);
+    border: 3px solid var(--color-borde-principal);
+    box-shadow: 3.8px 4px 3.5px 2px var(--color-borde-principal);
 
     #tituloAside {
         font-size: 18px;
