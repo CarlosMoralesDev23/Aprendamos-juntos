@@ -33,18 +33,11 @@
     box-sizing: border-box;
 }
 
-header,
-footer,
-aside,
-nav,
-div {
-    background-color: var(--color-fondo-principal);
-    border-radius: 14px;
-}
+
 
 /** BODY */
 body {
-    background-color: var(--color-fondo-base);
+    background-color: var(--color-fondo-principal);
     color: var(--color-texto-principal);
     font-family: "Poppins", sans-serif;
     font-style: normal;
@@ -243,7 +236,6 @@ footer {
 
 /** GENERAL */
 #mainDeHome {
-    background-color: var(--color-fondo-base);
 
     display: flex;
     justify-content: space-between;
@@ -429,8 +421,6 @@ footer {
     }
 
     #contenedorNiveles {
-        border: 1px solid skyblue;
-        background-color: blue;
         width: 95%;
         margin: 1.25rem auto;
 
@@ -474,8 +464,6 @@ footer {
 
 /** ASIDE */
 aside {
-    background-color: var(--color-fondo-principal);
-
     border: 1px solid white;
     width: 22.5%;
     height: fit-content;
@@ -553,7 +541,6 @@ aside {
     margin: 2.5rem auto;
 
     padding: 0.9375rem 0rem;
-    background-color: var(--color-fondo-principal);
     border: 0.1875rem solid var(--color-borde-principal);
     border-radius: 0.875rem;
     font-family: sans-serif;
