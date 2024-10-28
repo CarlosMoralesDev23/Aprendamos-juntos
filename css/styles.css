@@ -33,7 +33,11 @@
     box-sizing: border-box;
 }
 
-header, footer, aside, nav, div{
+header,
+footer,
+aside,
+nav,
+div {
     background-color: var(--color-fondo-principal);
     border-radius: 14px;
 }
@@ -45,20 +49,22 @@ body {
     font-family: "Poppins", sans-serif;
     font-style: normal;
     margin: auto;
+    padding-top: 10px;
 }
 
 /** HEADER */
 header {
-    width: 95%;
+    width: 98%;
     height: auto;
-    margin: 0.4rem auto;
+    margin: 0px auto;
     padding: 20px;
-    border: 3px solid var(--color-borde-principal);
+    border-bottom-left-radius: 0px;
+    
 
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     #logos {
         width: 30%;
         img {
@@ -239,12 +245,38 @@ footer {
 #mainDeHome {
     background-color: var(--color-fondo-base);
 
-    position: relative;
-    
-
     display: flex;
     justify-content: space-between;
 
+    #menuDeContenidosInteractivo {
+        width: 20%;
+        height: auto-fit;
+        text-align: center;
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+
+
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 1.25rem;
+
+            li {
+                list-style: none;
+                a {
+                    color: var(--color-texto-principal);
+                    text-decoration: none;
+                    padding: 0.625rem;
+                    border-radius: 0.3125rem;
+                    display: block;
+                }
+            }
+        }
+    }
 
     #modalPracticaVerbo {
         border: 0.25rem solid var(--color-borde-principal);
@@ -322,35 +354,6 @@ footer {
                 &:hover {
                     cursor: pointer;
                 }
-            }
-        }
-    }
-}
-
-#menuDeContenidosInteractivo {
-    width: 22.5%;
-    height: auto-fit;
-    text-align: center;
-    border: 1px solid white;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    border-right: 1px solid var(--color-borde-principal);
-
-    ul {
-        display: flex;
-        flex-direction: column;
-        gap: 1.25rem;
-
-        li {
-            list-style: none;
-            a {
-                color: var(--color-texto-principal);
-                text-decoration: none;
-                padding: 0.625rem;
-                border-radius: 0.3125rem;
-                display: block;
             }
         }
     }
