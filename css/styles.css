@@ -57,7 +57,6 @@ header {
         #ffd48b 100%
     );
 
-
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -95,12 +94,28 @@ header {
                     color: var(--color-texto-principal);
                     letter-spacing: 0.025rem;
                     cursor: pointer;
+                    display: inline-block;
+                    position: relative;
+
+                    &::after {
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        width: 0;
+                        height: 0.15rem;
+                        background-color: var(--color-subrayado-principal);
+                        transition: all 0.5s ease;
+                        transform: translateX(-50%);
+                    }
 
                     &:hover {
                         color: var(--color-texto-terciario);
-                        text-decoration: underline 0.15rem
-                            var(--color-subrayado-principal);
-                        text-underline-offset: 0.4rem;
+
+                        &::after {
+                            width: 100%;
+                            transition: all 0.35s ease;
+                        }
                     }
                 }
             }
@@ -241,118 +256,56 @@ footer {
 /** GENERAL */
 #mainDeHome {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 0.9375rem;
+}
 
-    #menuDeContenidosInteractivo {
-        border: 3px solid var(--color-borde-principal);
+/** CONTENEDOR MENU DE CONTENIDO INTERACTIVO */
+#menuDeContenidosInteractivo {
+    width: 20%;
+    height: fit-content;
+    padding: 20px 10px;
 
-        width: 20%;
-        height: fit-content;
-        padding: 20px 5px;
+    border: 3px solid var(--color-borde-principal);
+    border-radius: 8px;
+    box-shadow: 3.6px 3.8px 3.5px 2px var(--color-borde-principal);
 
-        text-align: center;
-        border-top-left-radius: 0px;
-        border-top-right-radius: 0px;
-
-        box-shadow: 3.8px 4px 3.5px 2px var(--color-borde-principal);
-
+    ul {
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
-
-        ul {
-            display: flex;
-            flex-direction: column;
-            gap: 1.25rem;
-
-            li {
-                list-style: none;
-                a {
-                    color: var(--color-texto-principal);
-                    text-decoration: none;
-                    padding: 0.625rem;
-                    border-radius: 0.3125rem;
-                    display: block;
-                }
-            }
-        }
-    }
-
-    #modalPracticaVerbo {
-        border: 0.25rem solid var(--color-borde-principal);
-        width: 60%;
-        margin: 1.875rem auto;
-        margin-top: 20px;
-        padding: 3.125rem;
-        font-size: 1rem;
-        text-align: center;
-
-        border-radius: 0.8125rem;
-
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        gap: 1.875rem;
-
-        #verboPregunta {
-            h3 {
-                font-size: 1.625rem;
-                margin-bottom: 0.625rem;
-            }
-
-            img {
-                width: 6.25rem;
-                height: 7.5rem;
-                border-radius: 0.625rem;
-            }
-        }
-
-        #opcionesDeVerboPregunta {
-            width: 80%;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-
-            button {
-                font-size: 0.9375rem;
-                font-weight: bold;
-                padding: 0.75rem;
-                border: 4px solid var(--color-borde-terciario);
-                border-radius: 10px;
-
-                background-color: var(---color-fondo-terciario);
-            }
-            &:hover {
-                cursor: pointer;
-            }
-
-            .correcta {
-                &:active {
-                    background-color: greenyellow;
-                }
-            }
-            .incorrecta {
-                &:active {
-                    background-color: red;
-                }
-            }
-        }
-
-        #verificarYAvanzar {
-            button {
-                font-size: 0.9375rem;
-                font-weight: bold;
-                padding: 0.75rem;
+        justify-content: space-around;
+        padding-left: 15px;
+        gap: 1rem;
+        li {
+            list-style: none;
+            a {
+                font-weight: 400;
+                text-decoration: none;
                 color: var(--color-texto-principal);
+                letter-spacing: 0.025rem;
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
 
-                border: 0.125rem solid var(--color-borde-principal);
-                border-radius: 10px;
-
-                background-color: var(--color-fondo-principal);
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 0;
+                    height: 0.15rem;
+                    background-color: var(--color-subrayado-principal);
+                    transition: all 0.5s ease;
+                    transform: translateX(-50%);
+                }
 
                 &:hover {
-                    cursor: pointer;
+                    color: var(--color-texto-terciario);
+
+                    &::after {
+                        width: 100%;
+                        transition: all 0.35s ease;
+                    }
                 }
             }
         }
@@ -536,6 +489,87 @@ aside {
         a {
             color: var(--color-texto-principal);
             text-decoration: none;
+        }
+    }
+}
+
+/** MODAL DE PRACTICA */
+#modalPracticaVerbo {
+    border: 0.25rem solid var(--color-borde-principal);
+    width: 60%;
+    margin: 1.875rem auto;
+    margin-top: 20px;
+    padding: 3.125rem;
+    font-size: 1rem;
+    text-align: center;
+
+    border-radius: 0.8125rem;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1.875rem;
+
+    #verboPregunta {
+        h3 {
+            font-size: 1.625rem;
+            margin-bottom: 0.625rem;
+        }
+
+        img {
+            width: 6.25rem;
+            height: 7.5rem;
+            border-radius: 0.625rem;
+        }
+    }
+
+    #opcionesDeVerboPregunta {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        button {
+            font-size: 0.9375rem;
+            font-weight: bold;
+            padding: 0.75rem;
+            border: 4px solid var(--color-borde-terciario);
+            border-radius: 10px;
+
+            background-color: var(---color-fondo-terciario);
+        }
+        &:hover {
+            cursor: pointer;
+        }
+
+        .correcta {
+            &:active {
+                background-color: greenyellow;
+            }
+        }
+        .incorrecta {
+            &:active {
+                background-color: red;
+            }
+        }
+    }
+
+    #verificarYAvanzar {
+        button {
+            font-size: 0.9375rem;
+            font-weight: bold;
+            padding: 0.75rem;
+            color: var(--color-texto-principal);
+
+            border: 0.125rem solid var(--color-borde-principal);
+            border-radius: 10px;
+
+            background-color: var(--color-fondo-principal);
+
+            &:hover {
+                cursor: pointer;
+            }
         }
     }
 }
