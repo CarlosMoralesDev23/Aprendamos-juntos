@@ -18,7 +18,7 @@
     --color-subrayado-principal: #ffd48b;
 }
 
-.ColoresDePaletaDeColores {
+.coloresDePaletaDeColores {
     /* standby*/
     color: #f8f8ec;
     color: #f65e55;
@@ -35,8 +35,6 @@
 
 /** BODY */
 body {
-    border: 0.0625rem solid white;
-
     width: 100%;
     background-color: var(--color-fondo-principal);
     color: var(--color-texto-principal);
@@ -52,7 +50,13 @@ header {
     margin-bottom: 1.875rem;
     padding: 1.25rem 2.1875rem;
 
-    border-bottom: 0.0625rem solid var(--color-borde-principal);
+    background: linear-gradient(
+        to bottom,
+        #010d23 0%,
+        #010d23 87%,
+        #ffd48b 100%
+    );
+
 
     display: flex;
     align-items: center;
