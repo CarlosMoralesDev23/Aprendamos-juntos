@@ -47,13 +47,13 @@ header {
     width: 100%;
     height: auto;
     margin: 0rem auto;
-    margin-bottom: 1.875rem;
+    margin-bottom: 40px;
     padding: 1.25rem 2.1875rem;
 
     background: linear-gradient(
         to bottom,
         #010d23 0%,
-        #010d23 87%,
+        #010d23 82.5%,
         #ffd48b 100%
     );
 
@@ -209,6 +209,7 @@ header {
 
 /** MAIN GENERAL */
 main {
+    border: 1px solid white;
     width: 100%;
     position: relative;
     /* TODO El position relative del login quizas se saca cuando lo trabaje en css */
@@ -257,18 +258,18 @@ footer {
 #mainDeHome {
     display: flex;
     justify-content: space-between;
-    padding: 0.9375rem;
+    padding: 0 35px;
 }
 
 /** CONTENEDOR MENU DE CONTENIDO INTERACTIVO */
 #menuDeContenidosInteractivo {
-    width: 20%;
+    width: 21%;
     height: fit-content;
-    padding: 20px 10px;
+    padding: 15px 8px;
 
     border: 3px solid var(--color-borde-principal);
     border-radius: 8px;
-    box-shadow: 3.6px 3.8px 3.5px 2px var(--color-borde-principal);
+    box-shadow: 3px 3px 5px var(--color-borde-principal);
 
     ul {
         display: flex;
@@ -279,6 +280,7 @@ footer {
         li {
             list-style: none;
             a {
+                font-size: 18px;
                 font-weight: 400;
                 text-decoration: none;
                 color: var(--color-texto-principal);
