@@ -463,79 +463,89 @@ aside {
     grid-template-rows: repeat(4, 1fr);
     gap: 8px;
 
-    .div1 {
-        grid-column: span 3 / span 3;
-    }
+    border: 3px solid var(--color-borde-principal);
+    border-radius: 8px;
+    width: 95%;
+    margin: auto;
+    padding: 1rem;
+    border-radius: 0.8125rem;
 
-    .div2 {
+    #tarea {
+        border: 1px solid white;
+        grid-column: span 3 / span 3;
+        text-align: start;
+    }
+    
+    #iconoAyuda {
+        border: 1px solid white;
         grid-column: span 2 / span 2;
         grid-column-start: 4;
+        text-align: end;
     }
-
-    .div3 {
+    
+    #verbo {
+        border: 1px solid white;
         grid-column: span 3 / span 3;
         grid-column-start: 2;
         grid-row-start: 2;
+        text-align: center;
     }
 
+    .opcion{
+        text-align: center;
+    }
+    
     .div5 {
+        border: 1px solid white;
         grid-row-start: 3;
     }
-
+    
     .div6 {
+        border: 1px solid white;
         grid-row-start: 3;
     }
-
+    
     .div7 {
+        border: 1px solid white;
         grid-row-start: 3;
     }
-
+    
     .div8 {
+        border: 1px solid white;
         grid-row-start: 3;
     }
-
+    
     .div9 {
+        border: 1px solid white;
         grid-row-start: 3;
     }
-
+    
     .div10 {
+        border: 1px solid white;
         grid-column-start: 2;
         grid-row-start: 4;
     }
-
+    
     .div11 {
+        border: 1px solid white;
         grid-column-start: 3;
         grid-row-start: 4;
     }
-
+    
     .div12 {
+        border: 1px solid white;
         grid-column-start: 4;
         grid-row-start: 4;
     }
-
+    
     .div13 {
+        border: 1px solid white;
         grid-column-start: 5;
         grid-row-start: 4;
     }
 }
 
 #modalPracticaVerbo {
-    border: 0.25rem solid var(--color-borde-principal);
-    width: 60%;
-    margin: 1.875rem auto;
-    margin-top: 20px;
-    padding: 3.125rem;
-    font-size: 1rem;
-    text-align: center;
-
-    border-radius: 0.8125rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 1.875rem;
-
     #verboPregunta {
         h3 {
             font-size: 1.625rem;
