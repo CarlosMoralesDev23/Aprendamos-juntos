@@ -322,7 +322,7 @@ footer {
     border: 3px solid white;
 
     #cajaDeTitulosDePractica {
-        padding: 8px 15px;        
+        padding: 8px 15px;
         h2 {
             text-align: start;
             font-size: 2rem;
@@ -427,7 +427,8 @@ aside {
         font-size: 20px;
     }
 
-    #sectionPacho8aYoutube, #sectionPacho8aSitioWeb {
+    #sectionPacho8aYoutube,
+    #sectionPacho8aSitioWeb {
         display: flex;
         flex-direction: column;
         margin-top: 25px;
@@ -455,6 +456,69 @@ aside {
 }
 
 /** MODAL DE PRACTICA */
+
+.parent {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 8px;
+
+    .div1 {
+        grid-column: span 3 / span 3;
+    }
+
+    .div2 {
+        grid-column: span 2 / span 2;
+        grid-column-start: 4;
+    }
+
+    .div3 {
+        grid-column: span 3 / span 3;
+        grid-column-start: 2;
+        grid-row-start: 2;
+    }
+
+    .div5 {
+        grid-row-start: 3;
+    }
+
+    .div6 {
+        grid-row-start: 3;
+    }
+
+    .div7 {
+        grid-row-start: 3;
+    }
+
+    .div8 {
+        grid-row-start: 3;
+    }
+
+    .div9 {
+        grid-row-start: 3;
+    }
+
+    .div10 {
+        grid-column-start: 2;
+        grid-row-start: 4;
+    }
+
+    .div11 {
+        grid-column-start: 3;
+        grid-row-start: 4;
+    }
+
+    .div12 {
+        grid-column-start: 4;
+        grid-row-start: 4;
+    }
+
+    .div13 {
+        grid-column-start: 5;
+        grid-row-start: 4;
+    }
+}
+
 #modalPracticaVerbo {
     border: 0.25rem solid var(--color-borde-principal);
     width: 60%;
