@@ -551,31 +551,27 @@ aside {
             grid-row-start: 3;
         }
 
-        #botones {
+        .botones {
             display: grid;
             place-items: center;
         }
 
         .div10 {
-            border: 1px solid white;
             grid-column-start: 2;
             grid-row-start: 4;
         }
 
         .div11 {
-            border: 1px solid white;
             grid-column-start: 3;
             grid-row-start: 4;
         }
 
         .div12 {
-            border: 1px solid white;
             grid-column-start: 4;
             grid-row-start: 4;
         }
 
         .div13 {
-            border: 1px solid white;
             grid-column-start: 5;
             grid-row-start: 4;
         }
