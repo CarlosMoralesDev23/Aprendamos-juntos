@@ -464,7 +464,7 @@ aside {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 20px;
+        gap: 50px;
 
         border: 3px solid var(--color-borde-principal);
         border-radius: 8px;
@@ -474,24 +474,21 @@ aside {
         border-radius: 0.8125rem;
 
         #tarea {
-            border: 1px solid white;
             grid-column: span 3 / span 3;
             text-align: start;
         }
 
         #iconoAyuda {
-            border: 1px solid white;
             grid-column: span 2 / span 2;
             grid-column-start: 4;
             text-align: end;
         }
 
         #verbo {
-            border: 1px solid white;
             grid-column: span 3 / span 3;
             grid-column-start: 2;
             grid-row-start: 2;
-            font-size: 1.5rem;
+            font-size: 1.4rem;
             text-align: center;
         }
 
@@ -500,7 +497,7 @@ aside {
             place-items: center;
 
             h5 {
-                font-size: 1.2rem;
+                font-size: 16px;
                 font-weight: bold;
                 padding: 0.75rem;
                 cursor: pointer;
@@ -528,48 +525,42 @@ aside {
                     }
                 }
             }
-
-
-
-
-            
-            #opcionesDeVerboPregunta {
-                .correcta {
-                    &:active {
-                        background-color: greenyellow;
-                    }
-                }
-                .incorrecta {
-                    &:active {
-                        background-color: red;
-                    }
-                }
-            }
         }
 
-        .div5 {
+        #opcion1 {
             grid-row-start: 3;
         }
 
-        .div6 {
+        #opcion2 {
             grid-row-start: 3;
         }
 
-        .div7 {
+        #opcion3 {
             grid-row-start: 3;
         }
 
-        .div8 {
+        #opcion4 {
             grid-row-start: 3;
         }
 
-        .div9 {
+        #opcion5 {
             grid-row-start: 3;
         }
 
         .botones {
             display: grid;
             place-items: center;
+
+            font-size: 12px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+
+            color: var(--color-texto-principal);
+            border: 0.125rem solid var(--color-borde-principal);
+            background-color: var(--color-fondo-principal);
+
+            cursor: pointer;
         }
 
         .div10 {
@@ -594,25 +585,6 @@ aside {
     }
 }
 
-#modalPracticaVerbo {
-    #verificarYAvanzar {
-        button {
-            font-size: 0.9375rem;
-            font-weight: bold;
-            padding: 0.75rem;
-            color: var(--color-texto-principal);
-
-            border: 0.125rem solid var(--color-borde-principal);
-            border-radius: 10px;
-
-            background-color: var(--color-fondo-principal);
-
-            &:hover {
-                cursor: pointer;
-            }
-        }
-    }
-}
 
 /** -------------- ONLY REGISTRO --------------*/
 
