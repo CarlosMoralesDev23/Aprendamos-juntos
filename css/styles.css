@@ -43,7 +43,6 @@ body {
     background-color: var(--color-fondo-principal);
     color: var(--color-texto-principal);
     font-family: "Poppins", sans-serif;
-    font-weight: 900;
 }
 
 /** HEADER */
@@ -75,7 +74,8 @@ header {
 
     h1 {
         font-size: 3.5rem;
-        letter-spacing: 0.0413rem;
+        letter-spacing: 0.075rem;
+        word-spacing: 7.5px;
         font-weight: 900;
         a {
             color: var(--color-texto-principal);
@@ -94,10 +94,10 @@ header {
                 list-style: none;
                 font-size: 16px;
                 a {
-                    font-weight: bold;
+                    font-weight: 700;
                     text-decoration: none;
                     color: var(--color-texto-principal);
-                    letter-spacing: 0.025rem;
+                    letter-spacing: 0.035rem;
                     cursor: pointer;
                     display: inline-block;
                     position: relative;
@@ -130,10 +130,10 @@ header {
 
 /** lOGIN */
 #formLogin {
-    width: 275px;
+    width: 300px;
     margin: auto;
 
-    padding: 10px;
+    padding: 30px 12px;
     background-color: var(--color-fondo-principal);
     border: 0.1875rem solid var(--color-borde-principal);
     border-radius: 0.875rem;
@@ -146,7 +146,7 @@ header {
     position: absolute; /* Cambiar a posición absoluta */
     top: 0px; /* Ajustar según tus necesidades */
     right: 250px; /* Ajustar para moverlo a la esquina superior derecha */
-
+    
     opacity: 1;
     opacity: 0.001;
 
@@ -157,8 +157,9 @@ header {
     }
 
     h2 {
-        font-size: 24px;
-        margin-bottom: 10px;
+        font-size: 22px;
+        margin-bottom: 22px;
+        font-weight: 700;
     }
 
     div {
@@ -171,12 +172,12 @@ header {
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        gap: 22px 25px;
+        gap: 24px 25px;
         margin-bottom: 1.7rem;
 
         input {
             width: 100%;
-            padding: 7px;
+            padding: 10px;
             border: 0.1875rem solid var(--color-borde-principal);
             border-radius: 0.5rem;
         }
@@ -188,7 +189,7 @@ header {
         justify-content: space-between;
 
         input {
-            padding: 7px 10px;
+            padding: 0.4375rem 0.625rem;
             border-radius: 0.5rem;
             font-size: 1rem;
             font-weight: bold;
