@@ -43,7 +43,7 @@ body {
     background-color: var(--color-fondo-principal);
     color: var(--color-texto-principal);
     font-family: "Poppins", sans-serif;
-    font-style: normal;
+    font-weight: 900;
 }
 
 /** HEADER */
@@ -74,8 +74,9 @@ header {
     }
 
     h1 {
-        font-size: 2.625rem;
+        font-size: 3.5rem;
         letter-spacing: 0.0413rem;
+        font-weight: 900;
         a {
             color: var(--color-texto-principal);
             text-decoration: underline 0.125rem var(--color-subrayado-principal);
