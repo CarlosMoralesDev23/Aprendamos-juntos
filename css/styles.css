@@ -1,3 +1,6 @@
+/** -------------- TIPOGRAFIAS --------------*/
+@import url("/css/fonts.css");
+
 /** -------------- COLORES --------------*/
 :root {
     --color-body: #010d23;
@@ -25,6 +28,7 @@
 }
 
 /** -------------- IGUAL PARA TODAS LAS PAGINAS --------------*/
+
 
 /** UNIVERSAL */
 * {
