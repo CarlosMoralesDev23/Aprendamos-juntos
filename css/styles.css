@@ -46,11 +46,12 @@ body {
     word-spacing: 1px;
 
     h1 {
-        font-weight: 900;
         font-size: 3.5rem;
+        font-weight: 900;
         word-spacing: 7.5px;
     }
     h2 {
+        font-size: 1.4rem;
         font-weight: 800;
     }
     h3 {
@@ -76,13 +77,19 @@ body {
             list-style: none;
         }
     }
+    input {
+        font-size: 1rem;
+        font-weight: 500;
+        border-radius: 0.5rem;
+        padding: 0.4375rem 0.625rem;
+        border: 0.1563rem solid var(--color-borde-principal);
+    }
 }
 
 /** HEADER */
 header {
     width: 100%;
-    height: auto;
-    margin: 0rem auto;
+    margin: auto;
     margin-bottom: 40px;
     padding: 1.25rem 2.1875rem;
 
@@ -107,7 +114,6 @@ header {
 
     h1 {
         a {
-            color: var(--color-texto-principal);
             text-decoration: underline 0.125rem var(--color-subrayado-principal);
             text-underline-offset: 0.475rem;
         }
@@ -166,12 +172,12 @@ header {
     justify-content: center;
     align-items: center;
 
-    position: absolute; /* Cambiar a posición absoluta */
-    top: 0px; /* Ajustar según tus necesidades */
-    right: 250px; /* Ajustar para moverlo a la esquina superior derecha */
+    position: absolute;
+    top: 0px;
+    right: 250px;
 
-    opacity: 1;
     opacity: 0.001;
+    opacity: 1;
 
     /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
 
@@ -180,9 +186,7 @@ header {
     }
 
     h2 {
-        font-size: 22px;
         margin-bottom: 22px;
-        font-weight: 800;
     }
 
     div {
@@ -212,12 +216,6 @@ header {
         justify-content: space-between;
 
         input {
-            padding: 0.4375rem 0.625rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: bold;
-            border: 0.1563rem solid var(--color-borde-principal);
-
             &[type="submit"] {
                 background-color: green;
                 color: var(--color--texto-blanco);
