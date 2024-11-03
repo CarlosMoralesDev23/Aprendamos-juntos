@@ -55,15 +55,19 @@ body {
         font-weight: 800;
     }
     h3 {
+        font-size: 1.3rem;
         font-weight: 700;
     }
     h4 {
+        font-size: 1.2rem;
         font-weight: 600;
     }
     h5 {
+        font-size: 1rem;
         font-weight: 500;
     }
     p {
+        font-size: 1rem;
         font-weight: 500;
     }
     a {
@@ -82,7 +86,7 @@ body {
         font-weight: 500;
         border-radius: 0.5rem;
         padding: 0.4375rem 0.625rem;
-        border: 0.1563rem solid var(--color-borde-principal);
+        border: 0.1875rem solid var(--color-borde-principal);
     }
 }
 
@@ -204,9 +208,6 @@ header {
 
         input {
             width: 100%;
-            padding: 10px;
-            border: 0.1875rem solid var(--color-borde-principal);
-            border-radius: 0.5rem;
         }
     }
 
@@ -227,7 +228,7 @@ header {
             }
 
             &:hover {
-                scale: 1.05;
+                scale: 1.03;
                 cursor: pointer;
             }
         }
@@ -251,11 +252,6 @@ footer {
     gap: 40px;
 
     border-top: 1px solid var(--color-borde-principal);
-
-    h4 {
-        font-weight: 600;
-        font-size: 20px;
-    }
 
     #footerSecciones {
         margin: auto;
