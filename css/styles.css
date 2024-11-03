@@ -266,12 +266,8 @@ footer {
         section {
             margin: auto;
             width: 22.2%;
-            font-size: 18px;
 
             a {
-                font-weight: 700;
-                color: var(--color-texto-principal);
-
                 img {
                     width: 45px;
                     height: 45px;
