@@ -454,7 +454,7 @@ aside {
         display: grid;
         grid-template-columns: repeat(5, 1fr);
         grid-template-rows: repeat(4, 1fr);
-        gap: 50px;
+        gap: 35px;
 
         border: 3px solid var(--color-borde-principal);
         border-radius: 8px;
@@ -486,16 +486,12 @@ aside {
         }
 
         .opcion {
-            border: 1px solid white;
             display: grid;
             place-items: center;
             margin: auto;
 
-            h5 {
-                font-size: 10px;
+            h4 {
                 /* TODO Subir el tamaño de la letra,  primero distribuir con grid */
-                font-weight: 500;
-                padding: 0.75rem;
                 cursor: pointer;
                 display: inline-block;
                 position: relative;
@@ -525,14 +521,18 @@ aside {
 
         #opcion1 {
             grid-row-start: 3;
+            grid-column-start: 2;
         }
 
         #opcion2 {
             grid-row-start: 3;
+            grid-column-start: 3;
         }
 
         #opcion3 {
             grid-row-start: 3;
+            grid-column-start: 4;
+
         }
 
         #opcion4 {
@@ -555,8 +555,9 @@ aside {
             color: var(--color-texto-principal);
             border: 0.125rem solid var(--color-borde-principal);
             background-color: var(--color-fondo-principal);
-
             cursor: pointer;
+
+            /* TODO CADA BOTON VA A SER DIFERENTE DE COLOR */
         }
 
         .div10 {
