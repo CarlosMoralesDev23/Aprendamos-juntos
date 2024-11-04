@@ -76,13 +76,55 @@ body {
         cursor: pointer;
         color: var(--color-texto-principal);
         text-decoration: none;
-    }    
+    }
     input {
         font-size: 1rem;
-        font-weight: 500;
+        font-weight: 400;
         border-radius: 0.5rem;
         padding: 0.4375rem 0.625rem;
         border: 0.1875rem solid var(--color-borde-principal);
+
+        &[type="submit"],
+        &[type="reset"] {
+            font-weight: 700;
+            padding: 0.625rem;
+            border-radius: 0.5rem;
+            font-size: 1rem;
+
+            color: white;
+
+            &:hover {
+                scale: 1.05;
+                cursor: pointer;
+            }
+        }
+
+        &[type="submit"] {
+            background-color: green;
+        }
+
+        &[type="reset"] {
+            background-color: red;
+        }
+    }
+
+    #formLogin,
+    #formRegistro,
+    #formContactanos {
+        padding: 1.875rem 12px;
+
+        background-color: var(--color-fondo-principal);
+        border: 3px solid var(--color-borde-principal);
+        border-radius: 0.875rem;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        h2 {
+            margin-bottom: 15px;
+        }
     }
 }
 
@@ -162,22 +204,12 @@ header {
     width: 300px;
     margin: auto;
 
-    padding: 30px 12px;
-    background-color: var(--color-fondo-principal);
-    border: 0.1875rem solid var(--color-borde-principal);
-    border-radius: 0.875rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
     position: absolute;
     top: 0px;
     right: 250px;
 
-    opacity: 1;
     opacity: 0.001;
+    opacity: 1;
 
     /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
 
@@ -211,23 +243,6 @@ header {
         width: 90%;
         display: flex;
         justify-content: space-between;
-
-        input {
-            &[type="submit"] {
-                background-color: green;
-                color: var(--color--texto-blanco);
-            }
-
-            &[type="reset"] {
-                background-color: red;
-                color: var(--color--texto-blanco);
-            }
-
-            &:hover {
-                scale: 1.03;
-                cursor: pointer;
-            }
-        }
     }
 }
 
@@ -362,7 +377,7 @@ footer {
         display: flex;
         flex-direction: column;
 
-        h4{
+        h4 {
             margin-bottom: 10px;
         }
 
@@ -391,7 +406,7 @@ footer {
 
         .cajaNivel {
             border: 3px solid var(--color-borde-principal);
-            width:  100px;
+            width: 100px;
             padding: 0.8rem;
             border-radius: 0.8125rem;
 
@@ -422,10 +437,9 @@ aside {
         display: flex;
         flex-direction: column;
 
-
         iframe {
             margin: auto;
-            width:  170px;
+            width: 170px;
             height: 130px;
         }
         /* TODO Como hacer para que el iframe se reproduzca en grande en mi pagina web */
@@ -525,7 +539,6 @@ aside {
         #opcion3 {
             grid-row-start: 3;
             grid-column-start: 4;
-
         }
 
         #opcion4 {
@@ -578,25 +591,8 @@ aside {
 /** -------------- ONLY REGISTRO --------------*/
 
 #formRegistro {
-    width: 37.5%;
+    width: 40%;
     margin: 2.5rem auto;
-
-    padding: 0.9375rem 0rem;
-    border: 0.1875rem solid var(--color-borde-principal);
-    border-radius: 0.875rem;
-    font-family: sans-serif;
-    color: var(--color-texto-principal);
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h2 {
-        font-size: 1.875rem;
-        text-align: center;
-        margin-bottom: 1.25rem;
-    }
 
     div {
         width: 95%;
@@ -607,14 +603,13 @@ aside {
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
-        gap: 2rem 1.5625rem;
-        margin-bottom: 1.875rem;
+        gap: 1.2rem;
 
         input {
             width: 45%;
             padding: 0.4375rem;
             border: 0.1875rem solid var(--color-borde-principal);
-            border-radius: 0.5rem;
+            border-radius: 0.6rem;
         }
     }
 
@@ -623,10 +618,8 @@ aside {
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 2rem;
 
         h4 {
-            font-size: 1.375rem;
             text-align: center;
             margin-bottom: 3px;
         }
@@ -641,21 +634,17 @@ aside {
             margin: auto;
 
             display: flex;
-            justify-content: end;
-            gap: 0.9375rem;
+            justify-content: space-between;
+            gap: 0.75rem;
 
             div {
                 margin: auto;
                 display: flex;
                 gap: 0.3125rem;
 
-                &:nth-child(3) {
-                    margin-left: 0.75rem;
-                }
-
                 input {
                     &:hover {
-                        scale: 1.35;
+                        scale: 1.25;
                     }
                 }
             }
@@ -671,14 +660,11 @@ aside {
         gap: 0.3125rem;
 
         h4 {
-            font-size: 1.25rem;
-            text-align: center;
             margin-bottom: 3px;
         }
 
         #OpcionesDeEdad {
             display: flex;
-            gap: 1.125rem;
             margin: auto;
 
             div {
@@ -695,52 +681,14 @@ aside {
         display: flex;
         justify-content: center;
         gap: 1.875rem;
-
-        input {
-            padding: 0.625rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: bold;
-            border: 0.1563rem solid var(--color-borde-principal);
-
-            &[type="submit"] {
-                background-color: green;
-                color: white;
-            }
-
-            &[type="reset"] {
-                background-color: red;
-                color: white;
-            }
-
-            &:hover {
-                scale: 1.15;
-                cursor: pointer;
-            }
-        }
     }
 }
 /* TODO Los estilos bordes del input se pierden cuando se quiere escribir en ellos */
 
 /** -------------- ONLY CONTACTAME --------------*/
 #formContactanos {
-    width: 35%;
+    width: 40%;
     margin: 2.5rem auto;
-
-    padding: 0.9375rem 1.5rem;
-    border: 1px solid var(--color-borde-principal);
-    border-radius: 0.875rem;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-
-    h2 {
-        font-size: 1.875rem;
-        text-align: center;
-        margin-bottom: 1.25rem;
-    }
 
     div {
         width: 95%;
@@ -760,8 +708,12 @@ aside {
             width: 47.5%;
             padding: 0.4375rem;
             border: 0.1875rem solid var(--color-borde-principal);
-            border-radius: 0.5rem;
+            border-radius: 0.6rem;
             cursor: pointer;
+        }
+
+        select {
+            padding: 0.59rem;
         }
     }
 
@@ -778,6 +730,7 @@ aside {
         }
 
         textarea {
+            font-size: 1.1rem;
             width: 100%;
             height: 150px;
             margin: auto;
@@ -785,7 +738,7 @@ aside {
 
             border: 0.1875rem solid var(--color-borde-principal);
 
-            border-radius: 0.5rem;
+            border-radius: 0.6rem;
         }
 
         p {
@@ -796,30 +749,7 @@ aside {
     #contenedorFormBotonesEnviarYBorrar {
         display: flex;
         justify-content: center;
-        gap: 1.875rem 1.875rem;
-
-        input {
-            padding: 0.625rem;
-            border-radius: 0.5rem;
-            font-size: 1rem;
-            font-weight: bold;
-            border: 0.1563rem solid var(--color-borde-principal);
-
-            &[type="submit"] {
-                background-color: green;
-                color: white;
-            }
-
-            &[type="reset"] {
-                background-color: red;
-                color: white;
-            }
-
-            &:hover {
-                scale: 1.05;
-                cursor: pointer;
-            }
-        }
+        gap: 1.875rem 3.875rem;
     }
 }
 
