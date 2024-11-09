@@ -92,15 +92,13 @@ body {
         align-items: center;
         gap: 17.5px;
 
-        /* h2 {
-            margin-bottom: 15px;
-        } */
-
         div {
             margin: auto;
         }
 
-        .contenedorInputWrite {
+        #contenedorInputWrite_login,
+        #contenedorInputWrite_registro,
+        #contenedorInputWrite_contactanos {
             display: flex;
             flex-direction: column;
             align-items: center;
