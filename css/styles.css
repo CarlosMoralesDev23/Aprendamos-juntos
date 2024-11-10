@@ -101,7 +101,6 @@ body {
         #contenedorInputWrite_contactanos {
             display: flex;
             align-items: center;
-            justify-content: center;
             gap: 15px;
 
             border: 1px solid white;
@@ -222,10 +221,10 @@ header {
 
     position: absolute;
     top: 0px;
-    right: 250px;
+    right: 150px;
 
-    opacity: 0.001;
     opacity: 1;
+    opacity: 0.001;
     /* TODO Con JS esta opacity se reemplazara por un event sobre el link Login; */
     &:hover {
         opacity: 1;
@@ -587,7 +586,7 @@ aside {
 /** -------------- ONLY REGISTRO --------------*/
 
 #formRegistro {
-    width: 40%;
+    width: 42%;
     margin: 2.5rem auto;
 
     div {
@@ -595,9 +594,9 @@ aside {
         display: flex;
     }
 
-    .contenedorInputWrite {
-        flex-direction: row !important;
-        justify-content: space-between !important;
+    #contenedorInputWrite_registro {
+        flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
         border: 1px solid white;
     }
@@ -679,8 +678,6 @@ aside {
     #contenedorInputWrite_contactanos {
         flex-direction: row;
         flex-wrap: wrap;
-
-        /* TODO Quiero quitarle ese margin que tiene el inputwrite */
 
         select {
             width: 17rem;
