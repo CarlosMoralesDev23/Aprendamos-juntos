@@ -46,7 +46,7 @@ body {
     word-spacing: 1px;
 
     h1 {
-        font-size: 3rem;
+        font-size: 3.2rem;
         font-weight: 900;
         word-spacing: 7.5px;
     }
@@ -144,7 +144,7 @@ body {
 /** HEADER */
 header {
     width: 100%;
-    margin: auto;
+    height: 125px;
     margin-bottom: 40px;
     padding: 1.25rem 2.1875rem;
 
@@ -156,27 +156,33 @@ header {
     );
 
     display: flex;
+    flex-flow: row wrap;
     align-items: center;
     justify-content: space-between;
 
-    #logos {
-        width: 27.5%;
-        img {
-            width: 4.6875rem;
-            height: 4.6875rem;
-        }
-    }
+    #header_titulo {
+        border: 1px solid white;
 
-    h1 {
-        a {
+        width: 50%;
+
+        display: flex;
+        flex-flow: row wrap;
+        gap: 17.5px;
+
+        #header_LogoPersonal {
+            width: 75px;
+            height: 75px;
+        }
+
+        h1 {
             text-decoration: underline 0.125rem var(--color-subrayado-principal);
-            text-underline-offset: 0.475rem;
+            text-underline-offset: 0.75rem;
         }
     }
 
     nav {
-        width: 31%;
-
+        width: 37.5%;
+        border: 1px solid white;
         ul {
             display: flex;
             justify-content: space-between;
@@ -793,7 +799,8 @@ aside {
 
 
 
-
-
-
-
+@media (max-width: 1280px) {
+    header nav a {
+        font-size: 16px;
+    }
+}
