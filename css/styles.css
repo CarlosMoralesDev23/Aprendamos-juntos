@@ -103,8 +103,6 @@ body {
             align-items: center;
             gap: 15px;
 
-            border: 1px solid white;
-
             input {
                 width: 17rem;
                 font-size: 1rem;
@@ -598,7 +596,6 @@ aside {
         flex-direction: row;
         justify-content: space-between;
         flex-wrap: wrap;
-        border: 1px solid white;
     }
 
     #contenedorFormSeleccionTemas {
@@ -681,6 +678,7 @@ aside {
         flex-wrap: wrap;
 
         select {
+            font-size: 1rem;
             width: 17rem;
             padding: 0.575rem;
             border: 0.1875rem solid var(--color-borde-principal);
@@ -741,7 +739,7 @@ aside {
         flex-direction: column;
 
         h2 {
-            font-size: 42px;
+            font-size: 36px;
             margin-bottom: 25px;
         }
 
@@ -778,3 +776,24 @@ aside {
         }
     }
 }
+
+#main_aboutMe {
+    padding: 0px 35px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+}
+
+
+
+
+
+
+
