@@ -9,6 +9,11 @@
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
         <title>Verbos Irregulares</title>
     </head>
+
+
+
+
+
     <body>
         <header id="header">
 
@@ -43,9 +48,11 @@
 
         </header>
 
-        <main id="mainDeHome">
+        <main id="main_home">
 
-            <form action="" id="formLogin">
+
+
+            <form action="" id="form_login">
                 <h2>Login</h2>
 
                 <div id="contenedorInputWrite_login">
@@ -74,64 +81,122 @@
                 </div>
             </form>
 
-            <nav id="menuDeContenidosInteractivo">
-                <ul>
-                    <li><a href="index.html#practica">Aprende verbos en pasado</a></li>
-                    <li><a href="index.html#practica">Aprende verbos base</a></li>
-                    <li><a href="index.html#practica">Aprende vocabulario</a></li>
-                    <li><a href="index.html#practica">Practica verbos en pasado</a></li>
-                    <li><a href="index.html#practica">Practica verbos base</a></li>
-                    <li><a href="index.html#practica">Pactica vocabulario</a></li>
 
-                    <!-- TODO ARREGLAR EL ENLACE -->
-                </ul>
-            </nav>
 
-            <div id="contenedorDeContenidoInteractivo">
 
-                <div id="contenidoInteractivoVerbosEnPasado">
-                    <div id="cajaDeTitulosDePractica">
-                        <h2>Verbos en pasado</h2>
 
-                        <a href="#cajaDeInstrucciones"><img src="/img/signo-de-interrogacion (2).png" alt=""></a>
-                    </div>
 
-                    <div id="cajaDeInstrucciones">
 
-                        <h4>Instrucciones</h4>
 
-                        <ol id="instruccionesPasado">
-                            <li>
-                                Practica los verbos en ingles en simple past, en
-                                orden de frecuencia de uso.
-                            </li>
-                            <li>
-                                En cada nivel veremos 10 verbos nuevos, y
-                                agregaremos la mitad de de verbos de los niveles
-                                anteriores aleatoriamente.
-                            </li>
-                            <li>
-                                Los verbos y opciones, apareceran de forma
-                                aleatoria
-                            </li>
-                            <li>
-                                Deberas seleccionar el verbo correcto y
-                                automaticamente avanza al siguiente verbo
-                            </li>
-                            <li>Solo apruebas cada nivel con el 95%</li>
-                            <li>
-                                Si te queivocas en algunos verbos, los mismo se
-                                repetiran al final tantas veces como te
-                                equivoques
-                            </li>
-                            <li>
-                                Los niveles siguientes solo se debloquean cuando
-                                apruebas el 100% del anterior
-                            </li>
-                        </ol>
-                    </div>
 
-                    <div id="contenedorNiveles">
+
+
+
+
+
+
+            <div id="main_contenedor_aplicacion">
+
+                <nav id="aplicacion_menu">
+                    <ul>
+                        <li><a href="index.html#practica">Aprende verbos en pasado</a></li>
+                        <li><a href="index.html#practica">Aprende verbos base</a></li>
+                        <li><a href="index.html#practica">Aprende vocabulario</a></li>
+                        <li><a href="index.html#practica">Practica verbos en pasado</a></li>
+                        <li><a href="index.html#practica">Practica verbos base</a></li>
+                        <li><a href="index.html#practica">Pactica vocabulario</a></li>
+
+                        <!-- TODO ARREGLAR EL ENLACE -->
+                    </ul>
+                </nav>
+
+
+
+
+
+
+
+
+
+
+
+
+                <div id="aplicacion_opcion_y_niveles">
+
+
+
+                    
+
+
+
+                        <div id="titulo_de_opcion_elegida_y_ayuda">
+
+
+
+                            <h2>Verbos en pasado</h2>
+
+                            <div id="contenedor_ayuda">
+
+                                <input type="checkbox" id="ayuda_toggle" />
+                                <label for="ayuda_toggle" id="ayuda_icon">
+                                <img src="/img/signo-de-interrogacion (2).png" alt="Ayuda">
+                                </label>
+
+                                <div id="contenedor_instrucciones">
+                                    <h4>Instrucciones</h4>
+
+                                    <ol id="contenedor_instrucciones_listado">
+                                        <li>
+                                            Practica los verbos en ingles en simple past, en
+                                            orden de frecuencia de uso.
+                                        </li>
+                                        <li>
+                                            En cada nivel veremos 10 verbos nuevos, y
+                                            agregaremos la mitad de de verbos de los niveles
+                                            anteriores aleatoriamente.
+                                        </li>
+                                        <li>
+                                            Los verbos y opciones, apareceran de forma
+                                            aleatoria
+                                        </li>
+                                        <li>
+                                            Deberas seleccionar el verbo correcto y
+                                            automaticamente avanza al siguiente verbo
+                                        </li>
+                                        <li>Solo apruebas cada nivel con el 95%</li>
+                                        <li>
+                                            Si te queivocas en algunos verbos, los mismo se
+                                            repetiran al final tantas veces como te
+                                            equivoques
+                                        </li>
+                                        <li>
+                                            Los niveles siguientes solo se debloquean cuando
+                                            apruebas el 100% del anterior
+                                        </li>
+                                    </ol>
+                                </div>
+
+                            </div>
+                            
+
+
+                        </div>
+
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <div id="aplicacion_niveles">
                         <div class="cajaNivel">
                             <a href="#contenedorPractica">Nivel 1 </a>
                         </div>
@@ -164,166 +229,20 @@
                         </div>
                     </div>
                 </div>
-
-
-                <!-- <div id="contenidoInteractivoVerbosFormaBase">
-                    <div id="cajaDeTitulosDePractica">
-                        <h2>Verbos forma base</h2>
-                        <p>
-                            Avancemos por frecuencia de su uso en la vida cotidiana
-                        </p>
-                    </div>
-
-                    <div id="cajaDeInstrucciones">
-                        <h4>Instrucciones</h4>
-                        <ol>
-                            <li>
-                                Pactica los verbos en ingles en simple past, en
-                                orden de frecuencia de uso.
-                            </li>
-                            <li>
-                                En cada nivel veremos 10 verbos nuevos, y
-                                agregaremos la mitad de de verbos de los niveles
-                                anteriores aleatoriamente.
-                            </li>
-                            <li>
-                                Los verbos y opciones, apareceran de forma
-                                aleatoria
-                            </li>
-                            <li>
-                                Deberas seleccionar el verbo correcto y
-                                automaticamente avanza al siguiente verbo
-                            </li>
-                            <li>Solo apruebas cada nivel con el 95%</li>
-                            <li>
-                                Si te queivocas en algunos verbos, los mismo se
-                                repetiran al final tantas veces como te
-                                equivoques
-                            </li>
-                            <li>
-                                Los niveles siguientes solo se debloquean cuando
-                                apruebas el 100% del anterior
-                            </li>
-                        </ol>
-                    </div>
-
-                    <div id="contenedorNiveles">
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 1 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 2 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 3 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 4 </a>
-                        </div>
-                        <div class="cajaNivelPlus cajaNivel">
-                            <a href="#modalPracticaVerbo">Plus</a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 5 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 6 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 7 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 8 </a>
-                        </div>
-                        <div class="cajaNivelPlus cajaNivel">
-                            <a href="#modalPracticaVerbo">Plus</a>
-                        </div>
-                    </div>
-                </div>
-
-
-                <div id="contenidoInteractivoVocabulario">
-                    <div id="cajaDeTitulosDePractica">
-                        <h2>Vocabulario</h2>
-                        <p>
-                            Avancemos por frecuencia de su uso en la vida cotidiana
-                        </p>
-                    </div>
-
-                    <div id="cajaDeInstrucciones">
-                        <h4>Instrucciones</h4>
-                        <ol>
-                            <li>
-                                Pactica los verbos en ingles en simple past, en
-                                orden de frecuencia de uso.
-                            </li>
-                            <li>
-                                En cada nivel veremos 10 verbos nuevos, y
-                                agregaremos la mitad de de verbos de los niveles
-                                anteriores aleatoriamente.
-                            </li>
-                            <li>
-                                Los verbos y opciones, apareceran de forma
-                                aleatoria
-                            </li>
-                            <li>
-                                Deberas seleccionar el verbo correcto y
-                                automaticamente avanza al siguiente verbo
-                            </li>
-                            <li>Solo apruebas cada nivel con el 95%</li>
-                            <li>
-                                Si te queivocas en algunos verbos, los mismo se
-                                repetiran al final tantas veces como te
-                                equivoques
-                            </li>
-                            <li>
-                                Los niveles siguientes solo se debloquean cuando
-                                apruebas el 100% del anterior
-                            </li>
-                        </ol>
-                    </div>
-
-                    <div id="contenedorNiveles">
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 1 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 2 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 3 </a>
-                        </div>
-                        <div class="cajaNivel">
-                            <a href="#modalPracticaVerbo">Nivel 4 </a>
-                        </div>
-                        <div class="cajaNivelPlus cajaNivel">
-                            <a href="#modalPracticaVerbo">Plus</a>
-                        </div>
-                    </div>
-                </div> -->
-
-
-                <div id="contenedorPractica">
-                    <div class="parent"> 
-                        <div id="tarea"><p>Practica Past Verb</p></div>
-                        <div id="iconoAyuda"><p>Ayuda</p></div>
-
-                        <div id="verbo"><h2>VERBO</h2></div>
-
-                        <div id="opcion1" class="div5 opcion"><h4>Opción 1</h4></div>
-                        <div id="opcion2" class="div6 opcion"><h4>Opción 2</h4></div>
-                        <div id="opcion3" class="div7 opcion"><h4>Opción 3</h4></div>
-
-                        
-                        <button class="botones div10" id="Borrar">Borrar Selección</button>
-                        <button class="botones div11" id="Ayuda">Ayuda</button>
-                        <button class="botones div12" id="Avanzar">Avanzar</button>
-                        <button class="botones div13" id="Comodin">Comodin</button>
-
-                    </div>
-                </div>
+                
             </div>
 
+
+
+
+
+
+
+
+
+
+
+            
             <aside>
                 <h3 id="tituloAside">Recomendaciones</h3>
 
@@ -357,7 +276,34 @@
 
                 </section>
             </aside>
+
+            <div id="aplicacion_practica">
+                <div class="parent"> 
+                    <div id="tarea"><p>Practica Past Verb</p></div>
+                    <div id="iconoAyuda"><p>Ayuda</p></div>
+
+                    <div id="verbo"><h2>VERBO</h2></div>
+
+                    <div id="opcion1" class="div5 opcion"><h4>Opción 1</h4></div>
+                    <div id="opcion2" class="div6 opcion"><h4>Opción 2</h4></div>
+                    <div id="opcion3" class="div7 opcion"><h4>Opción 3</h4></div>
+
+                    
+                    <button class="botones div10" id="Borrar">Borrar Selección</button>
+                    <button class="botones div11" id="Ayuda">Ayuda</button>
+                    <button class="botones div12" id="Avanzar">Avanzar</button>
+                    <button class="botones div13" id="Comodin">Comodin</button>
+
+                </div>
+            </div>
+
+
         </main>
+
+
+
+
+
 
         <footer>
             <h4>Designed and created by Carlos Morales; &copy; 2024</h4>
@@ -402,3 +348,155 @@
         </footer>
     </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!-- <div id="contenidoInteractivoVerbosFormaBase">
+                        <div id="cajaDeTitulosDePractica">
+                            <h2>Verbos forma base</h2>
+                            <p>
+                                Avancemos por frecuencia de su uso en la vida cotidiana
+                            </p>
+                        </div>
+
+                        <div id="cajaDeInstrucciones">
+                            <h4>Instrucciones</h4>
+                            <ol>
+                                <li>
+                                    Pactica los verbos en ingles en simple past, en
+                                    orden de frecuencia de uso.
+                                </li>
+                                <li>
+                                    En cada nivel veremos 10 verbos nuevos, y
+                                    agregaremos la mitad de de verbos de los niveles
+                                    anteriores aleatoriamente.
+                                </li>
+                                <li>
+                                    Los verbos y opciones, apareceran de forma
+                                    aleatoria
+                                </li>
+                                <li>
+                                    Deberas seleccionar el verbo correcto y
+                                    automaticamente avanza al siguiente verbo
+                                </li>
+                                <li>Solo apruebas cada nivel con el 95%</li>
+                                <li>
+                                    Si te queivocas en algunos verbos, los mismo se
+                                    repetiran al final tantas veces como te
+                                    equivoques
+                                </li>
+                                <li>
+                                    Los niveles siguientes solo se debloquean cuando
+                                    apruebas el 100% del anterior
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div id="contenedorNiveles">
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 1 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 2 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 3 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 4 </a>
+                            </div>
+                            <div class="cajaNivelPlus cajaNivel">
+                                <a href="#modalPracticaVerbo">Plus</a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 5 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 6 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 7 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 8 </a>
+                            </div>
+                            <div class="cajaNivelPlus cajaNivel">
+                                <a href="#modalPracticaVerbo">Plus</a>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div id="contenidoInteractivoVocabulario">
+                        <div id="cajaDeTitulosDePractica">
+                            <h2>Vocabulario</h2>
+                            <p>
+                                Avancemos por frecuencia de su uso en la vida cotidiana
+                            </p>
+                        </div>
+
+                        <div id="cajaDeInstrucciones">
+                            <h4>Instrucciones</h4>
+                            <ol>
+                                <li>
+                                    Pactica los verbos en ingles en simple past, en
+                                    orden de frecuencia de uso.
+                                </li>
+                                <li>
+                                    En cada nivel veremos 10 verbos nuevos, y
+                                    agregaremos la mitad de de verbos de los niveles
+                                    anteriores aleatoriamente.
+                                </li>
+                                <li>
+                                    Los verbos y opciones, apareceran de forma
+                                    aleatoria
+                                </li>
+                                <li>
+                                    Deberas seleccionar el verbo correcto y
+                                    automaticamente avanza al siguiente verbo
+                                </li>
+                                <li>Solo apruebas cada nivel con el 95%</li>
+                                <li>
+                                    Si te queivocas en algunos verbos, los mismo se
+                                    repetiran al final tantas veces como te
+                                    equivoques
+                                </li>
+                                <li>
+                                    Los niveles siguientes solo se debloquean cuando
+                                    apruebas el 100% del anterior
+                                </li>
+                            </ol>
+                        </div>
+
+                        <div id="contenedorNiveles">
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 1 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 2 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 3 </a>
+                            </div>
+                            <div class="cajaNivel">
+                                <a href="#modalPracticaVerbo">Nivel 4 </a>
+                            </div>
+                            <div class="cajaNivelPlus cajaNivel">
+                                <a href="#modalPracticaVerbo">Plus</a>
+                            </div>
+                        </div>
+                    </div> -->

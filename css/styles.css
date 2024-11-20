@@ -78,7 +78,7 @@ body {
         text-decoration: none;
     }
 
-    #formLogin,
+    #form_login,
     #formRegistro,
     #formContactanos {
         padding: 30px;
@@ -231,7 +231,7 @@ header {
 }
 
 /** lOGIN */
-#formLogin {
+#form_login {
     width: auto;
     margin: auto;
 
@@ -302,136 +302,136 @@ footer {
 
 /** -------------- ONLY HOME --------------*/
 
-/** GENERAL */
-#mainDeHome {
+#main_home {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     padding: 0px 35px;
+    height: 100vh;
 }
 
-/** CONTENEDOR MENU DE CONTENIDO INTERACTIVO */
-#menuDeContenidosInteractivo {
-    width: 22%;
-    height: fit-content;
-    padding: 18px 12px;
+#main_contenedor_aplicacion {
+    display: flex;
+    justify-content: space-between;
+    width: 75%;
+    gap: 80px;
 
-    border: 3px solid var(--color-borde-principal);
-    border-radius: 8px;
-    box-shadow: 3px 3px 5px var(--color-borde-principal);
+    #aplicacion_menu {
+        width: 30%;
+        height: fit-content;
+        padding: 18px 12px;
 
-    ul {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        gap: 1.7rem;
+        border: 3px solid var(--color-borde-principal);
+        border-radius: 8px;
+        box-shadow: 3px 3px 5px var(--color-borde-principal);
 
-        li {
-            list-style: none;
-            a {
-                display: inline-block;
-                position: relative;
+        ul {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            gap: 1.7rem;
 
-                &::after {
-                    content: "";
-                    position: absolute;
-                    left: 50%;
-                    bottom: 0;
-                    width: 0;
-                    height: 0.15rem;
-                    background-color: var(--color-subrayado-principal);
-                    transition: all 0.5s ease;
-                    transform: translateX(-50%);
-                }
-
-                &:hover {
-                    color: var(--color-texto-terciario);
+            li {
+                list-style: none;
+                a {
+                    display: inline-block;
+                    position: relative;
 
                     &::after {
-                        width: 100%;
-                        transition: all 0.35s ease;
+                        content: "";
+                        position: absolute;
+                        left: 50%;
+                        bottom: 0;
+                        width: 0;
+                        height: 0.15rem;
+                        background-color: var(--color-subrayado-principal);
+                        transition: all 0.5s ease;
+                        transform: translateX(-50%);
+                    }
+
+                    &:hover {
+                        color: var(--color-texto-terciario);
+
+                        &::after {
+                            width: 100%;
+                            transition: all 0.35s ease;
+                        }
                     }
                 }
             }
         }
     }
-}
 
-/** CONTENEDOR INTERACTIVO */
-#contenedorDeContenidoInteractivo {
-    margin: auto;
-    width: 52%;
-    display: flex;
-    flex-direction: column;
-
-    #cajaDeTitulosDePractica {
-        display: flex;
-        align-items: center;
-        padding: 8px 15px;
-        h2 {
-            text-align: start;
-        }
-
-        img {
-            width: 25px;
-            height: 25px;
-            cursor: pointer;
-            margin-left: 180px;
-            /* TODO Darle mejor codigo cuando aplique JS, PARA MOVER EL LOGIN */
-            /* border-radius: 50%; */
-        }
-    }
-
-    #cajaDeInstrucciones {
-        display: none;
-        width: 95%;
-        margin: auto;
+    #aplicacion_opcion_y_niveles {
+        padding: 10px;
+        width: 65%;
         display: flex;
         flex-direction: column;
+        gap: 10px;
 
-        h4 {
-            margin-bottom: 10px;
+        border: 3px solid var(--color-borde-principal);
+        border-radius: 8px;
+        box-shadow: 3px 3px 5px var(--color-borde-principal);
+
+        #titulo_de_opcion_elegida_y_ayuda {
+            width: 95%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin: 10px auto;
+
+            h2 {
+                width: 85%;
+            }
+
+            #contenedor_ayuda {
+                #ayuda_toggle {
+                    display: none;
+                }
+
+                #ayuda_icon {
+                    cursor: pointer;
+                    display: inline-block;
+
+                    img {
+                        width: 25px;
+                        height: 25px;
+                        cursor: pointer;
+                        margin-left: 180px;
+                        /* TODO Darle mejor codigo cuando aplique JS, PARA MOVER EL LOGIN */
+                        /* border-radius: 50%; */
+                    }
+                }
+            }
         }
 
-        ol {
-            margin: auto;
+        #aplicacion_niveles {
+            width: 95%;
+            margin: 1.25rem auto;
+
             display: flex;
-            flex-direction: column;
-            gap: 0.85rem;
-            li {
-                margin-left: 0.9375rem;
-                font-size: 0.85rem;
-                font-weight: 500;
+            flex-direction: row;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 3rem;
+
+            .cajaNivel {
+                border: 3px solid var(--color-borde-principal);
+                width: 85px;
+                height: 85px;
+                border-radius: 0.8125rem;
+
+                display: flex;
+                justify-content: center;
+                align-items: center;
             }
         }
     }
-
-    #contenedorNiveles {
-        width: 95%;
-        margin: 1.25rem auto;
-
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        gap: 3rem;
-
-        .cajaNivel {
-            border: 3px solid var(--color-borde-principal);
-            width: 100px;
-            padding: 0.35rem;
-            border-radius: 0.8125rem;
-
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-    }
 }
 
-/** ASIDE */
 aside {
-    width: 17.5%;
+    width: 20%;
     height: fit-content;
     padding: 15px 14px;
     text-align: center;
@@ -462,9 +462,7 @@ aside {
     }
 }
 
-/** MODAL DE PRACTICA */
-
-#contenedorPractica {
+#aplicacion_practica {
     display: grid;
     place-items: center;
     height: 100vh;
@@ -598,6 +596,50 @@ aside {
             grid-row-start: 4;
         }
     }
+}
+
+/** ICONO DE AYUDA */
+
+/** CAJA DE contenedor_instrucciones_listado */
+#contenedor_instrucciones {
+    display: none;
+    position: absolute;
+    top: 90px;
+    right: 350px;
+    background-color: var(--color-fondo-principal);
+    border: 1px solid var(--color-borde-principal);
+    padding: 1.5rem;
+    z-index: 10;
+    border-radius: 8px;
+
+    width: 50%;
+    margin: auto;
+
+    h4 {
+        margin-bottom: 20px;
+        text-align: center;
+    }
+
+    ol {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        gap: 1rem;
+        li {
+            margin-left: 0.9375rem;
+            font-size: 0.85rem;
+            font-weight: 500;
+        }
+    }
+}
+
+#ayuda_toggle:checked ~ #contenedor_instrucciones {
+    display: flex;
+    flex-direction: column;
+}
+
+#contenedor_instrucciones {
+    transition: all 0.3s ease;
 }
 
 /** -------------- ONLY REGISTRO --------------*/
@@ -852,7 +894,7 @@ aside {
         }
     }
 
-    #mainDeHome {
+    #main_home {
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
@@ -875,10 +917,8 @@ aside {
         }
 
         #contenedorDeContenidoInteractivo {
-
             width: 66%;
         }
-
     }
 }
 
@@ -960,7 +1000,6 @@ aside {
     }
 }
 
-
 @media (max-width: 900px) {
     #header {
         #menu {
@@ -968,7 +1007,6 @@ aside {
         }
     }
 }
-
 
 @media (max-width: 600px) {
     #header {
@@ -1010,7 +1048,6 @@ aside {
     }
 }
 
-
 @media (max-width: 510px) {
     #header {
         #header_titulo {
@@ -1029,7 +1066,6 @@ aside {
         }
     }
 }
-
 
 @media (max-width: 440px) {
     #header {
@@ -1050,7 +1086,6 @@ aside {
     }
 }
 
-
 @media (max-width: 400px) {
     #header {
         #header_titulo {
@@ -1070,7 +1105,6 @@ aside {
     }
 }
 
-
 @media (max-width: 360px) {
     #header {
         #header_titulo {
@@ -1089,5 +1123,3 @@ aside {
         }
     }
 }
-
-
