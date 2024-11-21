@@ -1,0 +1,15 @@
+
+
+@import url("/css/fonts/fonts.css");
+@import url("/css/universal_body/universal_body.css");
+@import url("/css/main/main.css");
+@import url("/css/formularios/formularios.css");
+
+
+@import url("/css/header/header.css");
+@import url("/css/login/login.css");
+
+@import url("/css/aplicación/aplicacion.css");
+@import url("/css/aside/aside.css");
+@import url("/css/footer/footer.css");
+@import url("/css/mediaQueries/mediaQueries.css");

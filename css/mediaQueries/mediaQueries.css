@@ -1,0 +1,233 @@
+@media (max-width: 1200px) {
+    header {
+        #header_titulo {
+            gap: 5px;
+        }
+
+        #menu {
+            ul {
+                gap: 1.2rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1100px) {
+    #header {
+        #header_titulo {
+            width: 47.5%;
+            img {
+                display: none;
+            }
+        }
+
+        #menu {
+            width: 52.5%;
+            ul {
+                gap: 1rem;
+            }
+        }
+    }
+}
+
+@media (max-width: 1000px) {
+    /* Ocultar menú por defecto */
+
+    #header {
+        #header_titulo {
+            width: 75%;
+        }
+
+        #menu {
+            display: none;
+            position: absolute;
+            top: 115px;
+            right: 0;
+            background-color: var(--color-fondo-principal);
+            width: 18.5%;
+            border: 1px solid white;
+            z-index: 1;
+            /*TODO saca el z index cuando mueva el aside hacia abajo. */
+            justify-content: center;
+        }
+
+        #menu ul {
+            flex-direction: column;
+            padding: 16px 0px;
+            gap: 1rem;
+        }
+
+        #menu ul li {
+            text-align: end;
+        }
+
+        /* cuando el menu esta oculto */
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Icono de menú */
+        #menu-icon {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 0.4rem;
+            cursor: pointer;
+            width: 2.5rem;
+            height: 2.5rem;
+        }
+
+        #menu-icon span {
+            height: 0.25rem;
+            width: 100%;
+            background-color: var(---color-fondo-terciario);
+            transition: all 0.5s ease;
+        }
+
+        /* Animación del icono al abrir */
+        #menu-toggle:checked + #menu-icon span:nth-child(1) {
+            transform: rotate(44deg);
+            position: relative;
+            top: 0.6rem;
+        }
+
+        #menu-toggle:checked + #menu-icon span:nth-child(2) {
+            opacity: 0;
+        }
+
+        #menu-toggle:checked + #menu-icon span:nth-child(3) {
+            transform: rotate(-46deg);
+            position: relative;
+            top: -0.6rem;
+        }
+
+        /* Mostrar menú cuando el checkbox está activo */
+        #menu-toggle:checked ~ #menu {
+            display: flex;
+        }
+    }
+}
+
+@media (max-width: 900px) {
+    #header {
+        #menu {
+            width: 22.5%;
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #header {
+        #header_titulo {
+            a {
+                h1 {
+                    font-size: 2.7rem;
+                }
+            }
+        }
+
+        #menu {
+            display: none;
+            position: absolute;
+            top: 115px;
+            right: 0;
+            background-color: var(--color-fondo-principal);
+            width: 100%;
+            border: 1px solid white;
+            z-index: 1;
+            /*TODO saca el z index cuando mueva el aside hacia abajo. */
+            justify-content: center;
+        }
+
+        #menu ul {
+            flex-direction: column;
+            padding: 16px 0px;
+            gap: 1rem;
+        }
+
+        #menu ul li {
+            text-align: center;
+        }
+
+        #menu-icon {
+            width: 2rem;
+            height: 2rem;
+        }
+    }
+}
+
+@media (max-width: 510px) {
+    #header {
+        #header_titulo {
+            width: 95%;
+
+            a {
+                h1 {
+                    font-size: 2.5rem;
+                }
+            }
+        }
+
+        #menu-icon {
+            width: 1.7rem;
+            height: 1.7rem;
+        }
+    }
+}
+
+@media (max-width: 440px) {
+    #header {
+        #header_titulo {
+            width: 95%;
+
+            a {
+                h1 {
+                    font-size: 2rem;
+                }
+            }
+        }
+
+        #menu-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+}
+
+@media (max-width: 400px) {
+    #header {
+        #header_titulo {
+            width: 95%;
+
+            a {
+                h1 {
+                    font-size: 1.7rem;
+                }
+            }
+        }
+
+        #menu-icon {
+            width: 1.4rem;
+            height: 1.4rem;
+        }
+    }
+}
+
+@media (max-width: 360px) {
+    #header {
+        #header_titulo {
+            width: 95%;
+
+            a {
+                h1 {
+                    font-size: 1.5rem;
+                }
+            }
+        }
+
+        #menu-icon {
+            width: 1.2rem;
+            height: 1.2rem;
+        }
+    }
+}

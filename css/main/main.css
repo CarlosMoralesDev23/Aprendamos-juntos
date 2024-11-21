@@ -1,0 +1,82 @@
+/** MAIN GENERAL */
+main {
+    /* width: 100%; */
+    position: relative;
+    /* TODO El position relative se uso para ubicar el modal loguin, quizas se saca cuando lo trabaje en css */
+}
+
+
+#main_home {
+    width: 95%;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+
+#main_aboutMe {
+    padding: 0px 35px;
+    margin: auto;
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    h2 {
+        font-size: 36px;
+        margin-bottom: 25px;
+    }
+}
+
+#mainPoliticasDePrivacidad {
+    padding: 0px 35px;
+    margin: auto;
+
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+
+    .contenedorPoliticasDePrivacidad {
+        width: 80%;
+        display: flex;
+        flex-direction: column;
+
+        h2 {
+            font-size: 36px;
+            margin-bottom: 25px;
+        }
+
+        ul {
+            display: flex;
+            flex-direction: column;
+            gap: 38px;
+            list-style: none;
+
+            li {
+                h3 {
+                    font-size: 22px;
+                    letter-spacing: 1.2px;
+                    margin-bottom: 12px;
+                    text-decoration: underline 0.125rem
+                        var(--color-subrayado-principal);
+                    text-underline-offset: 0.475rem;
+                }
+
+                p {
+                    font-size: 16px;
+                    letter-spacing: 1.2px;
+                    line-height: 21px;
+                    text-align: justify;
+                }
+            }
+
+            li:nth-child(2),
+            li:nth-child(6) {
+                ul {
+                    gap: 7px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,31 @@
+aside {
+    width: 20%;
+    height: fit-content;
+    padding: 15px 14px;
+    text-align: center;
+
+    border: 3px solid var(--color-borde-principal);
+    border-radius: 8px;
+    box-shadow: 3px 3px 5px var(--color-borde-principal);
+
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+
+    #sectionPacho8aYoutube,
+    #sectionPacho8aSitioWeb {
+        display: flex;
+        flex-direction: column;
+
+        iframe {
+            margin: auto;
+            width: 170px;
+            height: 130px;
+        }
+        /* TODO Como hacer para que el iframe se reproduzca en grande en mi pagina web */
+
+        img {
+            width: 125px;
+        }
+    }
+}

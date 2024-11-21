@@ -1,0 +1,135 @@
+#aplicacion_practica {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+
+    .parent {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(4, 1fr);
+        gap: 35px;
+
+        border: 3px solid var(--color-borde-principal);
+        border-radius: 8px;
+        width: 95%;
+        margin: auto;
+        padding: 1rem;
+        border-radius: 0.8125rem;
+
+        #tarea {
+            grid-column: span 3 / span 3;
+            text-align: start;
+            font-weight: 500;
+        }
+
+        #iconoAyuda {
+            grid-column: span 2 / span 2;
+            grid-column-start: 4;
+            text-align: end;
+            font-weight: 500;
+        }
+
+        #verbo {
+            grid-column: span 3 / span 3;
+            grid-column-start: 2;
+            grid-row-start: 2;
+            font-size: 1.4rem;
+            text-align: center;
+            font-weight: 800;
+        }
+
+        .opcion {
+            display: grid;
+            place-items: center;
+            margin: auto;
+
+            h4 {
+                /* TODO Subir el tamaño de la letra,  primero distribuir con grid */
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    left: 50%;
+                    bottom: 0;
+                    width: 0;
+                    height: 0.15rem;
+                    background-color: var(--color-subrayado-principal);
+                    transition: all 0.5s ease;
+                    transform: translateX(-50%);
+                }
+
+                &:hover {
+                    color: var(--color-texto-terciario);
+
+                    &::after {
+                        width: 100%;
+                        transition: all 0.35s ease;
+                    }
+                }
+            }
+        }
+
+        #opcion1 {
+            grid-row-start: 3;
+            grid-column-start: 2;
+        }
+
+        #opcion2 {
+            grid-row-start: 3;
+            grid-column-start: 3;
+        }
+
+        #opcion3 {
+            grid-row-start: 3;
+            grid-column-start: 4;
+        }
+
+        #opcion4 {
+            grid-row-start: 3;
+        }
+
+        #opcion5 {
+            grid-row-start: 3;
+        }
+
+        .botones {
+            display: grid;
+            place-items: center;
+
+            font-size: 14px;
+            font-weight: bold;
+            padding: 10px;
+            border-radius: 10px;
+
+            color: var(--color-texto-principal);
+            border: 0.125rem solid var(--color-borde-principal);
+            background-color: var(--color-fondo-principal);
+            cursor: pointer;
+
+            /* TODO CADA BOTON VA A SER DIFERENTE DE COLOR */
+        }
+
+        .div10 {
+            grid-column-start: 2;
+            grid-row-start: 4;
+        }
+
+        .div11 {
+            grid-column-start: 3;
+            grid-row-start: 4;
+        }
+
+        .div12 {
+            grid-column-start: 4;
+            grid-row-start: 4;
+        }
+
+        .div13 {
+            grid-column-start: 5;
+            grid-row-start: 4;
+        }
+    }
+}
