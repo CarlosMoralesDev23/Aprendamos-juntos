@@ -1,3 +1,4 @@
+
 const ayudaIcon = document.getElementById("ayuda_icon");
 const contenedorInstrucciones = document.getElementById(
     "contenedor_instrucciones"
@@ -6,5 +7,3 @@ const contenedorInstrucciones = document.getElementById(
 ayudaIcon.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto");
 });
-
-
