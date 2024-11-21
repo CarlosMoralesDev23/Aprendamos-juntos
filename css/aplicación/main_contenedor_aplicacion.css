@@ -5,14 +5,20 @@
     display: flex;
     justify-content: space-between;
     width: 80%;
+
+
+    border: 1px solid white;
 }
 
 #aplicacion_opcion_y_niveles {
-    padding: 10px;
     width: 66%;
     display: flex;
     flex-direction: column;
     gap: 10px;
+
+
+    border: 1px solid white;
+
 }
 
 #titulo_de_opcion_elegida_y_ayuda {
@@ -43,12 +49,11 @@ h2 {
         height: 25px;
         cursor: pointer;
         /* TODO Darle mejor codigo cuando aplique JS, PARA MOVER EL LOGIN */
-        /* border-radius: 50%; */
     }
 }
 
 #contenedor_instrucciones {
-    width: 50%;
+    width: 30%;
     margin: auto;
     padding: 1rem;
     border-radius: 8px;
@@ -57,12 +62,11 @@ h2 {
 
     position: absolute;
     top: 65px;
-    right: 320px;
+    right: 300px;
     z-index: 30;
 
-    /* transition: all 0.3s ease; */
 
-    display: flex; /* Estado visible predeterminado */
+    display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -70,7 +74,7 @@ h2 {
 }
 
 #contenedor_instrucciones.oculto {
-    display: none; /* Ocultar completamente */
+    display: none;
 }
 
 
@@ -91,10 +95,6 @@ ol {
         font-weight: 500;
     }
 }
-
-
-
-
 
 
 #aplicacion_niveles {
