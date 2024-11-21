@@ -159,9 +159,6 @@ header {
         #ffd48b 100%
     );
 
-    /* flex-flow: row wrap; */
-    /* flex-shrink: 1; */
-
     #header_titulo {
         width: 50%;
         display: flex;
@@ -303,34 +300,33 @@ footer {
 /** -------------- ONLY HOME --------------*/
 
 #main_home {
+    width: 95%;
+    margin: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    padding: 0px 35px;
-    height: 100vh;
+    flex-wrap: wrap;
 }
 
 #main_contenedor_aplicacion {
     display: flex;
     justify-content: space-between;
-    width: 75%;
-    gap: 80px;
+    width: 80%;
 
     #aplicacion_menu {
-        width: 30%;
-        height: fit-content;
-        padding: 18px 12px;
+        width: 33%;
 
         border: 3px solid var(--color-borde-principal);
         border-radius: 8px;
         box-shadow: 3px 3px 5px var(--color-borde-principal);
 
         ul {
+            padding: 20px 0px 20px 10px;
             margin: auto;
             display: flex;
             flex-direction: column;
             justify-content: space-around;
-            gap: 1.7rem;
+            align-items: start;
+            gap: 2.5rem;
 
             li {
                 list-style: none;
@@ -365,32 +361,41 @@ footer {
 
     #aplicacion_opcion_y_niveles {
         padding: 10px;
-        width: 65%;
+        width: 66%;
         display: flex;
         flex-direction: column;
         gap: 10px;
 
-        border: 3px solid var(--color-borde-principal);
-        border-radius: 8px;
-        box-shadow: 3px 3px 5px var(--color-borde-principal);
-
         #titulo_de_opcion_elegida_y_ayuda {
+            padding: 3px;
             width: 95%;
             display: flex;
             justify-content: space-between;
             align-items: center;
-            margin: 10px auto;
+            margin: 0 auto;
 
             h2 {
-                width: 85%;
+                width: 80%;
             }
 
             #contenedor_ayuda {
+                background-color: rgb(87, 137, 137);
+                width: 20%;
+                display: flex;
+                justify-content: end;
+
+                
+                /** Input */
                 #ayuda_toggle {
+                    width: 20%;
+                    background-color: #08afe9;
                     display: none;
                 }
-
+                
+                /** Label */
                 #ayuda_icon {
+                    width: 40%;
+                    background-color: #f8f8ec;
                     cursor: pointer;
                     display: inline-block;
 
@@ -398,28 +403,62 @@ footer {
                         width: 25px;
                         height: 25px;
                         cursor: pointer;
-                        margin-left: 180px;
                         /* TODO Darle mejor codigo cuando aplique JS, PARA MOVER EL LOGIN */
                         /* border-radius: 50%; */
+                    }
+                }
+
+
+                #contenedor_instrucciones {
+                    display: none;
+                    position: absolute;
+                    top: 90px;
+                    right: 350px;
+                    background-color: var(--color-fondo-principal);
+                    border: 1px solid var(--color-borde-principal);
+                    padding: 1.5rem;
+                    z-index: 10;
+                    border-radius: 8px;
+
+                    width: 50%;
+                    margin: auto;
+                    transition: all 0.3s ease;
+
+                    h4 {
+                        margin-bottom: 20px;
+                        text-align: center;
+                    }
+
+                    ol {
+                        margin: auto;
+                        display: flex;
+                        flex-direction: column;
+                        gap: 1rem;
+                        li {
+                            margin-left: 0.9375rem;
+                            font-size: 0.85rem;
+                            font-weight: 500;
+                        }
                     }
                 }
             }
         }
 
         #aplicacion_niveles {
+            background-color: #31383a;
             width: 95%;
-            margin: 1.25rem auto;
+            margin: 0 auto;
 
             display: flex;
             flex-direction: row;
             justify-content: space-between;
+            gap: 20px;
             flex-wrap: wrap;
-            gap: 3rem;
 
             .cajaNivel {
                 border: 3px solid var(--color-borde-principal);
-                width: 85px;
-                height: 85px;
+                width: 100px;
+                height: 100px;
                 border-radius: 0.8125rem;
 
                 display: flex;
@@ -601,46 +640,6 @@ aside {
 /** ICONO DE AYUDA */
 
 /** CAJA DE contenedor_instrucciones_listado */
-#contenedor_instrucciones {
-    display: none;
-    position: absolute;
-    top: 90px;
-    right: 350px;
-    background-color: var(--color-fondo-principal);
-    border: 1px solid var(--color-borde-principal);
-    padding: 1.5rem;
-    z-index: 10;
-    border-radius: 8px;
-
-    width: 50%;
-    margin: auto;
-
-    h4 {
-        margin-bottom: 20px;
-        text-align: center;
-    }
-
-    ol {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        gap: 1rem;
-        li {
-            margin-left: 0.9375rem;
-            font-size: 0.85rem;
-            font-weight: 500;
-        }
-    }
-}
-
-#ayuda_toggle:checked ~ #contenedor_instrucciones {
-    display: flex;
-    flex-direction: column;
-}
-
-#contenedor_instrucciones {
-    transition: all 0.3s ease;
-}
 
 /** -------------- ONLY REGISTRO --------------*/
 
@@ -853,11 +852,11 @@ aside {
 }
 
 /* Estilos para el menú en pantallas pequeñas */
-@media (max-width: 1300px) {
+/* @media (max-width: 1300px) {
     aside {
         width: 20%;
     }
-}
+} */
 
 @media (max-width: 1200px) {
     header {
@@ -870,10 +869,6 @@ aside {
                 gap: 1.2rem;
             }
         }
-    }
-
-    aside {
-        width: 21%;
     }
 }
 
@@ -891,33 +886,6 @@ aside {
             ul {
                 gap: 1rem;
             }
-        }
-    }
-
-    #main_home {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-between;
-        padding: 0px 35px;
-
-        aside {
-            width: 100%;
-            flex-flow: row wrap;
-            justify-content: center;
-            gap: 40px;
-            margin-bottom: 80px;
-
-            h3 {
-                width: 100%;
-            }
-        }
-
-        #menuDeContenidosInteractivo {
-            width: 33%;
-        }
-
-        #contenedorDeContenidoInteractivo {
-            width: 66%;
         }
     }
 }
