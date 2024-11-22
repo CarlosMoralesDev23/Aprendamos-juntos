@@ -72,9 +72,8 @@
     /* Ocultar menú por defecto */
 
     html {
-        font-size: 14px;
+        font-size: 15px;
     }
-
 }
 
 @media (max-width: 900px) {
@@ -151,6 +150,23 @@
             display: flex;
         }
     }
+
+    #main_contenedor_aplicacion {
+        width: 100%;
+
+        #aplicacion_menu {
+            width: 38%;
+        }
+
+        #aplicacion_opcion_y_niveles {
+            width: 62%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            border: 1px solid white;
+        }
+    }
 }
 
 @media (max-width: 600px) {
@@ -208,6 +224,40 @@
         #menu-icon {
             width: 1.7rem;
             height: 1.7rem;
+        }
+    }
+
+    #main_contenedor_aplicacion {
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        width: 80%;
+
+        border: 1px solid white;
+
+        #aplicacion_menu {
+            width: 100%;
+        }
+
+        #aplicacion_opcion_y_niveles {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+
+            border: 1px solid white;
+
+            #aplicacion_niveles {
+                background-color: #31383a;
+                width: 100%;
+                margin: 0 auto;
+
+                display: grid;
+                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                gap: 20px;
+                padding: 10px;
+            }
         }
     }
 }
