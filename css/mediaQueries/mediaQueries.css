@@ -71,8 +71,13 @@
 @media (max-width: 1000px) {
     /* Ocultar menú por defecto */
 
+    html {
+        font-size: 14px;
+    }
 
+}
 
+@media (max-width: 900px) {
     #header {
         #header_titulo {
             width: 75%;
@@ -144,14 +149,6 @@
         /* Mostrar menú cuando el checkbox está activo */
         #menu-toggle:checked ~ #menu {
             display: flex;
-        }
-    }
-}
-
-@media (max-width: 900px) {
-    #header {
-        #menu {
-            width: 22.5%;
         }
     }
 }
