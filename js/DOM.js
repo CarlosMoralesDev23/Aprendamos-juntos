@@ -7,3 +7,5 @@ const contenedorInstrucciones = document.getElementById(
 ayudaIcon.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto");
 });
+
+
