@@ -50,7 +50,7 @@
                     
                     <input
                         type="email"
-                        id="email"
+                        id="loginEmail"
                         class="controls"
                         name="email"
                         minlength="6"
@@ -60,12 +60,20 @@
 
                     <input
                         type="password"
-                        id="password"
+                        name="password"
+                        id="loginPassword"
                         class="controls"
                         minlength="8"
                         maxlength="12"
                         placeholder="Ingresa tu contraseña..."
                     />
+
+                    <input 
+                    type="phone"
+                    name="phone"
+                    id="loginNumero"
+                    placeholder="ingresa tu numero"
+                    >
                 </div>
 
                 <div id="contenedorFormBotonesEnviarYBorrar">
@@ -131,6 +139,8 @@
                     <textarea name="message" id="comentarios" rows="5" maxlength="1000" placeholder="Máximo 1000 caracteres..."></textarea>
 
                     <p id="contador">Caracteres restantes: 500</p>
+
+                    <!-- TODO no se envia el text area -->
                 </div>
 
                 <div id="contenedorFormBotonesEnviarYBorrar">
@@ -181,6 +191,9 @@
                 </section>
             </section>
         </footer>
+
+
+        <script src="../js/login.js"></script>
     </body>
 </html>
 
