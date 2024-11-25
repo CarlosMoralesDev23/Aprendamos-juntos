@@ -42,11 +42,10 @@
 
         <main>
 
-            <form action="" id="formLogin" onsubmit="enviarWhatsApp(event)">
+            <form id="form_login" class="ocultoLogin">
                 <h2>Login</h2>
 
                 <div id="contenedorInputWrite_login">
-
                     <input
                         type="email"
                         id="email"
@@ -56,10 +55,10 @@
                         maxlength="60"
                         placeholder="Ingresa tu correo..."
                     />
-
                     <input
                         type="password"
                         id="password"
+                        name="password"
                         class="controls"
                         minlength="8"
                         maxlength="12"
@@ -284,5 +283,7 @@
                 </section>
             </section>
         </footer>
+        <script src="/js/index.js"></script>
+
     </body>
 </html>
