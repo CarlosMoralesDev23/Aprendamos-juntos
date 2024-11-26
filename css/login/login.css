@@ -1,34 +1,91 @@
-/** lOGIN */
 #form_login {
-    width: auto;
-    margin: auto;
+    width: 90%;
+    /* para que ocupe el 90% en pantalla chica */
+    max-width: 450px;
+    /* para que no sea tan grande en pantalla grande */
+    margin: 20px auto;
+    padding: 25px;
 
-    position: absolute;
-    top: 0px;
-    right: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 
-    #contenedorInputWrite_login {
-        flex-direction: column;
-    }
+    background-color: var(--color-fondo-principal);
+    box-shadow: 0 4px 6px rgba(255, 212, 139, 0.35);
+    border-radius: 10px;
+    border: 3px solid var(--color-borde-principal);
 
-    #contenedorFormBotonesEnviarYBorrar {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
+    position: fixed; /* con esto lo fijo a la pantalla */
+    top: 50%;  /* lo hubico permanentemente*/
+    left: 50%; /* lo hubico permanentemente*/
+    transform: translate(-50%, -50%);
+    z-index: 10; 
+}
+
+#contenedorInputWrite_login {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre campos */
+}
+
+.controls {
+    width: 100%; /* Expandir campos al ancho del formulario */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#contenedorFormBotonesEnviarYBorrar {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+.buttons {
+    width: 100%;
+    flex: 1;
+    padding: 10px;
+    border: none;
+    background-color: var(--color-fondo-base);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+    &[type="submit"],
+    &[type="reset"] {
+        color: white;
+        font-size: 1rem;
+        letter-spacing: 0.5px;
+        border: 3px solid var(--color-borde-principal);
+
+        &:hover {
+            scale: 1.05;
+            cursor: pointer;
+
+            &[type="submit"] {
+                background-color: green;
+            }
+
+            &[type="reset"] {
+                background-color: red;
+            }
+        }
     }
 }
 
-
-#form_login {
+.ocultoLogin {
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.5s ease, visibility 0.5s ease;
-    /* TODO REVISA opacity y visibility */
-
-
+    transform: translateY(-75px); /* Desaparece */
+    transition: opacity 1s ease, visibility 1s ease, transform 1s ease;
 }
 
+/* Formulario de login visible */
 #form_login:not(.ocultoLogin) {
     opacity: 1;
     visibility: visible;
+    transform: translateY(75);
+    transition: opacity 1s ease, visibility 1s ease, transform 1s ease;
 }
+
+

@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="/css/styles.css" />
+        <link rel="stylesheet" href="/css/styles.css"/>
         <title>Verbos Irregulares</title>
     </head>
     <body>
@@ -34,7 +34,7 @@
                     <li><a href="/html/about_me.html">About me</a></li>
                     <li><a href="/html/contact_me.html">Contact me</a></li>
                     <li><a href="/html/sign_up.html">Sign up</a></li>
-                    <li><a href="#formLogin">Login</a></li>
+                    <li><a href="#formLogin" id="boton_login">Login</a></li>
                 </ul>
             </nav>
 
@@ -44,31 +44,13 @@
 
             <form id="form_login" class="ocultoLogin">
                 <h2>Login</h2>
-
                 <div id="contenedorInputWrite_login">
-                    <input
-                        type="email"
-                        id="email"
-                        class="controls"
-                        name="email"
-                        minlength="6"
-                        maxlength="60"
-                        placeholder="Ingresa tu correo..."
-                    />
-                    <input
-                        type="password"
-                        id="password"
-                        name="password"
-                        class="controls"
-                        minlength="8"
-                        maxlength="12"
-                        placeholder="Ingresa tu contraseña..."
-                    />
+                    <input type="email" class="controls" placeholder="Ingresa tu correo..." />
+                    <input type="password" class="controls" placeholder="Ingresa tu contraseña..." />
                 </div>
-
                 <div id="contenedorFormBotonesEnviarYBorrar">
-                    <input type="reset" value="Borrar todo" class="buttons"/>
-                    <input type="submit" class="buttons"/>
+                    <button type="reset" class="buttons">Borrar</button>
+                    <button type="submit" class="buttons">Enviar</button>
                 </div>
             </form>
             

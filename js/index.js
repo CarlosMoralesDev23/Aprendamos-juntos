@@ -1,12 +1,8 @@
 
 //Función LOGIN
-
-const botonLogin = document.getElementById("boton_login");
-const contenedorLogin = document.getElementById("form_login");
-botonLogin.addEventListener("click", () => {
-    contenedorLogin.classList.toggle("ocultoLogin");
+document.getElementById("boton_login").addEventListener("click", () => {
+    document.getElementById("form_login").classList.toggle("ocultoLogin");
 });
-
 
 
 
