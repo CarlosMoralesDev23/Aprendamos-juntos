@@ -61,9 +61,9 @@
             
             <form action="https://formspree.io/f/mnnqbwqy" method="post" id="formRegistro">
 
-                <div>
-                    <h2>Registro</h2>
-                </div>
+                
+                <h2>Registro</h2>
+                
 
                 <div id="contenedorInputWrite_registro">
 
@@ -131,71 +131,64 @@
                 </div>
 
 
+                
+                <h4>Areas en las que quieres enfocarte</h4>
+                <p>(Podes elegir 2, o general)</p>
+                
 
 
+                <div id="contenedorOpcionesTematicas">
+                    <div>
+                        <label for="opcionTemaTecnologia">Tecnologia</label>
+                        <input
+                            type="checkbox"
+                            name="temasParaPracticar"
+                            id="opcionTemaTecnologia"
+                            class="temaPreferidoParaPrcticar"
+                        />
+                    </div>
 
-                <div id="contenedorFormSeleccionTemas">
-                    <!-- ELEGIR TEMA -->
-                    <h4>Areas en las que quieres enfocarte</h4>
-                    <p>(Podes elegir 2, o general)</p>
+                    <div>
+                        <label for="opcionTemaGastronomia">Gastronomia</label>
+                        <input
+                            type="checkbox"
+                            name="temasParaPracticar"
+                            id="opcionTemaGastronomia"
+                            class="temaPreferidoParaPrcticar"
+                        />
+                    </div>
 
-                    <div id="contenedorOpcionesTematicas">
-                        <div>
-                            <label for="opcionTemaTecnologia">Tecnologia</label>
-                            <input
-                                type="checkbox"
-                                name="temasParaPracticar"
-                                id="opcionTemaTecnologia"
-                                class="temaPreferidoParaPrcticar"
-                            />
-                        </div>
+                    <div>
+                        <label for="opcionTemaViaje">Viaje</label>
+                        <input
+                            type="checkbox"
+                            name="temasParaPracticar"
+                            id="opcionTemaViaje"
+                            class="temaPreferidoParaPrcticar"
+                        />
+                    </div>
 
-                        <div>
-                            <label for="opcionTemaGastronomia">Gastronomia</label>
-                            <input
-                                type="checkbox"
-                                name="temasParaPracticar"
-                                id="opcionTemaGastronomia"
-                                class="temaPreferidoParaPrcticar"
-                            />
-                        </div>
+                    <div>
+                        <label for="opcionTemaDeportes">Deportes</label>
+                        <input
+                            type="checkbox"
+                            name="temasParaPracticar"
+                            id="opcionTemaDeportes"
+                            class="temaPreferidoParaPrcticar"
+                        />
+                    </div>
 
-                        <div>
-                            <label for="opcionTemaViaje">Viaje</label>
-                            <input
-                                type="checkbox"
-                                name="temasParaPracticar"
-                                id="opcionTemaViaje"
-                                class="temaPreferidoParaPrcticar"
-                            />
-                        </div>
-
-                        <div>
-                            <label for="opcionTemaDeportes">Deportes</label>
-                            <input
-                                type="checkbox"
-                                name="temasParaPracticar"
-                                id="opcionTemaDeportes"
-                                class="temaPreferidoParaPrcticar"
-                            />
-                        </div>
-
-                        <div>
-                            <label for="opcionTemaGeneral">General</label>
-                            <input
-                                type="checkbox"
-                                name="temasParaPracticar"
-                                id="opcionTemaGeneral"
-                                class="temaPreferidoParaPrcticar"
-                            />
-                        </div>
+                    <div>
+                        <label for="opcionTemaGeneral">General</label>
+                        <input
+                            type="checkbox"
+                            name="temasParaPracticar"
+                            id="opcionTemaGeneral"
+                            class="temaPreferidoParaPrcticar"
+                        />
                     </div>
                 </div>
-
-
-
-
-
+                
 
                 <div id="contenedorFormRangoDeEdad">
                     <!-- RANGO DE EDAD -->
@@ -227,11 +220,6 @@
                 </div>
 
 
-
-
-
-
-                
                 <div id="contenedorFormBotonesEnviarYBorrar">
                     <input type="reset" value="Borrar todo" class="buttons"/>
                     <input type="submit" class="buttons"/>

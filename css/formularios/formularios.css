@@ -14,7 +14,7 @@
     gap: 17.5px;
     margin: 1.5rem auto;
 
-    h2{
+    h2 {
         text-align: center;
     }
 
@@ -60,31 +60,38 @@
     }
 }
 
-
-
-
-
-
 #formRegistro {
-    #contenedorFormSeleccionTemas,
-    #contenedorFormRangoDeEdad {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        gap: 10px;
+    h4,
+    p {
+        margin: 0;
     }
+}
 
-    #contenedorOpcionesTematicas,
-    #OpcionesDeEdad {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: space-around;
+#contenedorOpcionesTematicas {
+    border: 5px solid gold;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+    div{
+        border: 1px solid white;
         width: 100%;
+
+        display: flex;
+        justify-content: start;
     }
 }
 
 
 
+
+
+@media (max-width: 1205px) {
+    #contenedorOpcionesTematicas {
+        flex-direction: column; /* Ajusta a columna en pantallas pequeñas */
+    }
+}
 
 
 
@@ -116,14 +123,12 @@
 }
 
 @media (max-width: 560px) {
-
     #contenedorInputWrite_registro,
     #contenedorInputWrite_contactanos {
         input,
         select {
             min-width: 250px;
         }
-
     }
 }
 
