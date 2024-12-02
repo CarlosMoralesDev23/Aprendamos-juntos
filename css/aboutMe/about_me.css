@@ -6,13 +6,11 @@
 
 .about-section {
     width: 100%;
-    border: 1px solid gold;
     display: flex;
 
     .foto {
         width: 20%;
         object-fit: contain;
-        border: 1px solid gold;
     }
 
     .about_content {
@@ -23,11 +21,9 @@
         h2 {
             width: 100%;
             font-size: 2.5rem !important;
-            border: 1px solid gold;
         }
 
         p {
-            border: 1px solid gold;
             margin-bottom: 30px;
             font-size: 1.2rem;
             text-align: justify;
@@ -36,13 +32,12 @@
     }
 }
 
-.tecnologias {
+.skills {
     width: 100%;
-    border: 1px solid gold;
 
     h3 {
         font-size: 2.2rem !important;
-        border: 1px solid gold;
+        text-align: center;
     }
 }
 
@@ -52,7 +47,6 @@
     justify-content: center;
     gap: 20px;
     padding: 20px;
-    background-color: var(--color-fondo-base);
     border-radius: 8px;
     list-style: none;
 
@@ -68,11 +62,13 @@
         width: 100px;
         text-align: center;
         transition: transform 0.3s ease;
-
+        color: black;
+        font-weight: bold;
+        
         &:hover {
             transform: scale(1.1);
         }
-
+        
         img {
             width: 60px;
             height: 60px;
@@ -91,7 +87,7 @@
     h3 {
         font-size: 2rem;
         margin-bottom: 1rem;
-        color: var(--color-texto-principal);
+        color: black;
     }
 
     .project-grid {
