@@ -1,13 +1,7 @@
 @media (max-width: 1200px) {
-    header {
+    #header {
         #header_titulo {
             gap: 0px;
-        }
-
-        aside {
-            width: 100%;
-            flex-direction: row;
-            margin-top: 40px;
         }
 
         #menu {
@@ -17,39 +11,47 @@
         }
     }
 
+    #main_home {
+        #main_contenedor_aplicacion {
+            width: 100%;
+            border: 1px solid white;
+
+            #contenedor_instrucciones {
+                width: 50%;
+            }
+
+            #aplicacion_menu {
+                width: 33%;
+
+                ul {
+                    padding: 20px 0px 20px 10px;
+                    margin: auto;
+
+                    li {
+                        list-style: none;
+                        a {
+                            font-size: 1.15rem;
+
+                            display: inline-block;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+        }
+
+        aside {
+            width: 100%;
+            flex-direction: row;
+            margin-top: 40px;
+        }
+    }
+
     #main_aboutMe {
         .about-section {
             .foto {
                 width: 30%;
                 object-fit: contain;
-            }
-        }
-    }
-
-    #main_contenedor_aplicacion {
-        width: 100%;
-        border: 1px solid white;
-
-        #contenedor_instrucciones {
-            width: 50%;
-        }
-
-        #aplicacion_menu {
-            width: 33%;
-
-            ul {
-                padding: 20px 0px 20px 10px;
-                margin: auto;
-
-                li {
-                    list-style: none;
-                    a {
-                        font-size: 1.15rem;
-
-                        display: inline-block;
-                        position: relative;
-                    }
-                }
             }
         }
     }
@@ -152,7 +154,9 @@
                 }
             }
         }
+    }
 
+    #main_home {
         #main_contenedor_aplicacion {
             width: 100%;
 
@@ -192,22 +196,22 @@
             z-index: 1;
             /*TODO saca el z index cuando mueva el aside hacia abajo. */
             justify-content: center;
-        }
 
-        #menu ul {
-            flex-direction: column;
-            padding: 16px 0px;
-            gap: 1rem;
+            ul {
+                flex-direction: column;
+                padding: 16px 0px;
+                gap: 1rem;
 
-            li {
-                text-align: end;
+                li {
+                    text-align: end;
 
-                a {
-                    font-size: 1rem;
+                    a {
+                        font-size: 1rem;
+                    }
                 }
             }
         }
-        
+
         /* Icono de menú */
         #menu-icon {
             display: flex;
@@ -230,7 +234,6 @@
         #menu-toggle {
             display: none;
         }
-
 
         /* Animación del icono al abrir */
         #menu-toggle:checked + #menu-icon span:nth-child(1) {
@@ -255,48 +258,27 @@
         }
     }
 
-    #main_contenedor_aplicacion {
-        width: 100%;
+    #main_home {
+        #main_contenedor_aplicacion {
+            width: 100%;
 
-        #aplicacion_menu {
-            width: 38%;
-        }
+            #aplicacion_menu {
+                width: 38%;
+            }
 
-        #aplicacion_opcion_y_niveles {
-            width: 62%;
-            display: flex;
-            flex-direction: column;
-            gap: 10px;
+            #aplicacion_opcion_y_niveles {
+                width: 62%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
 
-            border: 1px solid white;
+                border: 1px solid white;
+            }
         }
     }
 }
 
 @media (max-width: 510px) {
-    #main_aboutMe {
-        .about-section {
-            flex-direction: column;
-            align-items: center;
-
-            .foto {
-                width: 40%;
-            }
-
-            .about_content {
-                h2 {
-                    text-align: center;
-                    font-size: 2.5rem !important;
-                }
-
-                p {
-                    font-size: 1rem;
-                    line-height: 1.5rem;
-                }
-            }
-        }
-    }
-
     #header {
         #header_titulo {
             a {
@@ -334,62 +316,85 @@
             height: 2rem;
         }
     }
-}
 
-@media (max-width: 450px) {
-    /* #header {
-        #header_titulo {
-            width: 95%;
-
-            a {
-                h1 {
-                    font-size: 2.5rem;
-                }
-            }
-        }
-
-        #menu-icon {
-            width: 1.7rem;
-            height: 1.7rem;
-        }
-    } */
-
-    #main_contenedor_aplicacion {
-        margin: auto;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 80%;
-
-        border: 1px solid white;
-
-        #aplicacion_menu {
-            width: 100%;
-        }
-
-        #aplicacion_opcion_y_niveles {
-            width: 100%;
-            display: flex;
+    #main_aboutMe {
+        .about-section {
             flex-direction: column;
-            gap: 10px;
+            align-items: center;
 
-            border: 1px solid white;
+            .foto {
+                width: 40%;
+            }
 
-            #aplicacion_niveles {
-                background-color: #31383a;
-                width: 100%;
-                margin: 0 auto;
+            .about_content {
+                h2 {
+                    text-align: center;
+                    font-size: 2.5rem !important;
+                }
 
-                display: grid;
-                grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
-                gap: 20px;
-                padding: 10px;
+                p {
+                    font-size: 1rem;
+                    line-height: 1.5rem;
+                }
             }
         }
     }
 }
 
-@media (max-width: 440px) {
+@media (max-width: 450px) {
+    #header {
+        #header_titulo {
+            width: 95%;
+
+            a {
+                h1 {
+                    font-size: 1.9rem !important;
+                }
+            }
+        }
+
+        #menu-icon {
+            width: 1.5rem;
+            height: 1.5rem;
+        }
+    }
+
+    #main_home {
+        #main_contenedor_aplicacion {
+            margin: auto;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            width: 80%;
+
+            border: 1px solid white;
+
+            #aplicacion_menu {
+                width: 100%;
+            }
+
+            #aplicacion_opcion_y_niveles {
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                border: 1px solid white;
+
+                #aplicacion_niveles {
+                    background-color: #31383a;
+                    width: 100%;
+                    margin: 0 auto;
+
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(90px, 1fr));
+                    gap: 20px;
+                    padding: 10px;
+                }
+            }
+        }
+    }
+
     #main_aboutMe {
         .about-section {
             flex-direction: column;
@@ -412,26 +417,26 @@
             }
         }
     }
+}
 
+@media (max-width: 400px) {
     #header {
         #header_titulo {
             width: 95%;
 
             a {
                 h1 {
-                    font-size: 1.9rem !important;
+                    font-size: 1.7rem !important;
                 }
             }
         }
 
         #menu-icon {
-            width: 1.5rem;
-            height: 1.5rem;
+            width: 1.4rem;
+            height: 1.4rem;
         }
     }
-}
 
-@media (max-width: 400px) {
     #main_aboutMe {
         .about-section {
             flex-direction: column;
@@ -454,26 +459,26 @@
             }
         }
     }
+}
 
+@media (max-width: 360px) {
     #header {
         #header_titulo {
             width: 95%;
 
             a {
                 h1 {
-                    font-size: 1.7rem !important;
+                    font-size: 1.5rem !important;
                 }
             }
         }
 
         #menu-icon {
-            width: 1.4rem;
-            height: 1.4rem;
+            width: 1.2rem;
+            height: 1.2rem;
         }
     }
-}
 
-@media (max-width: 360px) {
     #main_aboutMe {
         .about-section {
             flex-direction: column;
@@ -494,23 +499,6 @@
                     line-height: 1.5rem;
                 }
             }
-        }
-    }
-
-    #header {
-        #header_titulo {
-            width: 95%;
-
-            a {
-                h1 {
-                    font-size: 1.5rem !important;
-                }
-            }
-        }
-
-        #menu-icon {
-            width: 1.2rem;
-            height: 1.2rem;
         }
     }
 }
