@@ -14,29 +14,13 @@
     #main_home {
         #main_contenedor_aplicacion {
             width: 100%;
-            border: 1px solid white;
-
-            #contenedor_instrucciones {
-                width: 50%;
-            }
 
             #aplicacion_menu {
                 width: 33%;
+            }
 
-                ul {
-                    padding: 20px 0px 20px 10px;
-                    margin: auto;
-
-                    li {
-                        list-style: none;
-                        a {
-                            font-size: 1.15rem;
-
-                            display: inline-block;
-                            position: relative;
-                        }
-                    }
-                }
+            #contenedor_instrucciones {
+                width: 50%;
             }
         }
 
@@ -93,6 +77,31 @@
                     }
                 }
             }
+        }
+    }
+
+    #main_home {
+        #main_contenedor_aplicacion {
+            width: 100%;
+
+            #aplicacion_menu {
+                width: 40%;
+            }
+
+            #aplicacion_opcion_y_niveles {
+                width: 60%;
+                padding: 0 10px;
+
+                #aplicacion_niveles {
+                    gap: 15px;
+                }
+            }
+        }
+
+        aside {
+            width: 100%;
+            flex-direction: row;
+            margin-top: 40px;
         }
     }
 
@@ -272,7 +281,6 @@
                 flex-direction: column;
                 gap: 10px;
 
-                border: 1px solid white;
             }
         }
     }
