@@ -1,12 +1,7 @@
-
-
-
 #main_contenedor_aplicacion {
     display: flex;
     justify-content: space-between;
     width: 80%;
-
-
 }
 
 #aplicacion_opcion_y_niveles {
@@ -15,100 +10,92 @@
     flex-direction: column;
     gap: 10px;
 
+    #titulo_de_opcion_elegida_y_ayuda {
+        width: 95%;
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        margin-bottom: 15px;
 
+        h2 {
+            width: 80%;
+        }
 
-}
+        #contenedor_ayuda {
+            width: 20%;
+            display: flex;
+            justify-content: end;
+            position: relative;
 
-#titulo_de_opcion_elegida_y_ayuda {
-    padding: 3px;
-    width: 95%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 0 auto;
-}
+            #ayuda_icon {
+                padding: 5px;
 
-h2 {
-    width: 80%;
-}
+                img {
+                    width: 25px;
+                    height: 25px;
+                    cursor: pointer;
+                }
+            }
+        }
 
-#contenedor_ayuda {
-    width: 20%;
-    display: flex;
-    justify-content: end;
-    position: relative;
-}
+        #contenedor_instrucciones {
+            width: 30%;
+            margin: auto;
+            padding: 1rem;
+            border-radius: 8px;
+            background-color: var(--color-fondo-principal);
+            border: 1px solid var(--color-borde-principal);
 
-#ayuda_icon {
-    padding: 5px;
+            position: absolute;
+            top: 65px;
+            right: 300px;
+            z-index: 30;
 
-    img {
-        width: 25px;
-        height: 25px;
-        cursor: pointer;
-        /* TODO Darle mejor codigo cuando aplique JS, PARA MOVER EL LOGIN */
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            transition: opacity 0.8s ease;
+
+            h4 {
+                margin-bottom: 20px;
+                text-align: center;
+            }
+
+            ol {
+                margin: auto;
+                display: flex;
+                flex-direction: column;
+                gap: 1.5rem;
+
+                li {
+                    margin-left: 0.9375rem;
+                    font-size: 0.85rem;
+                    font-weight: 500;
+                }
+            }
+        }
+
+        #contenedor_instrucciones.oculto {
+            display: none;
+        }
     }
 }
-
-#contenedor_instrucciones {
-    width: 30%;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 8px;
-    background-color: var(--color-fondo-principal);
-    border: 1px solid var(--color-borde-principal);
-
-    position: absolute;
-    top: 65px;
-    right: 300px;
-    z-index: 30;
-
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    transition: opacity 0.8s ease;
-}
-
-#contenedor_instrucciones.oculto {
-    display: none;
-}
-
-
-h4 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-
-ol {
-    margin: auto;
-    display: flex;
-    flex-direction: column;
-    gap: 1.5rem;
-
-    li {
-        margin-left: 0.9375rem;
-        font-size: 0.85rem;
-        font-weight: 500;
-    }
-}
-
 
 #aplicacion_niveles {
-    width: 95%;
+    width: 100%;
     margin: 0 auto;
 
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
     gap: 20px;
-    padding: 10px;
 
     .cajaNivel {
         border: 3px solid var(--color-borde-principal);
         width: 100px;
         height: 100px;
         border-radius: 0.8125rem;
+
         margin: auto;
 
         display: flex;
@@ -116,5 +103,3 @@ ol {
         align-items: center;
     }
 }
-
-
