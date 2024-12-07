@@ -1,3 +1,37 @@
+
+@media (max-width: 1250px) {
+    aside {
+        width: 20%;
+        height: fit-content;
+        padding: 10px 10px;
+        text-align: center;
+
+        border: 3px solid var(--color-borde-principal);
+        border-radius: 8px;
+        box-shadow: 3px 3px 5px var(--color-borde-principal);
+
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+        h3{
+            font-size: 1.15rem;
+        }
+
+
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 @media (max-width: 1200px) {
     #header {
         #header_titulo {
@@ -135,6 +169,49 @@
         }
     }
 
+    #main_home {
+        #main_contenedor_aplicacion {
+            width: 100%;
+
+            #aplicacion_menu {
+                background-color: rgba(240, 248, 255, 0.477);
+                width: 45%;
+
+                ul {
+                    padding: 20px 0px 20px 10px;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+                    align-items: start;
+                    gap: 2.5rem;
+
+                    li {
+                        a {
+                            display: inline-block;
+                            position: relative;
+                        }
+                    }
+                }
+            }
+
+            #aplicacion_opcion_y_niveles {
+                width: 55%;
+                padding: 0 10px;
+
+                #aplicacion_niveles {
+                    gap: 15px;
+                }
+            }
+        }
+
+        aside {
+            width: 100%;
+            flex-direction: row;
+            margin-top: 40px;
+        }
+    }
+
     #main_aboutMe {
         .about-section {
             flex-direction: column;
@@ -170,11 +247,16 @@
             width: 100%;
 
             #aplicacion_menu {
-                width: 38%;
+                ul {
+                    li {
+                        a {
+                            font-size: 1.15rem;
+                        }
+                    }
+                }
             }
 
             #aplicacion_opcion_y_niveles {
-                width: 62%;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
@@ -269,18 +351,84 @@
 
     #main_home {
         #main_contenedor_aplicacion {
+            border: 1px solid white;
             width: 100%;
 
             #aplicacion_menu {
-                width: 38%;
+                ul {
+                    border: 1px solid white;
+                    li {
+                        a {
+                            font-size: 1.1rem;
+                        }
+                    }
+                }
             }
 
             #aplicacion_opcion_y_niveles {
-                width: 62%;
+                width: 100%;
+                border: 1px solid white;
+                width: 50%;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
 
+                #titulo_de_opcion_elegida_y_ayuda {
+                    border: 1px solid lightblue;
+                    width: 100%;
+                    display: flex;
+                    justify-content: space-between;
+                    margin: 0 auto;
+                    margin-bottom: 15px;
+
+                    h2 {
+                        width: 90%;
+                        font-size: 1.25rem;
+                        align-self: center;
+                    }
+
+                    #contenedor_ayuda {
+                        border: 1px solid white;
+                        width: 10%;
+                        display: flex;
+                        position: relative;
+                    }
+                }
+
+                #aplicacion_niveles {
+                    width: 100%;
+                    margin: 0 auto;
+
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+                    gap: 15px 10px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    #main_home {
+        #main_contenedor_aplicacion {
+            #aplicacion_menu {
+                width: 50%;
+            }
+        }
+    }
+}
+
+@media (max-width: 630px) {
+    #main_home {
+        #main_contenedor_aplicacion {
+            flex-direction: column;
+
+            #aplicacion_menu {
+                width: 100%;
+            }
+
+            #aplicacion_niveles {
+                width: 100%;
             }
         }
     }
@@ -374,8 +522,7 @@
             flex-direction: column;
             justify-content: space-between;
             width: 80%;
-
-            border: 1px solid white;
+            gap: 50px;
 
             #aplicacion_menu {
                 width: 100%;
@@ -387,10 +534,7 @@
                 flex-direction: column;
                 gap: 10px;
 
-                border: 1px solid white;
-
                 #aplicacion_niveles {
-                    background-color: #31383a;
                     width: 100%;
                     margin: 0 auto;
 

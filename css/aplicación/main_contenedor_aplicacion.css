@@ -1,7 +1,8 @@
 #main_contenedor_aplicacion {
+
     display: flex;
     justify-content: space-between;
-    width: 80%;
+    width: 78%;
 }
 
 #aplicacion_opcion_y_niveles {
