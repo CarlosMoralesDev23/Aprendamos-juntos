@@ -1,8 +1,6 @@
 aside {
     width: 20%;
 
-
-
     height: fit-content;
     padding: 15px 14px;
     text-align: center;
@@ -28,7 +26,10 @@ aside {
         /* TODO Como hacer para que el iframe se reproduzca en grande en mi pagina web */
 
         img {
-            width: 125px;
+            width: 75%;
+            max-width: 135px;
+            min-width: 100px;
+
         }
     }
 

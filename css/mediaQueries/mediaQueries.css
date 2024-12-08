@@ -1,38 +1,17 @@
-
 @media (max-width: 1250px) {
-    aside {
-        width: 20%;
-        height: fit-content;
-        padding: 10px 10px;
-        text-align: center;
-
-        border: 3px solid var(--color-borde-principal);
-        border-radius: 8px;
-        box-shadow: 3px 3px 5px var(--color-borde-principal);
-
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-
-        h3{
-            font-size: 1.15rem;
+    #aplicacion_menu {
+        width: 34%;
+        ul {
+            padding: 20px 0px 20px 10px;
         }
+    }
 
-
+    #aplicacion_opcion_y_niveles {
+        width: 65%;
     }
 }
 
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1200px) {
+@media (max-width: 1170px) {
     #header {
         #header_titulo {
             gap: 0px;
@@ -50,11 +29,18 @@
             width: 100%;
 
             #aplicacion_menu {
-                width: 33%;
+                width: 30%;
             }
 
-            #contenedor_instrucciones {
-                width: 50%;
+            #aplicacion_opcion_y_niveles {
+                width: 68%;
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+
+                #contenedor_instrucciones {
+                    width: 50%;
+                }
             }
         }
 
@@ -93,6 +79,22 @@
     }
 }
 
+@media (max-width: 1050px) {
+    #main_home {
+        #main_contenedor_aplicacion {
+            width: 100%;
+
+            #aplicacion_menu {
+                width: 35%;
+            }
+
+            #aplicacion_opcion_y_niveles {
+                width: 65%;
+            }
+        }
+    }
+}
+
 @media (max-width: 1000px) {
     #header {
         #header_titulo {
@@ -111,31 +113,6 @@
                     }
                 }
             }
-        }
-    }
-
-    #main_home {
-        #main_contenedor_aplicacion {
-            width: 100%;
-
-            #aplicacion_menu {
-                width: 40%;
-            }
-
-            #aplicacion_opcion_y_niveles {
-                width: 60%;
-                padding: 0 10px;
-
-                #aplicacion_niveles {
-                    gap: 15px;
-                }
-            }
-        }
-
-        aside {
-            width: 100%;
-            flex-direction: row;
-            margin-top: 40px;
         }
     }
 
@@ -174,41 +151,12 @@
             width: 100%;
 
             #aplicacion_menu {
-                background-color: rgba(240, 248, 255, 0.477);
-                width: 45%;
-
-                ul {
-                    padding: 20px 0px 20px 10px;
-                    margin: auto;
-                    display: flex;
-                    flex-direction: column;
-                    justify-content: space-around;
-                    align-items: start;
-                    gap: 2.5rem;
-
-                    li {
-                        a {
-                            display: inline-block;
-                            position: relative;
-                        }
-                    }
-                }
+                width: 40%;
             }
 
             #aplicacion_opcion_y_niveles {
-                width: 55%;
-                padding: 0 10px;
-
-                #aplicacion_niveles {
-                    gap: 15px;
-                }
+                width: 60%;
             }
-        }
-
-        aside {
-            width: 100%;
-            flex-direction: row;
-            margin-top: 40px;
         }
     }
 
@@ -241,31 +189,12 @@
             }
         }
     }
-
-    #main_home {
-        #main_contenedor_aplicacion {
-            width: 100%;
-
-            #aplicacion_menu {
-                ul {
-                    li {
-                        a {
-                            font-size: 1.15rem;
-                        }
-                    }
-                }
-            }
-
-            #aplicacion_opcion_y_niveles {
-                display: flex;
-                flex-direction: column;
-                gap: 10px;
-            }
-        }
-    }
 }
 
-@media (max-width: 780px) {
+
+
+
+@media (max-width: 795px) {
     #header {
         #header_titulo {
             width: 72.5%;
@@ -324,75 +253,60 @@
         /* cuando el menu esta oculto */
         #menu-toggle {
             display: none;
-        }
 
-        /* Animación del icono al abrir */
-        #menu-toggle:checked + #menu-icon span:nth-child(1) {
-            transform: rotate(44deg);
-            position: relative;
-            top: 0.6rem;
-        }
+            /* Animación del icono al abrir */
+            &:checked + #menu-icon span:nth-child(1) {
+                transform: rotate(44deg);
+                position: relative;
+                top: 0.6rem;
+            }
 
-        #menu-toggle:checked + #menu-icon span:nth-child(2) {
-            opacity: 0;
-        }
+            &:checked + #menu-icon span:nth-child(2) {
+                opacity: 0;
+            }
 
-        #menu-toggle:checked + #menu-icon span:nth-child(3) {
-            transform: rotate(-46deg);
-            position: relative;
-            top: -0.6rem;
-        }
+            &:checked + #menu-icon span:nth-child(3) {
+                transform: rotate(-46deg);
+                position: relative;
+                top: -0.6rem;
+            }
 
-        /* Mostrar menú cuando el checkbox está activo */
-        #menu-toggle:checked ~ #menu {
-            display: flex;
+            /* Mostrar menú cuando el checkbox está activo */
+            &:checked ~ #menu {
+                display: flex;
+            }
         }
     }
 
     #main_home {
         #main_contenedor_aplicacion {
-            border: 1px solid white;
             width: 100%;
 
             #aplicacion_menu {
+                width: 41%;
                 ul {
-                    border: 1px solid white;
                     li {
                         a {
-                            font-size: 1.1rem;
+                            font-size: 1rem;
                         }
                     }
                 }
             }
 
             #aplicacion_opcion_y_niveles {
-                width: 100%;
-                border: 1px solid white;
-                width: 50%;
+                width: 57.5%;
                 display: flex;
                 flex-direction: column;
                 gap: 10px;
 
                 #titulo_de_opcion_elegida_y_ayuda {
-                    border: 1px solid lightblue;
                     width: 100%;
                     display: flex;
                     justify-content: space-between;
                     margin: 0 auto;
                     margin-bottom: 15px;
 
-                    h2 {
-                        width: 90%;
-                        font-size: 1.25rem;
-                        align-self: center;
-                    }
 
-                    #contenedor_ayuda {
-                        border: 1px solid white;
-                        width: 10%;
-                        display: flex;
-                        position: relative;
-                    }
                 }
 
                 #aplicacion_niveles {
@@ -400,13 +314,20 @@
                     margin: 0 auto;
 
                     display: grid;
-                    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-                    gap: 15px 10px;
+                    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+                    gap: 10px  5px;
                 }
             }
         }
     }
 }
+
+
+
+
+
+
+
 
 @media (max-width: 700px) {
     #main_home {
@@ -417,6 +338,12 @@
         }
     }
 }
+
+
+
+
+
+
 
 @media (max-width: 630px) {
     #main_home {
