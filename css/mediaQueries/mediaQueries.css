@@ -46,8 +46,24 @@
 
         aside {
             width: 100%;
+            margin: auto;
             flex-direction: row;
+            justify-content: space-around;
             margin-top: 40px;
+
+            h3 {
+                align-self: center;
+                font-size: 1.5rem;
+            }
+        }
+
+        #aplicacion_practica {
+            .parent {
+                gap: 25px;
+                #tarea {
+                    grid-column: 1 / 4;
+                }
+            }
         }
     }
 
@@ -93,6 +109,10 @@
                 width: 55%;
             }
         }
+
+        aside {
+            width: 95%;
+        }
     }
 }
 
@@ -111,6 +131,31 @@
                 li {
                     a {
                         font-size: 1rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #main_home {
+        #aplicacion_practica {
+            width: 90%;
+
+            .parent {
+                gap: 25px;
+                #tarea {
+                    grid-column: 1 / 4;
+
+                    h3 {
+                        font-size: 1.5rem;
+                    }
+                }
+
+                #iconoAyuda {
+                    grid-column: 5 / 6;
+
+                    p {
+                        font-size: 1.2rem;
                     }
                 }
             }
@@ -159,6 +204,19 @@
                 width: 55%;
             }
         }
+
+        aside {
+            width: 97.5%;
+            margin: auto;
+            flex-direction: row;
+            justify-content: space-around;
+            margin-top: 40px;
+
+            h3 {
+                align-self: center;
+                font-size: 1.5rem;
+            }
+        }
     }
 
     #main_aboutMe {
@@ -185,6 +243,63 @@
                 li {
                     a {
                         font-size: 0.85rem;
+                    }
+                }
+            }
+        }
+    }
+
+    #main_home {
+        #aplicacion_practica {
+            width: 95%;
+
+            .parent {
+                gap: 25px;
+                #tarea {
+                    grid-column: 1 / 4;
+
+                    h3 {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                #iconoAyuda {
+                    grid-column: 5 / 6;
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+
+                #verbo {
+                    h2 {
+                        text-align: center;
+                        width: 100%;
+                        font-size: 2.5rem;
+                    }
+                }
+
+                .opcion {
+                    h4 {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .botones,
+                .contadores {
+                    width: 95%;
+                    height: 100%;
+                    margin: auto;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: space-around;
+
+                    font-weight: bold;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    h3 {
+                        font-size: 1.1rem;
                     }
                 }
             }
@@ -347,6 +462,63 @@
                 }
             }
         }
+
+        aside {
+            h3 {
+                align-self: center;
+                font-size: 1.2rem;
+            }
+        }
+
+        #aplicacion_practica {
+            width: 95%;
+
+            .parent {
+                grid-template-columns: 1fr 2fr 2fr 2fr 1fr;
+                min-height: fit-content;
+
+                gap: 20px;
+                #tarea {
+                    grid-column: 1 / 4;
+
+                    h3 {
+                        font-size: 1.4rem;
+                    }
+                }
+
+                #iconoAyuda {
+                    grid-column: 5 / 6;
+
+                    p {
+                        font-size: 1rem;
+                    }
+                }
+
+                #verbo {
+                    grid-column: 2 / 5;
+
+                    h2 {
+                        text-align: center;
+                        width: 100%;
+                        font-size: 2.3rem;
+                    }
+                }
+
+                .opcion {
+                    width: 100%;
+                    h4 {
+                        font-size: 1.1rem;
+                    }
+                }
+
+                .botones,
+                .contadores {
+                    h3 {
+                        font-size: 1rem;
+                    }
+                }
+            }
+        }
     }
 }
 
@@ -386,10 +558,83 @@
                 }
             }
         }
+
+        aside {
+            width: 80%;
+            flex-wrap: wrap;
+
+            h3 {
+                width: 100%;
+                align-self: center;
+            }
+        }
+
+        #aplicacion_practica {
+            width: 95%;
+
+            .parent {
+                grid-template-rows: repeat(5, 1fr);
+
+                #tarea {
+                    grid-column: 2 / 5;
+                    grid-row-start: 2;
+
+                    text-align: start;
+                    height: 35px;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                #iconoAyuda {
+                    border: none;
+                    p {
+                        text-align: center;
+                        font-size: 0.75rem;
+                        padding: 0;
+
+                        border: none;
+                    }
+                }
+
+                #verbo {
+                    grid-row-start: 3;
+                    h2 {
+                        font-size: 1.7rem;
+                    }
+                }
+
+                #opcion1 {
+                    grid-row-start: 4;
+                }
+
+                #opcion2 {
+                    grid-row-start: 4;
+                }
+
+                #opcion3 {
+                    grid-row-start: 4;
+                }
+
+                .div8 {
+                    grid-row-start: 5;
+                }
+
+                .div9 {
+                    grid-row-start: 5;
+                }
+
+                .div10 {
+                    grid-row-start: 5;
+                }
+            }
+        }
     }
 }
 
-@media (max-width: 510px) {
+@media (max-width: 520px) {
     #header {
         #header_titulo {
             a {
@@ -425,6 +670,65 @@
         #menu-icon {
             width: 2rem;
             height: 2rem;
+        }
+    }
+
+    #main_home {
+        #aplicacion_practica {
+            width: 95%;
+
+            .parent {
+                width: 100%;
+                gap: 5px;
+
+                #tarea {
+                    grid-column: 2 / 5;
+                    grid-row-start: 2;
+
+                    height: 15px;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                #iconoAyuda {
+                    grid-column: 3 / 4;
+                    height: 20px;
+
+                    display: flex;
+                    justify-content: center;
+
+                    p {
+                        text-align: center;
+                        padding: 0;
+                    }
+                }
+
+                #verbo {
+                    grid-column: 1 / 6;
+                    grid-row-start: 3;
+                    h2 {
+                        font-size: 1.2rem;
+                    }
+                }
+
+                .opcion {
+                    h4 {
+                        font-size: 1rem;
+                    }
+                }
+
+                .botones,
+                .contadores {
+                    font-weight: 500;
+
+                    h3 {
+                        font-size: 0.9rem;
+                    }
+                }
+            }
         }
     }
 
@@ -528,6 +832,93 @@
                 width: 95%;
             }
         }
+
+        #aplicacion_practica {
+            width: 95%;
+
+            .parent {
+                width: 100%;
+                gap: 5px;
+
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+
+                #tarea {
+                    grid-column: 2 / 5;
+                    grid-row-start: 2;
+
+                    height: 15px;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 1.2rem;
+                    }
+                }
+
+                #iconoAyuda {
+                    grid-column: 3 / 4;
+                    height: 20px;
+
+                    display: flex;
+                    justify-content: center;
+
+                    p {
+                        text-align: center;
+                        padding: 0;
+                    }
+                }
+
+                #verbo {
+                    grid-column: 1 / 6;
+                    grid-row-start: 3;
+                    h2 {
+                        font-size: 1.3rem;
+                    }
+                }
+
+                .opcion {
+                    h4 {
+                        font-size: 0.85rem;
+                    }
+                }
+
+                #opcion1 {
+                    grid-row-start: 4;
+                    grid-column-start: 3;
+                }
+
+                #opcion2 {
+                    grid-row-start: 5;
+                    grid-column-start: 3;
+                }
+
+                #opcion3 {
+                    grid-row-start: 6;
+                    grid-column-start: 3;
+                }
+
+                .botones,
+                .contadores {
+                    font-weight: normal;
+
+                    h3 {
+                        font-size: 0.85rem;
+                    }
+                }
+
+                .div8 {
+                    grid-row-start: 7;
+                }
+
+                .div9 {
+                    grid-row-start: 7;
+                }
+
+                .div10 {
+                    grid-row-start: 7;
+                }
+            }
+        }
     }
 
     #main_aboutMe {
@@ -592,7 +983,7 @@
 
             #aplicacion_opcion_y_niveles {
                 width: 90%;
-                
+
                 #titulo_de_opcion_elegida_y_ayuda {
                     margin-bottom: 0;
                     h2 {
@@ -606,7 +997,98 @@
 
                 .cajaNivel {
                     height: 85px;
-                    width:  85px;
+                    width: 85px;
+                }
+            }
+        }
+
+        aside {
+            width: 95%;
+        }
+
+        #aplicacion_practica {
+            width: 95%;
+
+            .parent {
+                width: 100%;
+                gap: 5px;
+
+                grid-template-columns: repeat(5, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+
+                #tarea {
+                    grid-column: 2 / 5;
+                    grid-row-start: 2;
+
+                    height: 15px;
+
+                    h3 {
+                        text-align: center;
+                        font-size: 1rem;
+                    }
+                }
+
+                #iconoAyuda {
+                    grid-column: 3 / 4;
+                    height: 20px;
+
+                    display: flex;
+                    justify-content: center;
+
+                    p {
+                        text-align: center;
+                        padding: 0;
+                    }
+                }
+
+                #verbo {
+                    grid-column: 1 / 6;
+                    grid-row-start: 3;
+                    h2 {
+                        font-size: 1rem;
+                    }
+                }
+
+                .opcion {
+                    h4 {
+                        font-size: 0.65rem;
+                    }
+                }
+
+                #opcion1 {
+                    grid-row-start: 4;
+                    grid-column-start: 3;
+                }
+
+                #opcion2 {
+                    grid-row-start: 5;
+                    grid-column-start: 3;
+                }
+
+                #opcion3 {
+                    grid-row-start: 6;
+                    grid-column-start: 3;
+                }
+
+                .botones,
+                .contadores {
+                    font-weight: normal;
+
+                    h3 {
+                        font-size: 0.65rem;
+                    }
+                }
+
+                .div8 {
+                    grid-row-start: 7;
+                }
+
+                .div9 {
+                    grid-row-start: 7;
+                }
+
+                .div10 {
+                    grid-row-start: 7;
                 }
             }
         }
