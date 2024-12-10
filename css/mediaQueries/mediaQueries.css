@@ -634,7 +634,7 @@
     }
 }
 
-@media (max-width: 520px) {
+@media (max-width: 525px) {
     #header {
         #header_titulo {
             a {
@@ -750,6 +750,31 @@
                 p {
                     font-size: 1rem;
                     line-height: 1.5rem;
+                }
+            }
+        }
+    }
+
+    footer {
+        width: 100%;
+        padding: 30px 10px;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+
+        border-top: 1px solid var(--color-borde-principal);
+
+        #footerSecciones {
+            justify-content: space-between;
+            gap: 15px;
+
+            section {
+                margin: auto;
+                width: 45%;
+                a {
+                    font-size: 0.8rem;
                 }
             }
         }
