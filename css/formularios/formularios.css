@@ -1,145 +1,67 @@
-#formRegistro,
-#formContactanos {
-    width: 80%;
-    max-width: 600px;
-    padding: 30px;
-    background-color: var(--color-fondo-principal);
-    border: 3px solid var(--color-borde-principal);
-    border-radius: 14px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 17.5px;
-    margin: 1.5rem auto;
-
-    h2 {
-        text-align: center;
-    }
-
-    #contenedorInputWrite_registro,
-    #contenedorInputWrite_contactanos {
-        border: 1px solid white;
-        display: flex;
-        flex-wrap: wrap;
-        gap: 15px;
-        justify-content: space-between;
-        padding: 3px;
-
-        input,
-        select {
-            flex: 1 1 calc(50% - 15px); /* Se adaptan al 50% del contenedor */
-            max-width: calc(50% - 15px);
-            font-size: 1rem;
-            font-weight: 400;
-            border-radius: 0.5rem;
-            padding: 0.375rem 0.625rem;
-            border: 3px solid var(--color-borde-principal);
-            cursor: pointer;
-        }
-    }
-
-    #contenedorFormBotonesEnviarYBorrar {
-        display: flex;
-        justify-content: center;
-        gap: 1.5rem;
-    }
-}
-
-#formContactanos {
-    textarea {
-        font-size: 1.1rem;
-        width: 100%;
-        margin: auto;
-        padding: 1rem;
-
-        border: 0.1875rem solid var(--color-borde-principal);
-
-        border-radius: 0.6rem;
-    }
-}
-
-#formRegistro {
-    h4,
-    p {
-        margin: 0;
-    }
-}
-
-#contenedorOpcionesTematicas {
-    border: 5px solid gold;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-
-    div{
-        border: 1px solid white;
-        width: 100%;
-
-        display: flex;
-        justify-content: start;
-    }
-}
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 795px) {
-
-    /* IR A 795 */
-
+#main_sign_up,
+#main_contact_me {
     #formRegistro,
     #formContactanos {
-        padding: 20px;
-    }
-    #contenedorInputWrite_registro,
-    #contenedorInputWrite_contactanos {
-        max-width: 90%;
-        padding: 0;
+        width: 80%;
+        max-width: 600px;
+        padding: 30px;
+        background-color: var(--color-fondo-principal);
+        border: 3px solid var(--color-borde-principal);
+        border-radius: 14px;
+
         display: flex;
         flex-direction: column;
-        align-items: stretch;
         justify-content: center;
+        align-items: center;
+        gap: 17.5px;
+        margin: 1.5rem auto;
 
-        input,
-        select {
+        h2 {
+            text-align: center;
+        }
+
+        textarea {
+            font-size: 1.1rem;
             width: 100%;
-            min-width: 350px; /* Evita que los inputs se encojan demasiado */
-            padding: 0.5rem;
             margin: auto;
+            padding: 1rem;
+
+            border: 0.1875rem solid var(--color-borde-principal);
+
+            border-radius: 0.6rem;
+        }
+
+        #contenedorInputWrite_registro,
+        #contenedorInputWrite_contactanos {
+            border: 1px solid white;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: space-between;
+            padding: 3px;
+
+            input,
+            select {
+                flex: 1 1 calc(50% - 15px); /* Se adaptan al 50% del contenedor */
+                max-width: calc(50% - 15px);
+                min-width: 200px;
+
+                font-size: 1rem;
+                font-weight: 400;
+                border-radius: 0.5rem;
+                padding: 0.375rem 0.625rem;
+                border: 3px solid var(--color-borde-principal);
+                cursor: pointer;
+            }
+        }
+
+        #contenedorFormBotonesEnviarYBorrar {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
         }
     }
 }
 
-@media (max-width: 560px) {
-    #contenedorInputWrite_registro,
-    #contenedorInputWrite_contactanos {
-        input,
-        select {
-            min-width: 250px;
-        }
-    }
-}
 
-@media (max-width: 420px) {
-    #formRegistro,
-    #formContactanos {
-        width: 90%;
-        padding: 0px;
-    }
 
-    #contenedorInputWrite_registro,
-    #contenedorInputWrite_contactanos {
-        width: 100%;
-    }
-}

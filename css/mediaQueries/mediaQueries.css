@@ -781,6 +781,44 @@
     }
 }
 
+
+
+
+
+
+
+@media (max-width: 500px) {
+    /* IR A 795 */
+
+    #formRegistro,
+    #formContactanos {
+        padding: 20px;
+    }
+    #contenedorInputWrite_registro,
+    #contenedorInputWrite_contactanos {
+        max-width: 90%;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+
+        input,
+        select {
+            width: 100%;
+            min-width: 350px; /* Evita que los inputs se encojan demasiado */
+            padding: 0.5rem;
+            margin: auto;
+        }
+    }
+}
+
+
+
+
+
+
+
 @media (max-width: 450px) {
     #header {
         #header_titulo {
