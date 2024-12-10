@@ -33,7 +33,6 @@
 
         #contenedorInputWrite_registro,
         #contenedorInputWrite_contactanos {
-            border: 1px solid white;
             display: flex;
             flex-wrap: wrap;
             gap: 15px;
