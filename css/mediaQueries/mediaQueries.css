@@ -632,6 +632,23 @@
             }
         }
     }
+
+    #main_contact_me {
+        #formContactanos {
+            width: 90%;
+
+            #contenedorInputWrite_contactanos {
+                gap: 15px 5px;
+
+                input,
+                select {
+                    flex: 1 1 calc(50% - 10px);
+                    max-width: calc(50% - 10px);
+                    min-width: 160px;
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 525px) {
@@ -755,6 +772,22 @@
         }
     }
 
+    #main_contact_me {
+        #formContactanos {
+            #contenedorInputWrite_contactanos {
+                width: 100%;
+                gap: 15px 5px;
+                flex-direction: column;
+
+                input,
+                select {
+                    max-width: calc(100% - 5px);
+                    min-width: 150px;
+                }
+            }
+        }
+    }
+
     footer {
         width: 100%;
         padding: 30px 10px;
@@ -780,44 +813,6 @@
         }
     }
 }
-
-
-
-
-
-
-
-@media (max-width: 500px) {
-    /* IR A 795 */
-
-    #formRegistro,
-    #formContactanos {
-        padding: 20px;
-    }
-    #contenedorInputWrite_registro,
-    #contenedorInputWrite_contactanos {
-        max-width: 90%;
-        padding: 0;
-        display: flex;
-        flex-direction: column;
-        align-items: stretch;
-        justify-content: center;
-
-        input,
-        select {
-            width: 100%;
-            min-width: 350px; /* Evita que los inputs se encojan demasiado */
-            padding: 0.5rem;
-            margin: auto;
-        }
-    }
-}
-
-
-
-
-
-
 
 @media (max-width: 450px) {
     #header {
@@ -1180,23 +1175,17 @@
         }
     }
 
-    #formContactanos {
-        padding: 15px 0px;
-        width: 98%;
-        #contenedorInputWrite_contactanos {
-            width: 100%;
-            input,
-            select {
-                width: fit-content;
-            }
-        }
-        #comentarioForm {
-            display: grid;
-            place-items: center;
+    #main_contact_me {
+        #formContactanos {
+            width: 90%;
+            padding: 20px 10px;
 
-            textarea {
-                width: 95%;
-                margin: 10px auto;
+            #contenedorInputWrite_contactanos {
+                input,
+                select {
+                    max-width: 100%;
+                    min-width: 140px;
+                }
             }
         }
     }
