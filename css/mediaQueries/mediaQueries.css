@@ -1141,4 +1141,25 @@
             }
         }
     }
+
+    #formContactanos {
+        padding: 15px 0px;
+        width: 98%;
+        #contenedorInputWrite_contactanos {
+            width: 100%;
+            input,
+            select {
+                width: fit-content;
+            }
+        }
+        #comentarioForm {
+            display: grid;
+            place-items: center;
+
+            textarea {
+                width: 95%;
+                margin: 10px auto;
+            }
+        }
+    }
 }

@@ -87,18 +87,17 @@
 
 
 
-@media (max-width: 1205px) {
-    #contenedorOpcionesTematicas {
-        flex-direction: column; /* Ajusta a columna en pantallas pequeñas */
-    }
-}
 
 
 
 
 
 
-@media (max-width: 768px) {
+
+@media (max-width: 795px) {
+
+    /* IR A 795 */
+
     #formRegistro,
     #formContactanos {
         padding: 20px;
