@@ -431,6 +431,19 @@
             }
         }
     }
+
+    #main_sign_up {
+        #formRegistro {
+            width: 90%;
+            padding: 15px 5px;
+            #contenedorInputWrite_registro {
+                input {
+                    flex: 1 1 calc(49.5% - 5px); /* Se adaptan al 50% del contenedor */
+                    max-width: calc(49.5% - 5px);
+                }
+            }
+        }
+    }
 }
 
 @media (max-width: 700px) {
@@ -645,6 +658,22 @@
                     flex: 1 1 calc(50% - 10px);
                     max-width: calc(50% - 10px);
                     min-width: 160px;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 600px) {
+    #main_sign_up {
+        #formRegistro {
+            width: 90%;
+
+            #contenedorInputWrite_registro {
+                gap: 15px;
+                input {
+                    width: 100%;
+                    margin: auto;
                 }
             }
         }
