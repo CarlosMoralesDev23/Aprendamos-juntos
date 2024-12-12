@@ -6,7 +6,6 @@ document.getElementById("boton_login").addEventListener("click", () => {
 
 
 
-
 //Función Ayuda
 const ayudaIcon = document.getElementById("ayuda_icon");
 const contenedorInstrucciones = document.getElementById(
@@ -17,3 +16,23 @@ ayudaIcon.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto");
 });
 
+
+
+//* Cuando yo haga click en uno de los temas (li) del menu de app (EVENTO), se CREA un let tema
+
+
+
+
+let tema = document.getElementById("")
+
+
+
+const button = document.querySelector("button");
+
+
+button.addEventListener("click", (event) => {
+    button.textContent = `Recuento de clics: ${event.detail}`;
+
+
+
+});
