@@ -29,8 +29,6 @@ closeContenedorInstrucciones.addEventListener("click", () => {
 
 
 
-
-
 //* Modal practica menu
 
 const temasElegidos = document.querySelectorAll("#aplicacion_menu li a")
