@@ -1,12 +1,6 @@
 
 // Todo ESTO SE DEBERIA HACER CON Javascript
 
-//TODO click en login y aparecer el modal login - 
-//1
-//2
-//3
-//TODO click en la X del modal login y ocultar el mismo login
-//1   crear un modal y asignarle un ID
 
 //TODO en las paginas del sitio web, y navegar entre ellas.
 //1  home

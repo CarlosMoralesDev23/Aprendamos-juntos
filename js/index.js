@@ -26,3 +26,23 @@ ayudaIcon.addEventListener("click", () => {
 closeContenedorInstrucciones.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto")
 })
+
+
+
+
+
+//* Modal practica menu
+
+const temasElegidos = document.querySelectorAll("#aplicacion_menu li a")
+const tituloDeTemaElegido = document.getElementById("tituloDeTemaElegido");
+
+temasElegidos.forEach( tema => {
+    tema.addEventListener("click", (event) => {
+        //Acá obtendre el texto del tema elegido
+        const temaElegido = event.target.textContent;
+
+        //Acá tengo que actualizar h2 del contenedor de aplicación
+        tituloDeTemaElegido.textContent = temaElegido;
+    })
+    
+});
