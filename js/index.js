@@ -1,24 +1,21 @@
 //* Función LOGIN
-const botonLogin = document.getElementById("boton_login");
-const closeLogin = document.getElementById("closeLogin");
 const formLogin = document.getElementById("form_login");
 
-botonLogin.addEventListener("click", () => {
+document.getElementById("boton_login").addEventListener("click", () => {
     formLogin.classList.toggle("ocultoLogin");
 });
 
-closeLogin.addEventListener("click", () => {
+document.getElementById("closeLogin").addEventListener("click", () => {
     formLogin.classList.toggle("ocultoLogin");
 });
+
+
+
 
 //* Función Ayuda
 const ayudaIcon = document.getElementById("ayuda_icon");
-const closeContenedorInstrucciones = document.getElementById(
-    "closeLoginInstrucciones"
-);
-const contenedorInstrucciones = document.getElementById(
-    "contenedor_instrucciones"
-);
+const closeContenedorInstrucciones = document.getElementById("closeLoginInstrucciones");
+const contenedorInstrucciones = document.getElementById("contenedor_instrucciones");
 
 ayudaIcon.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto");
@@ -28,6 +25,9 @@ closeContenedorInstrucciones.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto");
 });
 
+
+
+
 //* Modal practica menu
 const temas = document.querySelectorAll("#aplicacion_menu li a");
 const tituloDeTemaElegido = document.getElementById("tituloDeTemaElegido");
@@ -35,19 +35,34 @@ const tituloEncabezadoModalPractica = document.getElementById(
     "tituloEncabezadoModalPractica"
 );
 
+const estado = {
+    temaElegido: " ",
+    nivelElegido: " "
+}
+
 temas.forEach((tema) => {
     tema.addEventListener("click", (event) => {
+
+        event.preventDefault();
+
         //Acá obtendre el texto del tema elegido
-        const temaElegido = event.target.textContent;
+        estado.temaElegido = event.target.textContent;
 
         //Acá tengo que actualizar h2 del contenedor de aplicación
-        tituloDeTemaElegido.textContent = temaElegido;
-        alert(tituloDeTemaElegido)
+        if (tituloDeTemaElegido) {
+            tituloDeTemaElegido.textContent = estado.temaElegido;
+        }
 
         //*Acá tengo que actualizar h2 del contenedor modal de practica
-        tituloEncabezadoModalPractica.textContent = temaElegido;
+        tituloEncabezadoModalPractica.textContent = estado.temaElegido;
+
+        // Para depurar
+        console.log("Estado después de elegir tema:", estado);
     });
 });
+
+
+
 
 //* Niveles practica verbos en pasado
 
@@ -55,16 +70,11 @@ const niveles = document.querySelectorAll("#aplicacion_niveles div a");
 
 niveles.forEach((nivel) => {
     nivel.addEventListener("click", (event) => {
-        alert("si soy yo");
-
-        const nivelElegido = event.target.textContent;
-        alert(nivelElegido);
-
-        tituloDeTemaElegido.textContent = temaElegido;
-
-        alert(tituloDeTemaElegido);
+        estado.nivelElegido = event.target.textContent;
+        alert(estado.nivelElegido);
     });
 });
+
 
 const levels = {
     level_1: {
@@ -1122,3 +1132,22 @@ const levels = {
         ],
     },
 };
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
