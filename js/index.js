@@ -56,3 +56,17 @@ temas.forEach(tema => {
     });
 });
 
+
+
+const cajasNivel = document.querySelectorAll(".cajaNivel");
+
+cajasNivel.forEach((caja, indice) => {
+    caja.addEventListener("click", () => {
+        // Si el índice es mayor o igual a 4 (suponiendo que "Plus 1" está en el índice 3):
+        if (indice >= 4) {
+            alert(
+                "Este nivel está en desarrollo. Por favor, elige un nivel del 1 al Plus 1."
+            );
+        }
+    });
+});
