@@ -396,6 +396,54 @@ const niveles = [
 
 
 
+//*  --------  Modal de Práctica ---------
+
+// Referencias al DOM
+const verboPregunta = document.getElementById("verbo");
+const opcionesRespuesta = document.querySelectorAll(".opcion");
+const contadorCorrectas = document.querySelector("#Correctas p");
+const contadorIncorrectas = document.querySelector("#Incorrectas p");
+
+let nivelActualPractica = 1; // Nivel inicial
+let indicePregunta = 0; // Índice de la pregunta actual
+let correctas = 0; // Contador de respuestas correctas
+let incorrectas = 0; // Contador de respuestas incorrectas
+
+// Función para cargar una pregunta
+function cargarPregunta(nivel, indice) {
+    const nivelDatos = niveles.find((n) => n.level === nivel); // Encuentra el nivel
+    if (!nivelDatos || indice >= nivelDatos.verbs.length) {
+        alert("No hay más preguntas en este nivel.");
+        return;
+    }
+
+    const pregunta = nivelDatos.verbs[indice];
+    verboPregunta.innerHTML = `<h2>${pregunta.present}</h2>`;
+    opcionesRespuesta.forEach((opcion, idx) => {
+        opcion.textContent = pregunta.options[idx];
+        opcion.dataset.correcto = pregunta.options[idx] === pregunta.correct;
+    });
+}
+
+// Evento para verificar respuesta
+opcionesRespuesta.forEach((opcion) => {
+    opcion.addEventListener("click", () => {
+        if (opcion.dataset.correcto === "true") {
+            correctas++;
+            contadorCorrectas.textContent = correctas;
+            alert("¡Correcto!");
+        } else {
+            incorrectas++;
+            contadorIncorrectas.textContent = incorrectas;
+            alert("Incorrecto. Inténtalo de nuevo.");
+        }
+        indicePregunta++;
+        cargarPregunta(nivelActualPractica, indicePregunta);
+    });
+});
+
+// Inicializa la primera pregunta
+cargarPregunta(nivelActualPractica, indicePregunta);
 
 
 
