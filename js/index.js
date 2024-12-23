@@ -396,34 +396,44 @@ const niveles = [
 
 
 
-//*  --------  Modal de Práctica ---------
+//*  --------  MODAL DE PRACTICA  ---------
 
-// Referencias al DOM
+// Referencias al DOM del modal practica
 const verboPregunta = document.getElementById("verbo");
 const opcionesRespuesta = document.querySelectorAll(".opcion");
 const contadorCorrectas = document.querySelector("#Correctas p");
 const contadorIncorrectas = document.querySelector("#Incorrectas p");
 
-let nivelActualPractica = 1; // Nivel inicial
-let indicePregunta = 0; // Índice de la pregunta actual
-let correctas = 0; // Contador de respuestas correctas
-let incorrectas = 0; // Contador de respuestas incorrectas
 
-// Función para cargar una pregunta
-function cargarPregunta(nivel, indice) {
-    const nivelDatos = niveles.find((n) => n.level === nivel); // Encuentra el nivel
-    if (!nivelDatos || indice >= nivelDatos.verbs.length) {
+//Variables para contabilizar correctas e incorrectas
+let nivelActualPractica = 1; 
+let indicePregunta = 0;
+let correctas = 0; 
+let incorrectas = 0; 
+
+let preguntasDisponibles = [];
+
+
+
+function cargarPregunta(nivelActualPractica, indicePregunta) {
+    const datosDelNivel = niveles.find((n) => n.level === nivelActualPractica); // Encuentra el nivel
+
+    console.log(datosDelNivel)
+
+    if (!datosDelNivel || indicePregunta >= datosDelNivel.verbs.length) {
         alert("No hay más preguntas en este nivel.");
         return;
     }
 
-    const pregunta = nivelDatos.verbs[indice];
+    const pregunta = datosDelNivel.verbs[indicePregunta];
     verboPregunta.innerHTML = `<h2>${pregunta.present}</h2>`;
     opcionesRespuesta.forEach((opcion, idx) => {
         opcion.textContent = pregunta.options[idx];
         opcion.dataset.correcto = pregunta.options[idx] === pregunta.correct;
     });
 }
+
+
 
 // Evento para verificar respuesta
 opcionesRespuesta.forEach((opcion) => {
