@@ -1,0 +1,141 @@
+[
+    {
+        "level": 1,
+        "verbs": [
+            {
+                "numero": 1,
+                "present": "be",
+                "options": ["was/were", "been", "being"],
+                "correct": "was/were"
+            },
+            {
+                "numero": 2,
+                "present": "have",
+                "options": ["had", "hadded", "hadd"],
+                "correct": "had"
+            },
+            {
+                "numero": 3,
+                "present": "do",
+                "options": ["did", "done", "does"],
+                "correct": "did"
+            },
+            {
+                "numero": 4,
+                "present": "say",
+                "options": ["said", "sayed", "says"],
+                "correct": "said"
+            },
+            {
+                "numero": 5,
+                "present": "go",
+                "options": ["went", "goed", "goes"],
+                "correct": "went"
+            },
+            {
+                "numero": 6,
+                "present": "get",
+                "options": ["got", "getted", "gets"],
+                "correct": "got"
+            },
+            {
+                "numero": 7,
+                "present": "make",
+                "options": ["made", "maked", "makes"],
+                "correct": "made"
+            },
+            {
+                "numero": 8,
+                "present": "know",
+                "options": ["knew", "knowed", "knows"],
+                "correct": "knew"
+            },
+            {
+                "numero": 9,
+                "present": "think",
+                "options": ["thought", "thinked", "thinks"],
+                "correct": "thought"
+            },
+            {
+                "numero": 10,
+                "present": "take",
+                "options": ["took", "taked", "takes"],
+                "correct": "took"
+            }
+        ]
+    },
+    {
+        "level": 2,
+        "verbs": [
+            {
+                "numero": 11,
+                "present": "come",
+                "options": ["came", "comed", "comes"],
+                "correct": "came"
+            },
+            {
+                "numero": 12,
+                "present": "see",
+                "options": ["saw", "seed", "sees"],
+                "correct": "saw"
+            },
+            {
+                "numero": 13,
+                "present": "want",
+                "options": ["wanted", "wantes", "wants"],
+                "correct": "wanted"
+            },
+
+
+
+            {
+                "numero": 14,
+                "present": "use",
+                "options": ["used", "useed", "uses"],
+                "correct": "used"
+            },
+            {
+                "numero": 15,
+                "present": "find",
+                "options": ["found", "finded", "finds"],
+                "correct": "found"
+            },
+            {
+                "numero": 16,
+                "present": "give",
+                "options": ["gave", "gived", "gives"],
+                "correct": "gave"
+            },
+            {
+                "numero": 17,
+                "present": "tell",
+                "options": ["told", "telled", "tells"],
+                "correct": "told"
+            },
+            {
+                "numero": 18,
+                "present": "work",
+                "options": ["worked", "workes", "works"],
+                "correct": "worked"
+            },
+            {
+                "numero": 19,
+                "present": "call",
+                "options": ["called", "callen", "calls"],
+                "correct": "called"
+            },
+            {
+                "numero": 20,
+                "present": "try",
+                "options": ["tried", "tryed", "tries"],
+                "correct": "tried"
+            },
+
+
+
+
+
+            ...
+        ]
+    }
+]
