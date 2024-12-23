@@ -176,8 +176,15 @@ let niveles = [];
 //* ----------------------- Cargar Datos desde JSON -----------------------
 async function cargarDatosDeJSON() {
     try {
-        const response = await fetch("/js/niveles.JSON"); 
-        if (!response.ok) throw new Error("No se pudo cargar el archivo JSON.");
+
+        const timeOut = setTimeout(() => {
+            throw new Error(
+                "La petición tardo demasiado, No se pudo cargar el archivo JSON."
+            );
+        }, 2000);
+
+        const response = await fetch("/js/niveles.JSON");
+        clearTimeout(timeOut);
 
         niveles = await response.json(); 
         console.log("Datos del JSON cargados:", niveles);
