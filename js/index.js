@@ -173,6 +173,19 @@ cajasNivel.forEach((caja, indice) => {
 let niveles = [];
 
 
+//* ----------------------- Cargar Datos desde JSON -----------------------
+async function cargarDatosDeJSON() {
+    try {
+        const response = await fetch("/js/niveles.JSON"); 
+        if (!response.ok) throw new Error("No se pudo cargar el archivo JSON.");
+
+        niveles = await response.json(); 
+        console.log("Datos del JSON cargados:", niveles);
+    } catch (error) {
+        console.error("Error al cargar el JSON:", error);
+        alert("Hubo un problema al cargar los datos. Por favor, inténtalo de nuevo más tarde.");
+    }
+}
 
 
 
@@ -189,12 +202,11 @@ const contadorCorrectas = document.querySelector("#Correctas p");
 const contadorIncorrectas = document.querySelector("#Incorrectas p");
 
 
-
-// Variables para la práctica
+//* Variables para la práctica
 let nivelActualPractica = nivelGuardado ? parseInt(nivelGuardado) : 1;
-let correctas = 0; // Respuestas correctas
-let incorrectas = 0; // Respuestas incorrectas
-let preguntasDisponibles = []; // Almacena las preguntas disponibles en un nivel
+let correctas = 0; 
+let incorrectas = 0; 
+let preguntasDisponibles = []; 
 
 
 
@@ -203,17 +215,16 @@ let preguntasDisponibles = []; // Almacena las preguntas disponibles en un nivel
 
 
 
+//* --------------  Hacer click en caja y cargar la practica  ----------
 
-
-
-// Cargar las preguntas del nivel actual
-function inicializarNivel(nivel) {
+//* Funcion para completar el modal practica - si nunca use - se llama al final del archivo con nivel 1 por defecto
+function inicializarNivel(nivelActualPractica) {
     if (niveles.length === 0) {
         alert("No se han cargado los datos de niveles aún.");
         return;
     }
 
-    const datosDelNivel = niveles.find((n) => n.level === nivel);
+    const datosDelNivel = niveles.find((n) => n.level === nivelActualPractica);
 
     if (!datosDelNivel) {
         alert("No se encontraron datos para este nivel.");
@@ -229,23 +240,37 @@ function inicializarNivel(nivel) {
     cargarPregunta();
 }
 
-// Cargar una pregunta aleatoria del nivel actual
+
+
+
+
+//* --------- Funcion para cargar el verbo present y sus opciones aleatoriamente, del nivelActualPractica ----------
 function cargarPregunta() {
+
+
+
+    //* Si ya no quedan verbos present del nivelActualPractica verificar si aprobe o no. 
     if (preguntasDisponibles.length === 0) {
         verificarDesbloqueo();
         return;
     }
 
-    // Selecciona una pregunta aleatoria
+
+
+    //* Metodo para desordenar los verbos present del nivelActualPractica
     const randomIndex = Math.floor(Math.random() * preguntasDisponibles.length);
     const pregunta = preguntasDisponibles.splice(randomIndex, 1)[0]; // Elimina y obtiene la pregunta seleccionada
 
-    // Desordenar las opciones de respuesta
+
+
+    //* Metodo para desordenar las opciones del verbo present del nivelActualPractica
     const opcionesDesordenadas = pregunta.options
         .slice()
         .sort(() => Math.random() - 0.5);
 
-    // Mostrar la pregunta en el DOM
+
+
+    //* Construir la pregunta en el DOM
     verboPregunta.innerHTML = `<h2>${pregunta.present}</h2>`;
     opcionesRespuesta.forEach((opcion, idx) => {
         opcion.textContent = opcionesDesordenadas[idx];
@@ -255,11 +280,20 @@ function cargarPregunta() {
     });
 }
 
-// Verificar respuesta y cargar la siguiente pregunta
+
+
+
+
+
+
+
+//* ------------------------ Comprobar si se elige la opcion correcta  --------------------------
+// - Si es correcta se aumenta el contador correctas;  misma logica para las incorrectas
+//*! OLVIDE que hace esa clase de bloqueo en las opciones
 opcionesRespuesta.forEach((opcion) => {
     opcion.addEventListener("click", () => {
-        if (opcion.classList.contains("bloqueado")) return; // Evita clics dobles
-        opcion.classList.add("bloqueado"); // Bloquea clics adicionales
+        if (opcion.classList.contains("bloqueado")) return;
+        opcion.classList.add("bloqueado"); 
 
         if (opcion.dataset.correcto === "true") {
             correctas++;
@@ -271,32 +305,52 @@ opcionesRespuesta.forEach((opcion) => {
             alert("Incorrecto. Inténtalo de nuevo.");
         }
 
-        setTimeout(cargarPregunta, 500); // Carga la siguiente pregunta después de un breve retraso
+        setTimeout(cargarPregunta, 300); 
     });
 });
 
-function desbloquearNivel(nivel) {
+
+
+
+//*  ----------------  Función para desbloquear la caja nivel  ----------------
+function desbloquearNivel(nivelActualPractica) {
     const cajasNivel = document.querySelectorAll(".cajaNivel");
-    if (nivel - 1 < cajasNivel.length) {
-        cajasNivel[nivel - 1].classList.remove("bloqueado");
+
+    // si el nivel aprobado es 19, y voy al 20,  20-1,
+    // es menor a los 20 caja nivel,  por lo cual caja 20 se desbloquea
+    if (nivelActualPractica - 1 < cajasNivel.length) {
+        cajasNivel[nivelActualPractica - 1].classList.remove("bloqueado");
     }
 }
 
+
+
+
+
+
+
+
+//* -----------------  Verificar si aprobe el nivel y desbloquear el siguiente  ---------------
 function verificarDesbloqueo() {
     const totalPreguntas = correctas + incorrectas;
     const porcentajeCorrectas = (correctas / totalPreguntas) * 100;
 
     if (porcentajeCorrectas >= 80) {
+        // Si se aprueba el nivel anterior entonces se aumenta el nivelActualPractica
+        // Para posterior desbloquear el siguiente nivel
         nivelActualPractica++;
-        localStorage.setItem("nivelActual", nivelActualPractica); // Guardar el nivel aprobado
 
-        desbloquearNivel(nivelActualPractica); // Desbloquea el siguiente nivel
+        //*  ---- LOCAL STORAGE - GUARDAR PROGRESO ---
+        localStorage.setItem("nivelActual", nivelActualPractica);
+
+        //* Desbloquea el siguiente nivel
+        desbloquearNivel(nivelActualPractica);
 
         if (nivelActualPractica % 5 === 0) {
             alert(
                 `¡Felicidades! Has desbloqueado el nivel Plus ${Math.floor(
                     nivelActualPractica / 5
-                )}.`
+                )}.` //divide el nivel actual entre 5, y redonea hacia abajo. 
             );
         } else {
             alert(
@@ -310,10 +364,16 @@ function verificarDesbloqueo() {
             `No alcanzaste el 80%. Obtuviste un ${porcentajeCorrectas.toFixed(
                 2
             )}%. Intenta nuevamente.`
+            //tofixed con el numero 2, es para decir que te de 2 decimales
         );
-        inicializarNivel(nivelActualPractica); // Reinicia el nivel actual
+        inicializarNivel(nivelActualPractica); // Volver a comenzar en el mismo nivel
     }
 }
 
-// Inicializa el nivel al cargar
-inicializarNivel(nivelActualPractica);
+
+
+//* Llamar la función al inicio para cargar los datos en la variable global "niveles"
+cargarDatosDeJSON().then(() => {
+    console.log("Datos cargados y disponibles para usar.");
+    inicializarNivel(nivelActualPractica); // Inicializa el nivel después de cargar los datos
+});
