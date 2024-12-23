@@ -63,17 +63,9 @@ const totalNiveles = 20;
 let nivelActual = 1;
 let plusCount = 1;
 
-//* Asignarselo a una caja tipo nivel 
-function reiniciarProgreso() {
-    localStorage.removeItem("nivelActual");
-    nivelActualPractica = 1;
-    inicializarNivel(nivelActualPractica);
-    alert("Progreso reiniciado.");
-}
 
 
-
-
+// Crear niveles
 for (let i = 0; i < totalNiveles; i++) {
     const div = document.createElement("div");
     div.classList.add("cajaNivel");
@@ -82,7 +74,7 @@ for (let i = 0; i < totalNiveles; i++) {
         div.classList.add("bloqueado");
     }
 
-    // Si es un nivel Plus
+    // Niveles Plus
     if (nivelActual % 5 === 0) {
         div.classList.add("cajaNivelPlus");
         div.innerHTML = `<a href="#aplicacion_practica">Plus ${plusCount}</a>`;
@@ -91,24 +83,39 @@ for (let i = 0; i < totalNiveles; i++) {
         div.innerHTML = `<a href="#aplicacion_practica">Nivel ${nivelActual}</a>`;
     }
 
-    if (i === totalNiveles.length) {
-        alert("voy a crear la caja borrar progeso")
-        // Generar la caja "Borrar Progreso"
-        const cajaBorrarProgreso = document.createElement("div");
-        cajaBorrarProgreso.id = "borrar-progreso";
-        cajaBorrarProgreso.classList.add("nivel");
-        cajaBorrarProgreso.textContent = "Borrar Progreso";
-
-        // Asignar la funcionalidad al hacer clic
-        cajaBorrarProgreso.addEventListener("click", reiniciarProgreso());
-
-        // Agregar la caja al contenedor principal de niveles
-        aplicacionNiveles.appendChild(cajaBorrarProgreso);
-    }
-
     aplicacionNiveles.appendChild(div);
-    nivelActual++; // Incrementa el nivel actual después de cada ciclo
+    nivelActual++;
 }
+
+
+// Crear la caja "Borrar Progreso"
+const cajaBorrarProgreso = document.createElement("div");
+cajaBorrarProgreso.id = "borrar-progreso";
+cajaBorrarProgreso.classList.add("cajaNivel");
+cajaBorrarProgreso.textContent = "Borrar Progreso";
+
+// Evento para reiniciar el progreso
+cajaBorrarProgreso.addEventListener("click", reiniciarProgreso);
+
+// Añadir la caja al contenedor
+aplicacionNiveles.appendChild(cajaBorrarProgreso);
+
+// Función para reiniciar el progreso
+function reiniciarProgreso() {
+    localStorage.removeItem("nivelActual");
+    nivelActualPractica = 1;
+    inicializarNivel(nivelActualPractica); // Reinicia el nivel al primero
+    alert("Progreso reiniciado.");
+}
+
+
+
+
+
+
+
+
+
 
 //*  --------  Generar bloqueo de cajas de nivel hasta aprobar ---------
 
