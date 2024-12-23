@@ -397,7 +397,6 @@ function inicializarNivel(nivel) {
     }
 
     preguntasDisponibles = [...datosDelNivel.verbs]; // Clona las preguntas del nivel
-    indicePregunta = 0; // Reinicia el índice
     correctas = 0;
     incorrectas = 0;
     contadorCorrectas.textContent = correctas;
@@ -409,10 +408,7 @@ function inicializarNivel(nivel) {
 // Cargar una pregunta aleatoria del nivel actual
 function cargarPregunta() {
     if (preguntasDisponibles.length === 0) {
-        alert("¡Felicidades! Has completado este nivel.");
-
-        console.log(contadorCorrectas)
-        console.log(contadorIncorrectas)
+        verificarDesbloqueo();
         return;
     }
 
@@ -430,7 +426,7 @@ function cargarPregunta() {
     opcionesRespuesta.forEach((opcion, idx) => {
         opcion.textContent = opcionesDesordenadas[idx];
         opcion.dataset.correcto = opcionesDesordenadas[idx] === pregunta.correct;
-        opcion.classList.remove("bloqueado"); // Asegúrate de que las opciones no estén bloqueadas
+        opcion.classList.remove("bloqueado");
     });
 }
 
@@ -453,6 +449,25 @@ opcionesRespuesta.forEach((opcion) => {
         setTimeout(cargarPregunta, 500); // Carga la siguiente pregunta después de un breve retraso
     });
 });
+
+// Verificar si se desbloquea el siguiente nivel
+function verificarDesbloqueo() {
+    const totalPreguntas = correctas + incorrectas;
+    const porcentajeCorrectas = (correctas / totalPreguntas) * 100;
+
+    if (porcentajeCorrectas >= 80) {
+        nivelActualPractica++;
+        alert(`¡Felicidades! Has desbloqueado el nivel ${nivelActualPractica}.`);
+        inicializarNivel(nivelActualPractica);
+    } else {
+        alert(
+            `No alcanzaste el 80%. Obtuviste un ${porcentajeCorrectas.toFixed(
+                2
+            )}%. Intenta nuevamente.`
+        );
+        inicializarNivel(nivelActualPractica); // Reinicia el nivel actual
+    }
+}
 
 // Inicializa el nivel al cargar
 inicializarNivel(nivelActualPractica);
