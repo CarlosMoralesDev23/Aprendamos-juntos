@@ -10,9 +10,6 @@ document.getElementById("closeLogin").addEventListener("click", () => {
     formLogin.classList.toggle("ocultoLogin");
 });
 
-
-
-
 //* --------   Función Ayuda  --------
 
 const ayudaIcon = document.getElementById("ayuda_icon");
@@ -53,17 +50,11 @@ temas.forEach((tema) => {
     });
 });
 
-
-
-
-
 //*  --------  Generar cajas de nivel por JS  ---------
 const aplicacionNiveles = document.getElementById("aplicacion_niveles");
 const totalNiveles = 20;
 let nivelActual = 1;
 let plusCount = 1;
-
-
 
 // Crear niveles
 for (let i = 0; i < totalNiveles; i++) {
@@ -87,7 +78,6 @@ for (let i = 0; i < totalNiveles; i++) {
     nivelActual++;
 }
 
-
 // Crear la caja "Borrar Progreso"
 const cajaBorrarProgreso = document.createElement("div");
 cajaBorrarProgreso.id = "borrar-progreso";
@@ -107,15 +97,6 @@ function reiniciarProgreso() {
     inicializarNivel(nivelActualPractica); // Reinicia el nivel al primero
     alert("Progreso reiniciado.");
 }
-
-
-
-
-
-
-
-
-
 
 //*  --------  Generar bloqueo de cajas de nivel hasta aprobar ---------
 
@@ -137,333 +118,26 @@ cajasNivel.forEach((caja, indice) => {
 
 //*  -------- Array Niveles  verbos-optiones --------
 //* Para conectar con las cajas generadas anteriormente
-const niveles = [
-    {
-        level: 1,
-        verbs: [
-            {
-                numero: 1,
-                present: "be",
-                options: ["was/were", "been", "being"],
-                correct: "was/were",
-            },
-            {
-                numero: 2,
-                present: "have",
-                options: ["had", "hadded", "hadd"],
-                correct: "had",
-            },
-            {
-                numero: 3,
-                present: "do",
-                options: ["did", "done", "does"],
-                correct: "did",
-            },
-            {
-                numero: 4,
-                present: "say",
-                options: ["said", "sayed", "says"],
-                correct: "said",
-            },
-            {
-                numero: 5,
-                present: "go",
-                options: ["went", "goed", "goes"],
-                correct: "went",
-            },
-            {
-                numero: 6,
-                present: "get",
-                options: ["got", "getted", "gets"],
-                correct: "got",
-            },
-            {
-                numero: 7,
-                present: "make",
-                options: ["made", "maked", "makes"],
-                correct: "made",
-            },
-            {
-                numero: 8,
-                present: "know",
-                options: ["knew", "knowed", "knows"],
-                correct: "knew",
-            },
-            {
-                numero: 9,
-                present: "think",
-                options: ["thought", "thinked", "thinks"],
-                correct: "thought",
-            },
-            {
-                numero: 10,
-                present: "take",
-                options: ["took", "taked", "takes"],
-                correct: "took",
-            },
-        ],
-    },
-    {
-        level: 2,
-        verbs: [
-            {
-                numero: 11,
-                present: "come",
-                options: ["came", "comed", "comes"],
-                correct: "came",
-            },
-            {
-                numero: 12,
-                present: "see",
-                options: ["saw", "seed", "sees"],
-                correct: "saw",
-            },
-            {
-                numero: 13,
-                present: "want",
-                options: ["wanted", "wantes", "wants"],
-                correct: "wanted",
-            },
-            {
-                numero: 14,
-                present: "use",
-                options: ["used", "useed", "uses"],
-                correct: "used",
-            },
-            {
-                numero: 15,
-                present: "find",
-                options: ["found", "finded", "finds"],
-                correct: "found",
-            },
-            {
-                numero: 16,
-                present: "give",
-                options: ["gave", "gived", "gives"],
-                correct: "gave",
-            },
-            {
-                numero: 17,
-                present: "tell",
-                options: ["told", "telled", "tells"],
-                correct: "told",
-            },
-            {
-                numero: 18,
-                present: "work",
-                options: ["worked", "workes", "works"],
-                correct: "worked",
-            },
-            {
-                numero: 19,
-                present: "call",
-                options: ["called", "callen", "calls"],
-                correct: "called",
-            },
-            {
-                numero: 20,
-                present: "try",
-                options: ["tried", "tryed", "tries"],
-                correct: "tried",
-            },
-        ],
-    },
-    {
-        level: 3,
-        verbs: [
-            {
-                numero: 21,
-                present: "need",
-                options: ["needed", "needes", "needs"],
-                correct: "needed",
-            },
-            {
-                numero: 22,
-                present: "feel",
-                options: ["felt", "feeled", "feels"],
-                correct: "felt",
-            },
-            {
-                numero: 23,
-                present: "become",
-                options: ["became", "becomed", "becomes"],
-                correct: "became",
-            },
-            {
-                numero: 24,
-                present: "leave",
-                options: ["left", "leaved", "leaves"],
-                correct: "left",
-            },
-            {
-                numero: 25,
-                present: "put",
-                options: ["put", "putted", "puts"],
-                correct: "put",
-            },
-            {
-                numero: 26,
-                present: "mean",
-                options: ["meant", "meaned", "means"],
-                correct: "meant",
-            },
-            {
-                numero: 27,
-                present: "keep",
-                options: ["kept", "keeped", "keeps"],
-                correct: "kept",
-            },
-            {
-                numero: 28,
-                present: "let",
-                options: ["let", "letted", "lets"],
-                correct: "let",
-            },
-            {
-                numero: 29,
-                present: "begin",
-                options: ["began", "beginned", "begins"],
-                correct: "began",
-            },
-            {
-                numero: 30,
-                present: "seem",
-                options: ["seemed", "seemes", "seems"],
-                correct: "seemed",
-            },
-        ],
-    },
-    {
-        level: 4,
-        verbs: [
-            {
-                numero: 31,
-                present: "help",
-                options: ["helped", "helpes", "helps"],
-                correct: "helped",
-            },
-            {
-                numero: 32,
-                present: "talk",
-                options: ["talked", "talkes", "talks"],
-                correct: "talked",
-            },
-            {
-                numero: 33,
-                present: "turn",
-                options: ["turned", "turnes", "turns"],
-                correct: "turned",
-            },
-            {
-                numero: 34,
-                present: "start",
-                options: ["started", "startes", "starts"],
-                correct: "started",
-            },
-            {
-                numero: 35,
-                present: "show",
-                options: ["showed", "showen", "shows"],
-                correct: "showed",
-            },
-            {
-                numero: 36,
-                present: "play",
-                options: ["played", "playes", "plays"],
-                correct: "played",
-            },
-            {
-                numero: 37,
-                present: "run",
-                options: ["ran", "runned", "runs"],
-                correct: "ran",
-            },
-            {
-                numero: 38,
-                present: "move",
-                options: ["moved", "moveed", "moves"],
-                correct: "moved",
-            },
-            {
-                numero: 39,
-                present: "like",
-                options: ["liked", "likees", "likes"],
-                correct: "liked",
-            },
-            {
-                numero: 40,
-                present: "live",
-                options: ["lived", "liveed", "lives"],
-                correct: "lived",
-            },
-        ],
-    },
-    {
-        level: 5,
-        verbs: [
-            {
-                numero: 51,
-                present: "include",
-                options: ["included", "includeed", "includes"],
-                correct: "included",
-            },
-            {
-                numero: 1,
-                present: "be",
-                options: ["was/were", "been", "being"],
-                correct: "was/were",
-            },
-            {
-                numero: 2,
-                present: "have",
-                options: ["had", "hadded", "hadd"],
-                correct: "had",
-            },
-            {
-                numero: 3,
-                present: "do",
-                options: ["did", "done", "does"],
-                correct: "did",
-            },
-            {
-                numero: 34,
-                present: "start",
-                options: ["started", "startes", "starts"],
-                correct: "started",
-            },
-            {
-                numero: 35,
-                present: "show",
-                options: ["showed", "showen", "shows"],
-                correct: "showed",
-            },
-            {
-                numero: 36,
-                present: "play",
-                options: ["played", "playes", "plays"],
-                correct: "played",
-            },
-            {
-                numero: 37,
-                present: "run",
-                options: ["ran", "runned", "runs"],
-                correct: "ran",
-            },
-            {
-                numero: 38,
-                present: "move",
-                options: ["moved", "moveed", "moves"],
-                correct: "moved",
-            },
-            {
-                numero: 39,
-                present: "like",
-                options: ["liked", "likees", "likes"],
-                correct: "liked",
-            },
-        ],
-    },
-];
+let niveles = [];
+
+fetch("/js/niveles.JSON")
+    .then((response) => {
+        if (!response.ok) {
+            throw new Error("Error al cargar el archivo JSON.");
+        }
+        return response.json();
+    })
+    .then((data) => {
+        niveles = data; // Asigna los datos cargados a la variable niveles
+        console.log("Niveles cargados:", niveles);
+
+        // Inicializa el nivel solo después de que los niveles se hayan cargado
+        let nivelGuardado = localStorage.getItem("nivelActual");
+        nivelActualPractica = nivelGuardado ? parseInt(nivelGuardado) : 1;
+        inicializarNivel(nivelActualPractica);
+    })
+    .catch((error) => console.error("Error cargando el JSON:", error));
+
 
 //* Practica
 
@@ -474,8 +148,6 @@ const verboPregunta = document.getElementById("verbo");
 const opcionesRespuesta = document.querySelectorAll(".opcion");
 const contadorCorrectas = document.querySelector("#Correctas p");
 const contadorIncorrectas = document.querySelector("#Incorrectas p");
-
-
 
 // Al cargar la página, restaurar el nivel guardado
 let nivelGuardado = localStorage.getItem("nivelActual");
@@ -488,6 +160,11 @@ let preguntasDisponibles = []; // Almacena las preguntas disponibles en un nivel
 
 // Cargar las preguntas del nivel actual
 function inicializarNivel(nivel) {
+    if (niveles.length === 0) {
+        alert("No se han cargado los datos de niveles aún.");
+        return;
+    }
+
     const datosDelNivel = niveles.find((n) => n.level === nivel);
 
     if (!datosDelNivel) {
@@ -524,7 +201,8 @@ function cargarPregunta() {
     verboPregunta.innerHTML = `<h2>${pregunta.present}</h2>`;
     opcionesRespuesta.forEach((opcion, idx) => {
         opcion.textContent = opcionesDesordenadas[idx];
-        opcion.dataset.correcto = opcionesDesordenadas[idx] === pregunta.correct;
+        opcion.dataset.correcto =
+            opcionesDesordenadas[idx] === pregunta.correct;
         opcion.classList.remove("bloqueado");
     });
 }
@@ -549,18 +227,12 @@ opcionesRespuesta.forEach((opcion) => {
     });
 });
 
-
-
-
 function desbloquearNivel(nivel) {
     const cajasNivel = document.querySelectorAll(".cajaNivel");
     if (nivel - 1 < cajasNivel.length) {
         cajasNivel[nivel - 1].classList.remove("bloqueado");
     }
 }
-
-
-
 
 function verificarDesbloqueo() {
     const totalPreguntas = correctas + incorrectas;
@@ -595,14 +267,5 @@ function verificarDesbloqueo() {
     }
 }
 
-
-
-
 // Inicializa el nivel al cargar
 inicializarNivel(nivelActualPractica);
-
-
-
-
-
-
