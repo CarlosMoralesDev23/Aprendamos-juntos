@@ -10,11 +10,6 @@ document.getElementById("closeLogin").addEventListener("click", () => {
     formLogin.classList.toggle("ocultoLogin");
 });
 
-
-
-
-
-
 //* --------   Función Ayuda  --------
 
 const ayudaIcon = document.getElementById("ayuda_icon");
@@ -33,15 +28,13 @@ closeContenedorInstrucciones.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto");
 });
 
-
-
-
-
 //*  --------  Seleccion de tematica y asignacion a susbtitulos  ---------
 
 const temas = document.querySelectorAll("#aplicacion_menu li a");
 const tituloDeTemaElegido = document.getElementById("tituloDeTemaElegido");
-const tituloDePractica = document.getElementById("tituloEncabezadoModalPractica");
+const tituloDePractica = document.getElementById(
+    "tituloEncabezadoModalPractica"
+);
 
 function actualizarTituloTema(nuevoTitulo) {
     tituloDeTemaElegido.textContent = nuevoTitulo;
@@ -56,10 +49,6 @@ temas.forEach((tema) => {
         // Aquí puedes agregar lógica adicional para mostrar contenido específico según el tema
     });
 });
-
-
-
-
 
 //*  --------  Generar cajas de nivel por JS  ---------
 const aplicacionNiveles = document.getElementById("aplicacion_niveles");
@@ -88,7 +77,6 @@ for (let i = 0; i < totalNiveles; i++) {
     nivelActual++; // Incrementa el nivel actual después de cada ciclo
 }
 
-
 //*  --------  Generar bloqueo de cajas de nivel hasta aprobar ---------
 
 const cajasNivel = document.querySelectorAll(".cajaNivel");
@@ -106,11 +94,6 @@ cajasNivel.forEach((caja, indice) => {
         }
     });
 });
-
-
-
-
-
 
 //*  -------- Array Niveles  verbos-optiones --------
 //* Para conectar con las cajas generadas anteriormente
@@ -388,13 +371,7 @@ const niveles = [
     },
 ];
 
-
-
-
-
 //* Practica
-
-
 
 //*  --------  MODAL DE PRÁCTICA  ---------
 
@@ -433,6 +410,9 @@ function inicializarNivel(nivel) {
 function cargarPregunta() {
     if (preguntasDisponibles.length === 0) {
         alert("¡Felicidades! Has completado este nivel.");
+
+        console.log(contadorCorrectas)
+        console.log(contadorIncorrectas)
         return;
     }
 
@@ -440,11 +420,16 @@ function cargarPregunta() {
     const randomIndex = Math.floor(Math.random() * preguntasDisponibles.length);
     const pregunta = preguntasDisponibles.splice(randomIndex, 1)[0]; // Elimina y obtiene la pregunta seleccionada
 
+    // Desordenar las opciones de respuesta
+    const opcionesDesordenadas = pregunta.options
+        .slice()
+        .sort(() => Math.random() - 0.5);
+
     // Mostrar la pregunta en el DOM
     verboPregunta.innerHTML = `<h2>${pregunta.present}</h2>`;
     opcionesRespuesta.forEach((opcion, idx) => {
-        opcion.textContent = pregunta.options[idx];
-        opcion.dataset.correcto = pregunta.options[idx] === pregunta.correct;
+        opcion.textContent = opcionesDesordenadas[idx];
+        opcion.dataset.correcto = opcionesDesordenadas[idx] === pregunta.correct;
         opcion.classList.remove("bloqueado"); // Asegúrate de que las opciones no estén bloqueadas
     });
 }
