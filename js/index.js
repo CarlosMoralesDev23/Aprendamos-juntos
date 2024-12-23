@@ -359,7 +359,7 @@ const niveles = [
         ],
     },
     {
-        plus: 1,
+        level: 5,
         verbs: [
             {
                 numero: 51,
@@ -368,22 +368,22 @@ const niveles = [
                 correct: "included",
             },
             {
-                numero: 31,
-                present: "help",
-                options: ["helped", "helpes", "helps"],
-                correct: "helped",
+                numero: 1,
+                present: "be",
+                options: ["was/were", "been", "being"],
+                correct: "was/were",
             },
             {
-                numero: 32,
-                present: "talk",
-                options: ["talked", "talkes", "talks"],
-                correct: "talked",
+                numero: 2,
+                present: "have",
+                options: ["had", "hadded", "hadd"],
+                correct: "had",
             },
             {
-                numero: 33,
-                present: "turn",
-                options: ["turned", "turnes", "turns"],
-                correct: "turned",
+                numero: 3,
+                present: "do",
+                options: ["did", "done", "does"],
+                correct: "did",
             },
             {
                 numero: 34,
