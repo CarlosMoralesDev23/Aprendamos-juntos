@@ -28,13 +28,32 @@ closeContenedorInstrucciones.addEventListener("click", () => {
     contenedorInstrucciones.classList.toggle("oculto");
 });
 
-//*  --------  Seleccion de tematica y asignacion a susbtitulos  ---------
+
+
+
+
+
+
+
+
+//* ----------------------  LocalStorage  ----------------------
+let nivelGuardado = localStorage.getItem("nivelActual");
+
+
+
+
+
+
+
+
+
+
+
+//*  ------------------------  Seleccion de tematica y asignacion a susbtitulos  ------------------------
 
 const temas = document.querySelectorAll("#aplicacion_menu li a");
 const tituloDeTemaElegido = document.getElementById("tituloDeTemaElegido");
-const tituloDePractica = document.getElementById(
-    "tituloEncabezadoModalPractica"
-);
+const tituloDePractica = document.getElementById("tituloEncabezadoModalPractica");
 
 function actualizarTituloTema(nuevoTitulo) {
     tituloDeTemaElegido.textContent = nuevoTitulo;
@@ -50,13 +69,23 @@ temas.forEach((tema) => {
     });
 });
 
-//*  --------  Generar cajas de nivel por JS  ---------
+
+
+
+
+
+
+
+
+
+//*  ------------------------  Generar cajas de nivel por JS  ------------------------
 const aplicacionNiveles = document.getElementById("aplicacion_niveles");
 const totalNiveles = 20;
 let nivelActual = 1;
 let plusCount = 1;
 
-// Crear niveles
+
+//* Visual cajas
 for (let i = 0; i < totalNiveles; i++) {
     const div = document.createElement("div");
     div.classList.add("cajaNivel");
@@ -78,27 +107,42 @@ for (let i = 0; i < totalNiveles; i++) {
     nivelActual++;
 }
 
-// Crear la caja "Borrar Progreso"
+
+
+
+
+
+
+
+//*  ------------------------  Crear la caja "Borrar Progreso"  -----------------------
 const cajaBorrarProgreso = document.createElement("div");
 cajaBorrarProgreso.id = "borrar-progreso";
 cajaBorrarProgreso.classList.add("cajaNivel");
 cajaBorrarProgreso.textContent = "Borrar Progreso";
 
-// Evento para reiniciar el progreso
-cajaBorrarProgreso.addEventListener("click", reiniciarProgreso);
-
-// Añadir la caja al contenedor
+//* Añadir la caja al último lugar de cajas
 aplicacionNiveles.appendChild(cajaBorrarProgreso);
 
-// Función para reiniciar el progreso
+//* Evento para deshacer todo lo aprobado
+cajaBorrarProgreso.addEventListener("click", reiniciarProgreso);
+
+
+//* Función para reiniciar el progreso
 function reiniciarProgreso() {
     localStorage.removeItem("nivelActual");
-    nivelActualPractica = 1;
-    inicializarNivel(nivelActualPractica); // Reinicia el nivel al primero
+    nivelActualPractica = 1; //seteo el nivel actual a 1
+    inicializarNivel(nivelActualPractica); // Reinicio el nivel 1
     alert("Progreso reiniciado.");
 }
 
-//*  --------  Generar bloqueo de cajas de nivel hasta aprobar ---------
+
+
+
+
+
+
+
+//*  ------------------  Generar bloqueo de cajas de nivel hasta aprobar ------------------
 
 const cajasNivel = document.querySelectorAll(".cajaNivel");
 cajasNivel.forEach((caja, indice) => {
@@ -116,47 +160,51 @@ cajasNivel.forEach((caja, indice) => {
     });
 });
 
-//*  -------- Array Niveles  verbos-optiones --------
+
+
+
+
+
+
+
+
+//*  ------------------ Array Niveles  verbos-optiones ------------------
 //* Para conectar con las cajas generadas anteriormente
 let niveles = [];
 
-fetch("/js/niveles.JSON")
-    .then((response) => {
-        if (!response.ok) {
-            throw new Error("Error al cargar el archivo JSON.");
-        }
-        return response.json();
-    })
-    .then((data) => {
-        niveles = data; // Asigna los datos cargados a la variable niveles
-        console.log("Niveles cargados:", niveles);
-
-        // Inicializa el nivel solo después de que los niveles se hayan cargado
-        let nivelGuardado = localStorage.getItem("nivelActual");
-        nivelActualPractica = nivelGuardado ? parseInt(nivelGuardado) : 1;
-        inicializarNivel(nivelActualPractica);
-    })
-    .catch((error) => console.error("Error cargando el JSON:", error));
 
 
-//* Practica
 
-//*  --------  MODAL DE PRÁCTICA  ---------
 
-// Referencias al DOM del modal práctica
+
+
+
+
+
+//* ----------------------- Construir Modal Practica -----------------------
+//* Referencias al DOM
 const verboPregunta = document.getElementById("verbo");
 const opcionesRespuesta = document.querySelectorAll(".opcion");
 const contadorCorrectas = document.querySelector("#Correctas p");
 const contadorIncorrectas = document.querySelector("#Incorrectas p");
 
-// Al cargar la página, restaurar el nivel guardado
-let nivelGuardado = localStorage.getItem("nivelActual");
+
 
 // Variables para la práctica
 let nivelActualPractica = nivelGuardado ? parseInt(nivelGuardado) : 1;
 let correctas = 0; // Respuestas correctas
 let incorrectas = 0; // Respuestas incorrectas
 let preguntasDisponibles = []; // Almacena las preguntas disponibles en un nivel
+
+
+
+
+
+
+
+
+
+
 
 // Cargar las preguntas del nivel actual
 function inicializarNivel(nivel) {
