@@ -251,6 +251,11 @@ function inicializarNivel(nivelActualPractica) {
 
 
 
+
+
+
+
+
 //* --------- Funcion para cargar el verbo present y sus opciones aleatoriamente, del nivelActualPractica ----------
 function cargarPregunta() {
 
@@ -296,7 +301,6 @@ function cargarPregunta() {
 
 //* ------------------------ Comprobar si se elige la opcion correcta  --------------------------
 // - Si es correcta se aumenta el contador correctas;  misma logica para las incorrectas
-//*! OLVIDE que hace esa clase de bloqueo en las opciones
 opcionesRespuesta.forEach((opcion) => {
     opcion.addEventListener("click", () => {
         if (opcion.classList.contains("bloqueado")) return;
@@ -319,6 +323,10 @@ opcionesRespuesta.forEach((opcion) => {
 
 
 
+
+
+
+
 //*  ----------------  Función para desbloquear la caja nivel  ----------------
 function desbloquearNivel(nivelActualPractica) {
     const cajasNivel = document.querySelectorAll(".cajaNivel");
@@ -329,6 +337,8 @@ function desbloquearNivel(nivelActualPractica) {
         cajasNivel[nivelActualPractica - 1].classList.remove("bloqueado");
     }
 }
+
+
 
 
 
@@ -376,6 +386,13 @@ function verificarDesbloqueo() {
         inicializarNivel(nivelActualPractica); // Volver a comenzar en el mismo nivel
     }
 }
+
+
+
+
+
+
+
 
 
 
