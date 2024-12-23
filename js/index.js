@@ -381,8 +381,13 @@ const opcionesRespuesta = document.querySelectorAll(".opcion");
 const contadorCorrectas = document.querySelector("#Correctas p");
 const contadorIncorrectas = document.querySelector("#Incorrectas p");
 
+
+
+// Al cargar la página, restaurar el nivel guardado
+let nivelGuardado = localStorage.getItem("nivelActual");
+
 // Variables para la práctica
-let nivelActualPractica = 1; // Nivel en el que se está jugando
+let nivelActualPractica = nivelGuardado ? parseInt(nivelGuardado) : 1;
 let correctas = 0; // Respuestas correctas
 let incorrectas = 0; // Respuestas incorrectas
 let preguntasDisponibles = []; // Almacena las preguntas disponibles en un nivel
@@ -450,14 +455,26 @@ opcionesRespuesta.forEach((opcion) => {
     });
 });
 
-// Verificar si se desbloquea el siguiente nivel
 function verificarDesbloqueo() {
     const totalPreguntas = correctas + incorrectas;
     const porcentajeCorrectas = (correctas / totalPreguntas) * 100;
 
     if (porcentajeCorrectas >= 80) {
         nivelActualPractica++;
-        alert(`¡Felicidades! Has desbloqueado el nivel ${nivelActualPractica}.`);
+        localStorage.setItem("nivelActual", nivelActualPractica); // Guardar el nivel aprobado
+
+        if (nivelActualPractica % 5 === 0) {
+            alert(
+                `¡Felicidades! Has desbloqueado el nivel Plus ${Math.floor(
+                    nivelActualPractica / 5
+                )}.`
+            );
+        } else {
+            alert(
+                `¡Felicidades! Has desbloqueado el nivel ${nivelActualPractica}.`
+            );
+        }
+
         inicializarNivel(nivelActualPractica);
     } else {
         alert(
@@ -469,5 +486,20 @@ function verificarDesbloqueo() {
     }
 }
 
+
+
 // Inicializa el nivel al cargar
 inicializarNivel(nivelActualPractica);
+
+
+
+
+
+
+//* Asignarselo a una caja tipo nivel 
+function reiniciarProgreso() {
+    localStorage.removeItem("nivelActual");
+    nivelActualPractica = 1;
+    inicializarNivel(nivelActualPractica);
+    alert("Progreso reiniciado.");
+}
