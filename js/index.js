@@ -396,48 +396,65 @@ const niveles = [
 
 
 
-//*  --------  MODAL DE PRACTICA  ---------
+//*  --------  MODAL DE PRÁCTICA  ---------
 
-// Referencias al DOM del modal practica
+// Referencias al DOM del modal práctica
 const verboPregunta = document.getElementById("verbo");
 const opcionesRespuesta = document.querySelectorAll(".opcion");
 const contadorCorrectas = document.querySelector("#Correctas p");
 const contadorIncorrectas = document.querySelector("#Incorrectas p");
 
+// Variables para la práctica
+let nivelActualPractica = 1; // Nivel en el que se está jugando
+let correctas = 0; // Respuestas correctas
+let incorrectas = 0; // Respuestas incorrectas
+let preguntasDisponibles = []; // Almacena las preguntas disponibles en un nivel
 
-//Variables para contabilizar correctas e incorrectas
-let nivelActualPractica = 1; 
-let indicePregunta = 0;
-let correctas = 0; 
-let incorrectas = 0; 
+// Cargar las preguntas del nivel actual
+function inicializarNivel(nivel) {
+    const datosDelNivel = niveles.find((n) => n.level === nivel);
 
-let preguntasDisponibles = [];
-
-
-
-function cargarPregunta(nivelActualPractica, indicePregunta) {
-    const datosDelNivel = niveles.find((n) => n.level === nivelActualPractica); // Encuentra el nivel
-
-    console.log(datosDelNivel)
-
-    if (!datosDelNivel || indicePregunta >= datosDelNivel.verbs.length) {
-        alert("No hay más preguntas en este nivel.");
+    if (!datosDelNivel) {
+        alert("No se encontraron datos para este nivel.");
         return;
     }
 
-    const pregunta = datosDelNivel.verbs[indicePregunta];
+    preguntasDisponibles = [...datosDelNivel.verbs]; // Clona las preguntas del nivel
+    indicePregunta = 0; // Reinicia el índice
+    correctas = 0;
+    incorrectas = 0;
+    contadorCorrectas.textContent = correctas;
+    contadorIncorrectas.textContent = incorrectas;
+
+    cargarPregunta();
+}
+
+// Cargar una pregunta aleatoria del nivel actual
+function cargarPregunta() {
+    if (preguntasDisponibles.length === 0) {
+        alert("¡Felicidades! Has completado este nivel.");
+        return;
+    }
+
+    // Selecciona una pregunta aleatoria
+    const randomIndex = Math.floor(Math.random() * preguntasDisponibles.length);
+    const pregunta = preguntasDisponibles.splice(randomIndex, 1)[0]; // Elimina y obtiene la pregunta seleccionada
+
+    // Mostrar la pregunta en el DOM
     verboPregunta.innerHTML = `<h2>${pregunta.present}</h2>`;
     opcionesRespuesta.forEach((opcion, idx) => {
         opcion.textContent = pregunta.options[idx];
         opcion.dataset.correcto = pregunta.options[idx] === pregunta.correct;
+        opcion.classList.remove("bloqueado"); // Asegúrate de que las opciones no estén bloqueadas
     });
 }
 
-
-
-// Evento para verificar respuesta
+// Verificar respuesta y cargar la siguiente pregunta
 opcionesRespuesta.forEach((opcion) => {
     opcion.addEventListener("click", () => {
+        if (opcion.classList.contains("bloqueado")) return; // Evita clics dobles
+        opcion.classList.add("bloqueado"); // Bloquea clics adicionales
+
         if (opcion.dataset.correcto === "true") {
             correctas++;
             contadorCorrectas.textContent = correctas;
@@ -447,15 +464,10 @@ opcionesRespuesta.forEach((opcion) => {
             contadorIncorrectas.textContent = incorrectas;
             alert("Incorrecto. Inténtalo de nuevo.");
         }
-        indicePregunta++;
-        cargarPregunta(nivelActualPractica, indicePregunta);
+
+        setTimeout(cargarPregunta, 500); // Carga la siguiente pregunta después de un breve retraso
     });
 });
 
-// Inicializa la primera pregunta
-cargarPregunta(nivelActualPractica, indicePregunta);
-
-
-
-
-
+// Inicializa el nivel al cargar
+inicializarNivel(nivelActualPractica);
