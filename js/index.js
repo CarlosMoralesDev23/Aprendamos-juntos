@@ -10,6 +10,9 @@ document.getElementById("closeLogin").addEventListener("click", () => {
     formLogin.classList.toggle("ocultoLogin");
 });
 
+
+
+
 //* --------   Función Ayuda  --------
 
 const ayudaIcon = document.getElementById("ayuda_icon");
@@ -50,11 +53,26 @@ temas.forEach((tema) => {
     });
 });
 
+
+
+
+
 //*  --------  Generar cajas de nivel por JS  ---------
 const aplicacionNiveles = document.getElementById("aplicacion_niveles");
 const totalNiveles = 20;
 let nivelActual = 1;
 let plusCount = 1;
+
+//* Asignarselo a una caja tipo nivel 
+function reiniciarProgreso() {
+    localStorage.removeItem("nivelActual");
+    nivelActualPractica = 1;
+    inicializarNivel(nivelActualPractica);
+    alert("Progreso reiniciado.");
+}
+
+
+
 
 for (let i = 0; i < totalNiveles; i++) {
     const div = document.createElement("div");
@@ -71,6 +89,21 @@ for (let i = 0; i < totalNiveles; i++) {
         plusCount++;
     } else {
         div.innerHTML = `<a href="#aplicacion_practica">Nivel ${nivelActual}</a>`;
+    }
+
+    if (i === totalNiveles.length) {
+        alert("voy a crear la caja borrar progeso")
+        // Generar la caja "Borrar Progreso"
+        const cajaBorrarProgreso = document.createElement("div");
+        cajaBorrarProgreso.id = "borrar-progreso";
+        cajaBorrarProgreso.classList.add("nivel");
+        cajaBorrarProgreso.textContent = "Borrar Progreso";
+
+        // Asignar la funcionalidad al hacer clic
+        cajaBorrarProgreso.addEventListener("click", reiniciarProgreso());
+
+        // Agregar la caja al contenedor principal de niveles
+        aplicacionNiveles.appendChild(cajaBorrarProgreso);
     }
 
     aplicacionNiveles.appendChild(div);
@@ -550,10 +583,3 @@ inicializarNivel(nivelActualPractica);
 
 
 
-//* Asignarselo a una caja tipo nivel 
-function reiniciarProgreso() {
-    localStorage.removeItem("nivelActual");
-    nivelActualPractica = 1;
-    inicializarNivel(nivelActualPractica);
-    alert("Progreso reiniciado.");
-}
