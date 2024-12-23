@@ -549,6 +549,19 @@ opcionesRespuesta.forEach((opcion) => {
     });
 });
 
+
+
+
+function desbloquearNivel(nivel) {
+    const cajasNivel = document.querySelectorAll(".cajaNivel");
+    if (nivel - 1 < cajasNivel.length) {
+        cajasNivel[nivel - 1].classList.remove("bloqueado");
+    }
+}
+
+
+
+
 function verificarDesbloqueo() {
     const totalPreguntas = correctas + incorrectas;
     const porcentajeCorrectas = (correctas / totalPreguntas) * 100;
@@ -556,6 +569,8 @@ function verificarDesbloqueo() {
     if (porcentajeCorrectas >= 80) {
         nivelActualPractica++;
         localStorage.setItem("nivelActual", nivelActualPractica); // Guardar el nivel aprobado
+
+        desbloquearNivel(nivelActualPractica); // Desbloquea el siguiente nivel
 
         if (nivelActualPractica % 5 === 0) {
             alert(
@@ -579,6 +594,7 @@ function verificarDesbloqueo() {
         inicializarNivel(nivelActualPractica); // Reinicia el nivel actual
     }
 }
+
 
 
 
